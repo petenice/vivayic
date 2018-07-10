@@ -1,0 +1,34 @@
+/* MIXINS */
+
+@extra-large: ~"only screen and (min-width:1200px) and (max-width: 4000px)"; //XL
+@large: ~"only screen and (min-width: 992px) and (max-width: 1199px)"; //LG
+@medium: ~"only screen and (min-width: 768px) and (max-width: 991px)"; //MD
+@small: ~"only screen and (min-width: 576px) and (max-width: 767px)"; //SM
+@extra-small: ~"only screen and (max-width: 575px)"; //XS
+@tiny: ~"only screen and (max-width: 320px)";
+@retina: ~ "only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and ( -o-min-device-pixel-ratio: 2/1), only screen and ( min-device-pixel-ratio: 2), only screen and ( min-resolution: 192dpi), only screen and ( min-resolution: 2dppx)";
+
+@imgdir: ~"/assets/img";
+
+.build-border-red {border: solid red 1px;}
+.build-border-blue {border: solid blue 1px;}
+.build-border-green {border: solid green 1px;}
+
+.body-border {
+  @media @extra-large {border: solid 1px red;}
+  @media @large {border: solid 1px blue;}
+  @media @medium {border: solid 1px green;}
+  @media @small {border: solid 1px yellow;}
+  @media @extra-small {border: solid 1px pink;}
+}
+
+.useful-bg {
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

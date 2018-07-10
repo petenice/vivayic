@@ -1,0 +1,19 @@
+{
+  "name": "vivayic-new",
+  "version": "1.0.0",
+  "description": "<p align=\"center\"><a href=\"https://craftcms.com/\" target=\"_blank\"><img width=\"312\" height=\"90\" src=\"https://craftcms.com/craftcms.svg\" alt=\"Craft CMS\"></a></p>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-less": "^2.0.0",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-watch": "^1.1.0"
+  },
+  "dependencies": {}
+}

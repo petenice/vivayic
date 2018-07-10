@@ -1,0 +1,77 @@
+// DA FONTS
+@o: 'Open Sans', sans-serif;
+
+
+h1, h2, h3, h4, h5, p, strong {
+  font-family: @o;
+  .f-weight-med-ital;
+  margin:0;
+  padding: 0;
+}
+
+ul li {
+  font-family: @o;
+  .f-size-22;
+  @media @small, @extra-small, @tiny {.f-size-12;}
+}
+
+.ul-tweak {
+  margin-top:-17px;
+  margin-left: -17px;
+  @media @small, @extra-small, @tiny {margin-top:0; margin-left:0;}
+}
+
+.ul-nobull {
+  li {list-style: none;}
+}
+
+.ul-tweak-h {
+  border: solid red 1px;
+}
+
+//300,400,400i,600,600i,700,800
+.f-weight-light {font-weight:300;}
+.f-weight-reg {font-weight:400;}
+.f-weight-reg-ital {font-weight:400; font-style: italic;}
+.f-weight-med {font-weight:600;}
+.f-weight-med-ital {font-weight:600; font-style: italic;}
+.f-weight-sembold {font-weight:700;}
+.f-weight-bold {font-weight:800;}
+
+.f-size-90 {font-size: 90px; line-height: 100px;}
+.f-size-80 {font-size: 80px; line-height: 90px;}
+.f-size-42 {font-size: 42px; line-height: 46px;}
+.f-size-36 {font-size: 36px; line-height: 40px;}
+.f-size-32-line-35 {font-size: 32px; line-height: 35px;}
+.f-size-28 {font-size: 28px; line-height: 32px;}
+.f-size-26 {font-size: 26px; line-height: 30px;}
+.f-size-22 {font-size: 22px; line-height: 26px;}
+.f-size-20 {font-size: 20px; line-height: 24px;}
+.f-size-20-line-23 {font-size: 20px; line-height: 23px;}
+.f-size-18 {font-size: 18px; line-height: 22px;}
+.f-size-17 {font-size: 17px; line-height: 20px;}
+.f-size-16 {font-size: 16px; line-height: 18px;}
+.f-size-14 {font-size: 14px; line-height: 16px;}
+.f-size-13 {font-size: 13px; line-height: 13px;}
+.f-size-13-line-16 {font-size: 13px; line-height: 16px;}
+.f-size-12 {font-size: 12px; line-height: 16px;}
+.f-size-12-line-14 {font-size: 12px; line-height: 14px;}
+.f-size-10 {font-size: 10px; line-height: 14px;}
+.f-size-9 {font-size: 9px; line-height: 11px;}
+
+.l-height-26 {line-height:26px;}
+
+.p-size-large {font-size: 22px; line-height: 32px;}
+
+
+.dont-break-out {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  // -ms-word-break: break-all;
+  word-break: break-word;
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  // -ms-hyphens: auto;
+  // -moz-hyphens: auto;
+  // -webkit-hyphens: auto;
+  // hyphens: auto;
+}
