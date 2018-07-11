@@ -16,14 +16,8 @@
 .charcoal {
   color: #333F48;
 }
-.cobalt {
-  color: #335165;
-}
-.bright-blue {
-  color: #00A3E1;
-}
-.dark-blue {
-  color: #00263E;
+.light-blue {
+  color: #DEE7F0;
 }
 .green {
   color: #3CDBC0;
@@ -35,7 +29,7 @@
   color: #F5A623;
 }
 .bg-white {
-  background-color: #FFF !important;
+  background-color: #FFF;
 }
 .bg-black {
   background-color: #000;
@@ -52,17 +46,14 @@
 .bg-charcoal {
   background-color: #1A3C52;
 }
-.bg-bright-blue {
-  background-color: #00A3E1;
+.bg-light-blue {
+  background-color: #DEE7F0;
 }
 .bg-dark-blue {
   background-color: #1A3C52;
 }
 .bg-blue {
   background-color: #1A3C52;
-}
-.bg-cobalt {
-  background-color: #335165;
 }
 .bg-bright-green {
   background-color: #3CDBC0;
@@ -135,21 +126,25 @@ h5,
 p,
 strong {
   font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  font-style: italic;
   margin: 0;
   padding: 0;
 }
+h2 {
+  font-size: 36px;
+  font-weight: 600;
+}
+h2.white {
+  color: #FFF;
+  text-shadow: 1px 1px 0px #000;
+}
+p,
 ul li {
   font-family: 'Open Sans', sans-serif;
-  font-size: 22px;
-  line-height: 26px;
+  font-size: 24px;
+  font-weight: 300;
 }
-@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px), only screen and (max-width: 320px) {
-  ul li {
-    font-size: 12px;
-    line-height: 16px;
-  }
+p.white {
+  color: #FFF;
 }
 .ul-tweak {
   margin-top: -17px;
@@ -190,92 +185,41 @@ ul li {
 .f-weight-bold {
   font-weight: 800;
 }
-.f-size-90 {
-  font-size: 90px;
-  line-height: 100px;
+.f-size-extra-large {
+  font-size: 46px;
 }
-.f-size-80 {
-  font-size: 80px;
-  line-height: 90px;
+.l-height-extra-large {
+  line-height: 50px;
 }
-.f-size-42 {
-  font-size: 42px;
-  line-height: 46px;
-}
-.f-size-36 {
+.f-size-large {
   font-size: 36px;
+}
+.l-height-large {
   line-height: 40px;
 }
-.f-size-32-line-35 {
-  font-size: 32px;
-  line-height: 35px;
+.f-size-medium {
+  font-size: 24px;
 }
-.f-size-28 {
-  font-size: 28px;
-  line-height: 32px;
-}
-.f-size-26 {
-  font-size: 26px;
+.l-height-medium {
   line-height: 30px;
 }
-.f-size-22 {
-  font-size: 22px;
-  line-height: 26px;
-}
-.f-size-20 {
-  font-size: 20px;
-  line-height: 24px;
-}
-.f-size-20-line-23 {
-  font-size: 20px;
-  line-height: 23px;
-}
-.f-size-18 {
+.f-size-small {
   font-size: 18px;
+}
+.l-height-small {
   line-height: 22px;
 }
-.f-size-17 {
-  font-size: 17px;
+.f-size-small-16 {
+  font-size: 16px;
+}
+.l-height-small-16 {
   line-height: 20px;
 }
-.f-size-16 {
-  font-size: 16px;
-  line-height: 18px;
-}
-.f-size-14 {
-  font-size: 14px;
-  line-height: 16px;
-}
-.f-size-13 {
-  font-size: 13px;
-  line-height: 13px;
-}
-.f-size-13-line-16 {
-  font-size: 13px;
-  line-height: 16px;
-}
-.f-size-12 {
+.f-size-extra-small {
   font-size: 12px;
+}
+.l-height-extra-small {
   line-height: 16px;
-}
-.f-size-12-line-14 {
-  font-size: 12px;
-  line-height: 14px;
-}
-.f-size-10 {
-  font-size: 10px;
-  line-height: 14px;
-}
-.f-size-9 {
-  font-size: 9px;
-  line-height: 11px;
-}
-.l-height-26 {
-  line-height: 26px;
-}
-.p-size-large {
-  font-size: 22px;
-  line-height: 32px;
 }
 .dont-break-out {
   overflow-wrap: break-word;
@@ -327,6 +271,11 @@ ul li {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) only screen and (min-width: 768px) and (max-width: 991px) only screen and (min-width: 576px) and (max-width: 767px) only screen and (max-width: 575px) {
+  .rwd-break-lg {
+    display: none;
+  }
 }
 .container-fluid-no-padding,
 .container-no-padding,
@@ -623,6 +572,22 @@ ul li {
     margin: 20px 0;
   }
 }
+.btn {
+  border-radius: 0;
+  padding: 10px 80px 10px 20px;
+}
+.btn:focus {
+  outline: 0;
+}
+.button-arrow-grey {
+  border: 1px solid #CECECE;
+  color: #333F48;
+  background: #fff url('../imgz/icon-arrow-grey-rollover-sm.png') no-repeat 90% -105%;
+}
+.button-arrow-grey:hover {
+  color: #FFF;
+  background: #5A89B4 url('../imgz/icon-arrow-grey-rollover-sm.png') no-repeat 90% 195%;
+}
 .top-nav {
   background-color: rgba(255, 255, 255, 0.8);
   border-bottom: solid 1px rgba(233, 233, 233, 0.6);
@@ -645,7 +610,6 @@ ul li {
   margin-right: 2%;
 }
 #global-boog {
-  min-height: 520px;
   background: url('../imgz/home-global-boog-xl.jpg') no-repeat center center;
 }
 @media only screen and (min-width:1200px) and (max-width: 4000px) {
@@ -659,6 +623,7 @@ ul li {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    height: 702px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -672,11 +637,26 @@ ul li {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    height: 540px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  #global-boog {
+    background: url('../imgz/home-global-boog-md.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 510px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   #global-boog {
-    background: url('../imgz/home-global-boog-xl.jpg') no-repeat center center;
+    background: url('../imgz/home-global-boog-sm.jpg') no-repeat center center;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
@@ -685,11 +665,12 @@ ul li {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    height: 500px;
   }
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and ( -o-min-device-pixel-ratio: 2/1), only screen and ( min-device-pixel-ratio: 2), only screen and ( min-resolution: 192dpi), only screen and ( min-resolution: 2dppx) {
+@media only screen and (max-width: 575px) {
   #global-boog {
-    background: url('../imgz/home-global-boog-xl.jpg') no-repeat center center;
+    background: url('../imgz/home-global-boog-sm.jpg') no-repeat center center;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
@@ -698,7 +679,32 @@ ul li {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    height: 500px;
   }
+}
+.home-features h2 {
+  margin-bottom: 2%;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .home-features h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .home-features h2 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .home-features h2 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+.home-features p {
+  font-size: 16px;
 }
 .mt0 {
   margin-top: 0;

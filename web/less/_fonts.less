@@ -4,16 +4,19 @@
 
 h1, h2, h3, h4, h5, p, strong {
   font-family: @o;
-  .f-weight-med-ital;
   margin:0;
   padding: 0;
 }
 
-ul li {
+h2 {.f-size-large; .f-weight-med;}
+h2.white {color:@white; .black-text-shadow;}
+
+p, ul li {
   font-family: @o;
-  .f-size-22;
-  @media @small, @extra-small, @tiny {.f-size-12;}
+  .f-size-medium;
+  .f-weight-light;
 }
+p.white {color:@white;}
 
 .ul-tweak {
   margin-top:-17px;
@@ -38,31 +41,23 @@ ul li {
 .f-weight-sembold {font-weight:700;}
 .f-weight-bold {font-weight:800;}
 
-.f-size-90 {font-size: 90px; line-height: 100px;}
-.f-size-80 {font-size: 80px; line-height: 90px;}
-.f-size-42 {font-size: 42px; line-height: 46px;}
-.f-size-36 {font-size: 36px; line-height: 40px;}
-.f-size-32-line-35 {font-size: 32px; line-height: 35px;}
-.f-size-28 {font-size: 28px; line-height: 32px;}
-.f-size-26 {font-size: 26px; line-height: 30px;}
-.f-size-22 {font-size: 22px; line-height: 26px;}
-.f-size-20 {font-size: 20px; line-height: 24px;}
-.f-size-20-line-23 {font-size: 20px; line-height: 23px;}
-.f-size-18 {font-size: 18px; line-height: 22px;}
-.f-size-17 {font-size: 17px; line-height: 20px;}
-.f-size-16 {font-size: 16px; line-height: 18px;}
-.f-size-14 {font-size: 14px; line-height: 16px;}
-.f-size-13 {font-size: 13px; line-height: 13px;}
-.f-size-13-line-16 {font-size: 13px; line-height: 16px;}
-.f-size-12 {font-size: 12px; line-height: 16px;}
-.f-size-12-line-14 {font-size: 12px; line-height: 14px;}
-.f-size-10 {font-size: 10px; line-height: 14px;}
-.f-size-9 {font-size: 9px; line-height: 11px;}
+.f-size-extra-large {font-size: 46px;}
+.l-height-extra-large {line-height: 50px;}
 
-.l-height-26 {line-height:26px;}
+.f-size-large {font-size: 36px;}
+.l-height-large {line-height: 40px;}
 
-.p-size-large {font-size: 22px; line-height: 32px;}
+.f-size-medium {font-size: 24px;}
+.l-height-medium {line-height: 30px;}
 
+.f-size-small {font-size: 18px;}
+.l-height-small {line-height: 22px;}
+
+.f-size-small-16 {font-size: 16px;}
+.l-height-small-16 {line-height: 20px;}
+
+.f-size-extra-small {font-size: 12px;}
+.l-height-extra-small {line-height: 16px;}
 
 .dont-break-out {
   overflow-wrap: break-word;

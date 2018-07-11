@@ -12,10 +12,20 @@
 .nav-open {margin-right: 2%;}
 
 #global-boog {
-  min-height: 520px;
   background: url('../imgz/home-global-boog-xl.jpg') no-repeat center center;
-   @media @extra-large { background: url('../imgz/home-global-boog-xl.jpg') no-repeat center center; .useful-bg;}
-   @media @large { background: url('../imgz/home-global-boog-xl.jpg') no-repeat center center; .useful-bg;}
-   @media @small {background: url('../imgz/home-global-boog-xl.jpg') no-repeat center center; .useful-bg;}
-   @media @retina { background: url('../imgz/home-global-boog-xl.jpg') no-repeat center center; .useful-bg;}
+   @media @extra-large { background: url('../imgz/home-global-boog-xl.jpg') no-repeat center center; .useful-bg; height: 702px;}
+   @media @large { background: url('../imgz/home-global-boog-xl.jpg') no-repeat center center; .useful-bg; height: 540px;}
+   @media @medium {background: url('../imgz/home-global-boog-md.jpg') no-repeat center center; .useful-bg; height: 510px;}
+   @media @small {background: url('../imgz/home-global-boog-sm.jpg') no-repeat center center; .useful-bg; height: 500px;}
+   @media @extra-small {background: url('../imgz/home-global-boog-sm.jpg') no-repeat center center; .useful-bg; height: 500px;}
+}
+
+.home-features {
+  h2 {
+      @media @large {.f-size-large; .l-height-large;}
+      @media @medium {.f-size-medium; .l-height-medium;}
+      @media @small {.f-size-small; .l-height-small;}
+      margin-bottom: 2%;
+  }
+  p {.f-size-small-16;}
 }
