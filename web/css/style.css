@@ -5,28 +5,37 @@
   color: #000;
 }
 .warm-black {
-  color: #42505A;
+  color: #1A1A1A;
 }
 .gray {
-  color: #EFF0F1;
+  color: #9B9B9B;
 }
 .grey {
-  color: #EFF0F1;
+  color: #9B9B9B;
 }
 .charcoal {
-  color: #333F48;
+  color: #5B6770;
+}
+.blue {
+  color: #5A89B4;
 }
 .light-blue {
   color: #DEE7F0;
 }
 .green {
-  color: #3CDBC0;
+  color: #19988B;
 }
-.bright-green {
-  color: #3CDBC0;
+.light-green {
+  color: #E3F2F1;
 }
-.yellow {
-  color: #F5A623;
+.red {
+  color: #D6282D;
+}
+.amber {
+  color: #CD8A29;
+}
+.purple {
+  color: #7C7DAA;
 }
 .bg-white {
   background-color: #FFF;
@@ -34,61 +43,39 @@
 .bg-black {
   background-color: #000;
 }
+.bg-warm-black {
+  background-color: #1A1A1A;
+}
 .bg-gray {
-  background-color: #EFF0F1;
+  background-color: #9B9B9B;
 }
 .bg-grey {
-  background-color: #EFF0F1;
-}
-.bg-dark-grey {
-  background-color: #dddddd;
+  background-color: #9B9B9B;
 }
 .bg-charcoal {
-  background-color: #1A3C52;
+  background-color: #5B6770;
+}
+.bg-blue {
+  background-color: #5A89B4;
 }
 .bg-light-blue {
   background-color: #DEE7F0;
 }
-.bg-dark-blue {
-  background-color: #1A3C52;
+.bg-green {
+  background-color: #19988B;
 }
-.bg-blue {
-  background-color: #1A3C52;
+.bg-light-green {
+  background-color: #E3F2F1;
 }
-.bg-bright-green {
-  background-color: #3CDBC0;
+.bg-amber {
+  background-color: #CD8A29;
 }
-.bg-yellow {
-  background-color: #F5A623;
+.bg-purple {
+  background-color: #7C7DAA;
 }
 .bg-nav {
   background-color: rgba(255, 255, 255, 0.8);
   border-bottom: solid 1px grey;
-}
-a.hover-white:hover {
-  color: #FFF;
-}
-.half-bg-cobalt {
-  background: url(../images/bg-cobalt.jpg) repeat-x;
-  background-color: white;
-}
-.half-bg-bright-blue {
-  background: url(../images/bg-bright-blue.jpg) repeat-x;
-}
-.half-bg-gray {
-  background: url(../images/bg-grey.jpg) repeat-x;
-}
-.text-white {
-  color: #FFF;
-}
-.text-dark-blue {
-  color: #00263E;
-}
-.text-black {
-  color: #42505A;
-}
-.text-charcoal {
-  color: #333F48 !important;
 }
 .links-white-hover a:hover {
   color: #FFF;
@@ -237,32 +224,41 @@ p.white {
 .build-border-green {
   border: solid green 1px;
 }
+.build-border-yellow {
+  border: solid yellow 1px;
+}
+.build-border-pink {
+  border: solid pink 1px;
+}
+.build-border-dashed {
+  border: dashed black 1px;
+}
 @media only screen and (min-width:1200px) and (max-width: 4000px) {
-  .body-border {
+  .body-build-border {
     border: solid 1px red;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .body-border {
+  .body-build-border {
     border: solid 1px blue;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .body-border {
+  .body-build-border {
     border: solid 1px green;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  .body-border {
+  .body-build-border {
     border: solid 1px yellow;
   }
 }
 @media only screen and (max-width: 575px) {
-  .body-border {
+  .body-build-border {
     border: solid 1px pink;
   }
 }
-.useful-bg {
+.cover-bg {
   -webkit-background-size: 100%;
   -moz-background-size: 100%;
   -o-background-size: 100%;
@@ -448,6 +444,19 @@ p.white {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+.p30 {
+  padding: 30px;
+}
+.pt30 {
+  padding-top: 30px;
+}
+.pb30 {
+  padding-bottom: 30px;
+}
+.ptb30 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 .pl20 {
   padding-left: 20px;
 }
@@ -581,7 +590,7 @@ p.white {
 }
 .button-arrow-grey {
   border: 1px solid #CECECE;
-  color: #333F48;
+  color: #5B6770;
   background: #fff url('../imgz/icon-arrow-grey-rollover-sm.png') no-repeat 90% -105%;
 }
 .button-arrow-grey:hover {
@@ -609,79 +618,6 @@ p.white {
 .nav-open {
   margin-right: 2%;
 }
-#global-boog {
-  background: url('../imgz/home-global-boog-xl.jpg') no-repeat center center;
-}
-@media only screen and (min-width:1200px) and (max-width: 4000px) {
-  #global-boog {
-    background: url('../imgz/home-global-boog-xl.jpg') no-repeat center center;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 702px;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  #global-boog {
-    background: url('../imgz/home-global-boog-xl.jpg') no-repeat center center;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 540px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  #global-boog {
-    background: url('../imgz/home-global-boog-md.jpg') no-repeat center center;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 510px;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  #global-boog {
-    background: url('../imgz/home-global-boog-sm.jpg') no-repeat center center;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 500px;
-  }
-}
-@media only screen and (max-width: 575px) {
-  #global-boog {
-    background: url('../imgz/home-global-boog-sm.jpg') no-repeat center center;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 500px;
-  }
-}
 .home-features h2 {
   margin-bottom: 2%;
 }
@@ -699,12 +635,273 @@ p.white {
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .home-features h2 {
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .home-features h2 {
+    font-size: 24px;
+    line-height: 30px;
   }
 }
 .home-features p {
   font-size: 16px;
+}
+.home-feature-text {
+  max-width: 475px;
+  width: 80%;
+}
+#home-global-boog {
+  background: url('../imgz/home-global-boog-sm.jpg') no-repeat center center;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 500px;
+}
+@media only screen and (min-width:1200px) and (max-width: 4000px) {
+  #home-global-boog {
+    background: url('../imgz/home-global-boog-xl.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 702px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  #home-global-boog {
+    background: url('../imgz/home-global-boog-xl.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 540px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  #home-global-boog {
+    background: url('../imgz/home-global-boog-md.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 510px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), extra-small {
+  #home-global-boog {
+    background: url('../imgz/home-global-boog-sm.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 500px;
+  }
+}
+#home-global-boog-mob .home-feature-text {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), extra-small {
+  #home-global-boog-mob .home-feature-text {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+#home-globes {
+  background: url('../imgz/home-globes-lg.jpg') repeat-x center center;
+}
+@media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  #home-globes {
+    background: #E3F2F1 url('../imgz/home-globes-lg.jpg') repeat-x center center;
+    height: 395px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  #home-globes {
+    background: #E3F2F1 url('../imgz/home-globes-sm.jpg') repeat-x center -30px;
+    height: 167px;
+  }
+}
+#home-globes .row {
+  padding-bottom: 30px;
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  #home-globes .row {
+    padding-bottom: 10px;
+  }
+}
+@media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  #home-industries {
+    height: 445px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  #home-industries {
+    height: auto;
+  }
+}
+#home-industries .home-industries-img {
+  background: url('../imgz/home-industries-lg.jpg') repeat-x center center;
+}
+@media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  #home-industries .home-industries-img {
+    background: #E3F2F1 url('../imgz/home-industries-lg.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  #home-industries .home-industries-img {
+    background: #E3F2F1 url('../imgz/home-industries-lg.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  #home-industries .home-industries-img {
+    height: 325px;
+  }
+}
+#home-industries .home-feature-text {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), extra-small {
+  #home-industries .home-feature-text {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+@media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  #home-solutions {
+    height: 430px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  #home-solutions {
+    height: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+#home-solutions .home-solutions-img {
+  background: url('../imgz/home-solutions-lg.jpg') repeat-x center center;
+}
+@media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  #home-solutions .home-solutions-img {
+    background: #E3F2F1 url('../imgz/home-solutions-lg.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  #home-solutions .home-solutions-img {
+    background: #E3F2F1 url('../imgz/home-solutions-lg.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  #home-solutions .home-solutions-img {
+    height: 325px;
+  }
+}
+#home-solutions .home-feature-text {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), extra-small {
+  #home-solutions .home-feature-text {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+@media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  #home-experts {
+    height: 614px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  #home-experts {
+    height: auto;
+  }
+}
+#home-experts .home-industries-img {
+  background: url('../imgz/home-industries-lg.jpg') repeat-x center center;
+}
+@media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  #home-experts .home-industries-img {
+    background: #DEE7F0 url('../imgz/home-team-lg.jpg') repeat-x left center;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  #home-experts .home-industries-img {
+    background: #DEE7F0 url('../imgz/home-team-sm.jpg') repeat-x center center;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  #home-experts .home-industries-img {
+    height: 433px;
+  }
+}
+#home-experts .home-feature-text {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), extra-small {
+  #home-experts .home-feature-text {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
 }
 .mt0 {
   margin-top: 0;

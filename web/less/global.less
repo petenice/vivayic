@@ -11,21 +11,86 @@
 .nav-link {border: solid red 1px; height: 40px; display: inline-block;}
 .nav-open {margin-right: 2%;}
 
-#global-boog {
-  background: url('../imgz/home-global-boog-xl.jpg') no-repeat center center;
-   @media @extra-large { background: url('../imgz/home-global-boog-xl.jpg') no-repeat center center; .useful-bg; height: 702px;}
-   @media @large { background: url('../imgz/home-global-boog-xl.jpg') no-repeat center center; .useful-bg; height: 540px;}
-   @media @medium {background: url('../imgz/home-global-boog-md.jpg') no-repeat center center; .useful-bg; height: 510px;}
-   @media @small {background: url('../imgz/home-global-boog-sm.jpg') no-repeat center center; .useful-bg; height: 500px;}
-   @media @extra-small {background: url('../imgz/home-global-boog-sm.jpg') no-repeat center center; .useful-bg; height: 500px;}
-}
-
 .home-features {
   h2 {
       @media @large {.f-size-large; .l-height-large;}
       @media @medium {.f-size-medium; .l-height-medium;}
-      @media @small {.f-size-small; .l-height-small;}
+      @media @small {.f-size-medium; .l-height-medium;}
+      @media @extra-small {.f-size-medium; .l-height-medium;}
       margin-bottom: 2%;
   }
   p {.f-size-small-16;}
+}
+
+.home-feature-text {max-width: 475px; width: 80%;}
+
+#home-global-boog {
+  background: url('../imgz/home-global-boog-sm.jpg') no-repeat center center; .cover-bg; height: 500px;
+   @media @extra-large { background: url('../imgz/home-global-boog-xl.jpg') no-repeat center center; .cover-bg; height: 702px;}
+   @media @large { background: url('../imgz/home-global-boog-xl.jpg') no-repeat center center; .cover-bg; height: 540px;}
+   @media @medium {background: url('../imgz/home-global-boog-md.jpg') no-repeat center center; .cover-bg; height: 510px;}
+   @media @small, extra-small {background: url('../imgz/home-global-boog-sm.jpg') no-repeat center center; .cover-bg; height: 500px;}
+}
+
+#home-global-boog-mob {
+  .home-feature-text {
+    .mtb40;
+    @media @small, extra-small {.mtb40;}
+  }
+}
+
+#home-globes {
+  background: url('../imgz/home-globes-lg.jpg') repeat-x center center;
+   @media @extra-large, @large, @medium { background: #E3F2F1 url('../imgz/home-globes-lg.jpg') repeat-x center center; .flat-bg; height: 395px;}
+   @media @small, @extra-small {background:  #E3F2F1 url('../imgz/home-globes-sm.jpg') repeat-x center -30px; .flat-bg; height: 167px;}
+   .row {.pb30;
+     @media @small, @extra-small {.pb10;}
+   }
+}
+
+#home-industries {
+  @media @extra-large, @large, @medium {height:445px;}
+  @media @small, @extra-small  {height:auto;}
+  .home-industries-img {
+    background: url('../imgz/home-industries-lg.jpg') repeat-x center center;
+     @media @extra-large, @large, @medium { background: #E3F2F1 url('../imgz/home-industries-lg.jpg') no-repeat center center; .cover-bg;}
+     @media @small, @extra-small {background:  #E3F2F1 url('../imgz/home-industries-lg.jpg') no-repeat center center; .cover-bg;}
+     @media @small, @extra-small {height:325px;}
+  }
+  .home-feature-text {
+    .mtb40;
+    @media @small, extra-small {.mtb40;}
+  }
+}
+
+#home-solutions {
+  @media @extra-large, @large, @medium {height:430px; .mt-md-4; }
+  @media @small, @extra-small  {height:auto; .mtb40;}
+  .home-solutions-img {
+    background: url('../imgz/home-solutions-lg.jpg') repeat-x center center;
+     @media @extra-large, @large, @medium { background: #E3F2F1 url('../imgz/home-solutions-lg.jpg') no-repeat center center; .cover-bg;}
+     @media @small, @extra-small {background:  #E3F2F1 url('../imgz/home-solutions-lg.jpg') no-repeat center center; .cover-bg;}
+     @media @small, @extra-small {height:325px;}
+  }
+  .home-feature-text {
+    .mtb40;
+    @media @small, extra-small {.mtb40;}
+  }
+}
+
+
+
+#home-experts {
+  @media @extra-large, @large, @medium {height:614px;}
+  @media @small, @extra-small  {height:auto;}
+  .home-industries-img {
+    background: url('../imgz/home-industries-lg.jpg') repeat-x center center;
+     @media @extra-large, @large, @medium { background: #DEE7F0 url('../imgz/home-team-lg.jpg') repeat-x left center; .flat-bg;}
+     @media @small, @extra-small {background: #DEE7F0 url('../imgz/home-team-sm.jpg') repeat-x center center; .flat-bg;}
+     @media @small, @extra-small {height:433px;}
+  }
+  .home-feature-text {
+    .mtb40;
+    @media @small, extra-small {.mtb40;}
+  }
 }

@@ -1,15 +1,16 @@
 @white:		       	#FFF;
 @black:		        #000;
-@warm-black:      #42505A;
-@gray:            #EFF0F1;
-@grey:            #EFF0F1;
-@dark-gray:       #dddddd;
-@charcoal:        #333F48;
+@warm-black:      #1A1A1A;
+@gray:            #9B9B9B;
+@grey:            #9B9B9B;
+@charcoal:        #5B6770;
+@blue:            #5A89B4;
 @light-blue:      #DEE7F0;
-@dark-blue:       #00263E;
-@green:           #3CDBC0;
-@bright-green:    #3CDBC0;
-@yellow:          #F5A623;
+@green:           #19988B;
+@light-green:     #E3F2F1;
+@red:              #D6282D;
+@amber:           #CD8A29;
+@purple:          #7C7DAA;
 
 .white {color:@white;}
 .black {color:@black;}
@@ -17,36 +18,28 @@
 .gray {color:@gray;}
 .grey {color:@gray;}
 .charcoal {color:@charcoal;}
+.blue {color:@blue;}
 .light-blue {color:@light-blue;}
 .green {color:@green;}
-.bright-green {color:@bright-green;}
-.yellow {color:@yellow;}
+.light-green {color:@light-green;}
+.red {color:@red;}
+.amber {color:@amber;}
+.purple {color:@purple;}
 
 .bg-white {background-color: @white;}
 .bg-black {background-color: @black;}
+.bg-warm-black {background-color: @warm-black;}
 .bg-gray {background-color: @gray;}
 .bg-grey {background-color: @gray;}
-.bg-dark-grey {background-color: @dark-gray;}
-// .bg-charcoal {background-color: @charcoal;}
-.bg-charcoal {background-color: #1A3C52;} // bg-charcoal became blue (design change)
+.bg-charcoal {background-color: @charcoal;}
+.bg-blue {background-color: @blue;}
 .bg-light-blue {background-color: @light-blue;}
-// .bg-dark-blue {background-color: @dark-blue;}
-.bg-dark-blue {background-color: #1A3C52;}
-.bg-blue {background-color: #1A3C52;}
-.bg-bright-green {background-color: @bright-green;}
-.bg-yellow {background-color: @yellow;}
+.bg-green {background-color: @green;}
+.bg-light-green {background-color: @light-green;}
+.bg-amber {background-color: @amber;}
+.bg-purple {background-color: @purple;}
 .bg-nav {background-color: rgba(255, 255, 255, 0.8); border-bottom: solid 1px grey;}
 
-a.hover-white:hover {color:@white;}
-
-.half-bg-cobalt {background: url(../images/bg-cobalt.jpg) repeat-x; background-color: white;}
-.half-bg-bright-blue {background: url(../images/bg-bright-blue.jpg) repeat-x;}
-.half-bg-gray {background: url(../images/bg-grey.jpg) repeat-x;}
-
-.text-white {color: @white;}
-.text-dark-blue {color:@dark-blue;}
-.text-black {color:@warm-black;}
-.text-charcoal {color:@charcoal!important;}
 
 .links-white-hover {
   a { &:hover {color: @white;} &:focus {color:@white;}}
