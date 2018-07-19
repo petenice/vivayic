@@ -30,7 +30,9 @@ return [
     // Dev environment settings
     'dev' => [
         // Base site URL
-        'siteUrl' => null,
+        //'siteUrl' => null,
+        'siteUrl' => 'http://local-new.vivayic.com',
+        'basePath' => '/Users/petenice/Sites/Vivayic-new/public/',
 
         // Dev Mode (see https://craftcms.com/support/dev-mode)
         'devMode' => true,
@@ -39,7 +41,9 @@ return [
     // Staging environment settings
     'staging' => [
         // Base site URL
-        'siteUrl' => null,
+        //'siteUrl' => null,
+        'siteUrl' => 'http://dev.vivayic.com',
+
     ],
 
     // Production environment settings
