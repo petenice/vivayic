@@ -12,49 +12,77 @@ input {
 	transition: background-color 0.2s;
 }
 
-
-.form_main {
+.footer_contact_form {
     width: 100%;
-}
-.form_main h4 {
-    font-family: @o;
-		.f-size-medium;
-		.mtb30;
-}
-.heading {
-    .pb10;
-    position: relative;
-}
-.form {
-    border-radius: 7px;
-    padding: 6px;
+		.mtb40;
+		@media @extra-large {max-width: 530px;}
+		@media @large {max-width: 440px;}
+		@media @medium {max-width: 340px;}
+		@media @small {max-width: 540px;}
+	 h4 {
+	    font-family: @o;
+			.f-size-medium;
+			.mt30; .mb10;
+			.f-weight-bold;
+			.f-size-large;
+		}
+	 form {.mt20;}
 }
 .txt[type="text"] {
     border: 1px solid #ccc;
+		border-radius: 4px;
     margin: 10px 0;
-    padding: 10px 0 10px 5px;
+    padding: 15px 0 15px 15px;
     width: 100%;
+		.f-weight-light;
 }
 .txt_3[type="text"] {
-    margin: 10px 0 0;
-    padding: 10px 0 10px 5px;
-    width: 100%;
-}
-.txt2[type="submit"] {
-    background: #242424 none repeat scroll 0 0;
-    border: 1px solid #4f5c04;
-    border-radius: 25px;
-    color: #fff;
-    font-size: 16px;
-    font-style: normal;
-    line-height: 35px;
+		border: 1px solid #ccc;
+		border-radius: 4px;
     margin: 10px 0;
-    padding: 0;
-    text-transform: uppercase;
-    width: 30%;
+    padding: 15px 0 15px 15px;
+		min-height: 150px;
+    width: 100%;
+		.f-weight-light;
 }
+
 .txt2:hover {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     color: #5793ef;
     transition: all 0.5s ease 0s;
+}
+select.select_1 {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin: 10px 0;
+	padding: 15px 0 15px 15px;
+	height: 40px;
+	width: 100%;
+	.f-weight-light;
+		option {
+			.f-weight-light;
+	}
+}
+
+.txt_5[type="submit"] {.mt20;}
+
+
+.w3-check,.w3-radio{width:24px;height:24px;position:relative;top:6px}
+
+.search_txt[type="text"] {
+	border: 1px solid #ccc;
+	.bg-white;
+	border-radius: 4px;
+	margin: 10px 0;
+	padding: 3px 0 3px 16px;
+	width: 300px;
+	@media @small, @extra-small {width: 180px;}
+	.f-weight-light;
+}
+
+.search_btn {
+	.white;
+	.bg-blue;
+	width: 47px;
+	padding: 0;
 }

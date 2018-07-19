@@ -18,11 +18,29 @@
 }
 
 .button-arrow-blue {
-  border: 1px solid #CECECE;
+  border: 1px solid @white;
   .white;
-  background: #5A89B4 url('../imgz/icon-arrow-grey-rollover-sm.png') no-repeat 90% -105%;
+  background: #5A89B4 url('../imgz/icon-arrow-grey-rollover-sm.png') no-repeat 90% 195%;
 }
 .button-arrow-blue:hover {
+  border: 1px solid @charcoal;
+  .charcoal;
+  background: #E3F2F1 url('../imgz/icon-arrow-grey-rollover-sm.png') no-repeat 90% -105%;
+}
+
+.button-nav-arrow-grey {
+  border: 1px solid #CECECE;
+  .charcoal;
+  background: #fff url('../imgz/icon-arrow-grey-rollover-sm.png') no-repeat 200px 22px;
+  height: 60px;
+  width: 230px;
+  padding:0;
+  text-align: left!important;
+  padding-top: 15px;
+  padding-left: 20px;
+  @media @small {.mt10;}
+}
+.button-nav-arrow-grey:hover {
   .white;
-  background: #DEE7F0 url('../imgz/icon-arrow-grey-rollover-sm.png') no-repeat 90% 195%;
+  background: #5A89B4 url('../imgz/icon-arrow-grey-rollover-sm.png') no-repeat 200px -26px;
 }

@@ -1,3 +1,9 @@
+{#
+# HOME PAGE
+# /templates/index.html
+# niceworld 7.18.18
+#}
+
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -5,7 +11,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <meta name="referrer" content="origin-when-cross-origin" />
-
     <link rel="stylesheet" href="/bootstrap-4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,800" rel="stylesheet">
@@ -17,16 +22,17 @@
 <div class="container">
 <nav class="top-nav fixed-top row no-mar">
     <div class="col-6 col-md-6 col-lg-4 align-self-center pl-4 build-border-blue">
-        <a href="/"><img src="imgz/logo-vivayic.svg"></a>
+        <!-- <a href="/"><img src="imgz/logo-vivayic.svg"></a> -->
+        <a href="/">{{ craft.inlin.er('imgz/logo-vivayic.svg') | raw }}</a>
     </div>
     <div class="col-lg-7 align-self-center no-padd d-none d-lg-block build-border-blue">
-        <a class="nav-link float-right" href="#">Stories</a>
-        <a class="nav-link float-right" href="#">Positive Impact</a>
-        <a class="nav-link float-right" href="#">Industries</a>
-        <a class="nav-link float-right" href="#">Solutions</a>
+        <a class="nav-link float-right" href="{{ siteUrl }}stories">Stories</a>
+        <a class="nav-link float-right" href="{{ siteUrl }}positive-impact">Positive Impact</a>
+        <a class="nav-link float-right" href="{{ siteUrl }}industries">Industries</a>
+        <a class="nav-link float-right" href="{{ siteUrl }}solutions">Solutions</a>
     </div>
     <div class="col-6 col-md-6 col-lg-1 align-self-center pr-2 build-border-blue">
-      <a class="nav-open float-right" href="#"><img src="imgz/icon-hamburger-search.svg"></a>
+      <a class="nav-open float-right" href="#">{{ craft.inlin.er('imgz/icon-hamburger-search.svg') | raw }}</a>
     </div>
 </nav>
 </div><!-- /container -->
@@ -177,167 +183,193 @@
 
 <div id="super-footer-form-quote" class="container-fluid no-padd no-marr build-border-blue">
   <div class="row h-100 no-padd no-marr build-border-red">
-    <div class="col-12 col-sm-6 order-6 order-md-1 bg-light-blue d-flex justify-content-center justify-content-sm-center justify-content-md-end build-border-green">
+    <div class="col-12 col-md-6 order-6 order-md-1 bg-light-blue d-flex justify-content-center justify-content-sm-center justify-content-md-end build-border-green">
 
-      <div class="form_main">
-                      <h4 class="heading">Let's Talk</h4>
-                      <p>Great coversations start here.</p>
-                      <div class="form">
-                      <form action="#" method="post" id="contactFrm" name="contactFrm">
-                          <input type="text" required="" placeholder="Name" value="" name="name" class="txt">
-                          <input type="text" required="" placeholder="Email" value="" name="email" class="txt">
-                          <input type="text" required="" placeholder="Phone" value="" name="mob" class="txt">
+      <div class="footer_contact_form">
+            <h4>Let's Talk</h4>
+            <p>Great coversations start here.</p>
+            <form action="#" method="post" id="contactFrm" name="contactFrm">
+                <input type="text" required="" placeholder="Name" value="" name="name" class="txt">
+                <input type="text" required="" placeholder="Email" value="" name="email" class="txt">
+                <input type="text" required="" placeholder="Phone" value="" name="mob" class="txt">
 
-                      	 <textarea placeholder="How can we help you?" name="mess" type="text" class="txt_3"></textarea>
-                           <select class="span3" id="subject" name="subject">
-                               <option selected value="na">
-                                   Industry:
-                               </option>
+            	 <textarea placeholder="How can we help you?" name="mess" type="text" class="txt_3"></textarea>
 
-                               <option value="service">
-                                   General Customer Service
-                               </option>
+                 <select class="select_1" id="subject" name="subject">
+                     <option selected value="na">
+                         Industry:
+                     </option>
 
-                               <option value="suggestions">
-                                   Suggestions
-                               </option>
-                               <option value="product">
-                                   Product Support
-                               </option>
-                            </select>
-                            <br>
-                           <input type="submit" value="submit" name="submit" class="btn button-arrow-blue">
-                      </form>
-                      </div>
+                     <option value="service">
+                         General Customer Service
+                     </option>
+
+                     <option value="suggestions">
+                         Suggestions
+                     </option>
+                     <option value="product">
+                         Product Support
+                     </option>
+                  </select>
+                  <br>
+                  <input class="w3-check" type="checkbox"><label>Join our mailing list :-) </label>
+                  <br>
+                  <input type="submit" value="submit" name="submit" class="btn button-arrow-blue txt_5">
+            </form>
       </div>
 
     </div>
-    <div class="sf-quote col-12 col-sm-6 order-6 order-md-1 bg-blue d-flex justify-content-center justify-content-sm-center justify-content-md-start build-border-green">
-      <div class="home-feature-text ml-md-4 align-self-center build-border-yellow">
+    <div class="sf-quote col-12 col-md-6 order-6 order-md-1 bg-blue py-4 py-md-0 d-flex justify-content-center justify-content-sm-center justify-content-md-start build-border-green">
+      <div class="home-feature-text ml-md-4 align-self-center text-center build-border-yellow">
       <h3>
       “Vivayic shines in deeply understanding the need, aligning it with the business / organizational goals, and designing a solution that is practical”
       </h3>
+      <p>– David Sarnoff<br>
+        Industrialist Corp</p>
+
+        <img src="/imgz/icon-mail-circle.svg">
+        <p><a href="mailto:info@vivayic.com">info@vivayic.com</a></p>
+        <img src="/imgz/icon-phone-circle.svg">
+        <p>(800) 280-7272</p>
       </div>
+
     </div><!-- /sf-quote -->
   </div><!-- /row -->
-</div>
+</div><!-- /super-footer-form-quote -->
 
-footer-bg-logo
-
-
-<h1>Go!</h1>
-<h1>Go!</h1>
-<h1>Go!</h1>
-<h1>Go!</h1>
-<h1>Go!</h1>
-
-
-<div style="width: 50px; height: 50px; display: inline-block;" class="bg-warm-black"></div>
-<div style="width: 50px; height: 50px; display: inline-block;" class="bg-gray"></div>
-<div style="width: 50px; height: 50px; display: inline-block;" class="bg-charcoal"></div>
-<div style="width: 50px; height: 50px; display: inline-block;" class="bg-blue"></div>
-<div style="width: 50px; height: 50px; display: inline-block;" class="bg-light-blue"></div>
-<div style="width: 50px; height: 50px; display: inline-block;" class="bg-green"></div>
-<div style="width: 50px; height: 50px; display: inline-block;" class="bg-light-green"></div>
-<div style="width: 50px; height: 50px; display: inline-block;" class="bg-amber"></div>
-<div style="width: 50px; height: 50px; display: inline-block;" class="bg-purple"></div>
-<div style="width: 50px; height: 50px; display: inline-block;" class=""></div>
-
-
-<h1>Go!</h1>
-<h1>Go!</h1>
-<h1>Go!</h1>
-<h1>Go!</h1>
-<h1>Go!</h1>
-<h1>Go!</h1>
-<h1>Go!</h1>
-<h1>Go!</h1>
-<h1>Go!</h1>
-<h1>Go!</h1>
-<h1>Go!</h1>
-<h1>Go!</h1><h1>Go!</h1>
-<h1>Go!</h1>
-<h1>Go!</h1>
-<h1>Go!</h1>
-<h1>Go!</h1>
-<h1>Go!</h1>
-
-
+<div id="footer-bottom" class="container-fluid no-padd no-marr build-border-blue">
+  <div class="container">
+  <div class="row no-padd no-marr build-border-red">
+    <div class="col-12 col-md-3 text-sm-center build-border-blue">
+      <img src="/imgz/logo-vivayic-white.svg" class="p-4 p-sm-0">
+    </div>
+    <div class="col-12 col-md-9 build-border-blue">
+      <div class="row bottom-links">
+        <div class="col-12 offset-md-3 col-md-3 build-border-red">
+          <p><a href="#">Solutions</a></p>
+          <p><a href="#">Industries</a></p>
+          <p><a href="#">Positive Impact</a></p>
+          <p><a href="#">Process</a></p>
+          <p><a href="#">Purpose</a></p>
+        </div><!-- /col -->
+        <div class="col-12 col-md-3 build-border-red">
+          <p><a href="#">Insights</a></p>
+          <p><a href="#">Free Resources</a></p>
+          <p><a href="#">About</a></p>
+        </div><!-- /col -->
+        <div class="col-12 col-md-3 build-border-red">
+          <p><a href="#">Contact</a></p>
+          <p><a href="#">Search</a></p>
+        </div><!-- /col -->
+      </div><!-- /row -->
+    </div><!-- /col -->
+  </div><!-- /row -->
+  <div class="row no-padd no-marr build-border-red">
+    <div class="col-12 bottom-links">
+      <a href="#"><img src="/imgz/icon-twitter.svg" class="social-icon"></a>
+      <a href="#"><img src="/imgz/icon-facebook.svg" class="social-icon"></a>
+      <a href="#"><img src="/imgz/icon-linkedin.svg" class="social-icon"></a>
+    </div>
+    <div class="col-12 bottom-links mt10">
+      <p class="small"><a href="#">privacy policy</a> | <a href="#">cookies</a></p>
+    </div>
+  </div>
+</div><!-- /container -->
+</div><!-- /footer-bottom -->
 
 
 
 <div class="overlay">
   <div class="container-fluid no-padd no-marr">
-    <div class="overlay-brand row no-padd no-marr build-border-red">
-      <div class="col-6  align-self-center pl-4 build-border-blue">
-          <a href="/"><img src="imgz/logo-vivayic-bug-white.svg"></a>
+    <div class="overlay-brand row no-padd no-marr">
+      <div class="col-12 col-md-2 align-self-center pl-4">
+        <a href="/"><img src="imgz/logo-vivayic-bug-white.svg"></a>
+        <a class="nav-close d-inline d-md-none float-right" href="#"><img src="imgz/icon-close-x.svg"></a>
       </div>
-      <div class="col-6 align-self-center pr-2 build-border-blue">
-        <a class="nav-close float-right" href="#"><img src="imgz/icon-hamburger-search.svg"></a>
+      <div class="col-12 col-md-10 text-center text-md-right pr-2">
+        <input type="text" placeholder="search" value="" name="search" class="search_txt">
+        <input type="submit" class="search_btn" value="go">
+        <a class="nav-close d-none d-md-inline" href="#"><img src="imgz/icon-close-x.svg"></a>
       </div>
     </div>
   </div><!-- /container -->
 
   <div class="container">
 
-  <div class="overlay-brand row h-100 no-padd no-marr build-border-red">
-      <div class="col-12 col-sm-12 col-md-4 d-flex mtb40 justify-content-center">
-        <a href="#" class="btn button-arrow-grey">Solutions</a>
+  <div class="overlay-brand no-padd mt-5 mt-md-0">
+
+    <div class="row mt-0 mt-md-5">
+      <div class="col-12 col-md-4 text-center text-md-right">
+        <a href="{{ siteUrl }}solutions" class="btn button-nav-arrow-grey">Solutions</a>
       </div>
-      <div class="col-12 col-sm-12 col-md-4 d-flex mtb40 justify-content-center">
-        <a href="#" class="btn button-arrow-grey">Industries</a>
+      <div class="col-12 col-md-4 text-center">
+        <a href="{{ siteUrl }}industries" class="btn button-nav-arrow-grey">Industries</a>
       </div>
-      <div class="col-12 col-sm-12 col-md-4 d-flex mtb40 justify-content-center">
-        <a href="#" class="btn button-arrow-grey">Positive Impact</a>
+      <div class="col-12 col-md-4 text-center text-md-left">
+        <a href="{{ siteUrl }}positive-impact" class="btn button-nav-arrow-grey">Positive Impact</a>
+      </div>
+    </div><!-- /row -->
+
+    <div class="row mt-0 mt-md-5">
+      <div class="col-12 col-md-4 text-center text-md-right">
+        <a href="{{ siteUrl }}talent" class="btn button-nav-arrow-grey">Talent</a>
+      </div>
+      <div class="col-12 col-md-4 text-center text-center">
+        <a href="{{ siteUrl }}process" class="btn button-nav-arrow-grey">Process</a>
+      </div>
+      <div class="col-12 col-md-4 text-center text-md-left">
+        <a href="{{ siteUrl }}purpose" class="btn button-nav-arrow-grey">Purpose</a>
+      </div>
+    </div><!-- /row -->
+
+    <div class="row mt-0 mt-md-5">
+      <div class="col-12 col-md-4 offset-md-2 text-center">
+        <a href="{{ siteUrl }}insights" class="btn button-nav-arrow-grey">Insights</a>
+      </div>
+      <div class="col-12 col-md-4 text-center">
+        <a href="{{ siteUrl }}contact" class="btn button-nav-arrow-grey">Contact</a>
+      </div>
+    </div><!-- /row -->
+
+
+    <div class="row top-links">
+      <div class="col-12 mt-0 mt-md-5 text-center">
+        <p><a href="{{ siteUrl }}about">About</a>
+        <a href="{{ siteUrl }}about/values">Values</a>
+        <a href="{{ siteUrl }}about/giving-back">Giving Back</a>
+        <a href="{{ siteUrl }}free-resources">Free Resources</a></p>
+      </div>
+      <div class="col-12 mt-0 mt-md-2 text-center">
+        <p><a href="{{ siteUrl }}xd-portfolio">See Our Experience Design Portfolio</a></p>
       </div>
 
-      <div class="col-12 col-sm-12 col-md-4 d-flex mtb40 justify-content-center">
-        <a href="#" class="btn button-arrow-grey">Solutions</a>
+      <div class="col-12 mt-4 text-center">
+        <p class="small"><a href="{{ siteUrl }}about/privacy">privacy policy</a>
+        <a href="{{ siteUrl }}about/legal">legal</a>
+        <a href="{{ siteUrl }}about/join">join our mailing list</a></p>
       </div>
-      <div class="col-12 col-sm-12 col-md-4 d-flex mtb40 justify-content-center">
-        <a href="#" class="btn button-arrow-grey">Industries</a>
-      </div>
-      <div class="col-12 col-sm-12 col-md-4 d-flex mtb40 justify-content-center">
-        <a href="#" class="btn button-arrow-grey">Positive Impact</a>
-      </div>
+    </div><!-- /row -->
 
   </div>
 
 </div>
+</div><!-- /overlay -->
 
 {#
+  COLOR CHEAT SHEET
+  <div style="width: 50px; height: 50px; display: inline-block;" class="bg-warm-black"></div>
+  <div style="width: 50px; height: 50px; display: inline-block;" class="bg-gray"></div>
+  <div style="width: 50px; height: 50px; display: inline-block;" class="bg-charcoal"></div>
+  <div style="width: 50px; height: 50px; display: inline-block;" class="bg-blue"></div>
+  <div style="width: 50px; height: 50px; display: inline-block;" class="bg-light-blue"></div>
+  <div style="width: 50px; height: 50px; display: inline-block;" class="bg-green"></div>
+  <div style="width: 50px; height: 50px; display: inline-block;" class="bg-light-green"></div>
+  <div style="width: 50px; height: 50px; display: inline-block;" class="bg-amber"></div>
+  <div style="width: 50px; height: 50px; display: inline-block;" class="bg-purple"></div>
+  <div style="width: 50px; height: 50px; display: inline-block;" class=""></div>
 
-	<div class="wrap">
-		<ul class="wrap-nav">
-			<li><a href="#">About</a>
-			<ul>
-				<li><a href="#">About Company</a></li>
-				<li><a href="#">Designers</a></li>
-				<li><a href="#">Developers</a></li>
-				<li><a href="#">Pets</a></li>
-			</ul>
-			</li>
-			<li><a href="#">Services</a>
-			<ul>
-				<li><a href="https://www.google.hr/">Web Design</a></li>
-				<li><a href="#">Development</a></li>
-				<li><a href="#">Apps</a></li>
-				<li><a href="#">Graphic design</a></li>
-				<li><a href="#">Branding</a></li>
-			</ul>
-			</li>
-			<li><a href="#">Work</a>
-			<ul>
-				<li><a href="#">Web</a></li>
-				<li><a href="#">Graphic</a></li>
-				<li><a href="#">Apps</a></li>
-			</ul>
-			</li>
-		</ul>
-  </div><!-- /wrap -->
 #}
 
-</div><!-- /overlay -->
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

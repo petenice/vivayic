@@ -4,7 +4,7 @@ $(document).ready(function(){
        $(this).toggleClass('btn-open').toggleClass('btn-close');
     });
 });
-$('.overlay').on('click', function(){
+$('.nav-close').on('click', function(){
     $(".overlay").fadeToggle(200);
     $(".button a").toggleClass('btn-open').toggleClass('btn-close');
     open = false;
