@@ -206,11 +206,17 @@ a:hover {
 .l-height-large {
   line-height: 40px;
 }
+.f-size-large-32 {
+  font-size: 32px;
+}
 .f-size-medium {
   font-size: 24px;
 }
 .l-height-medium {
   line-height: 30px;
+}
+.f-size-medium-20 {
+  font-size: 20px;
 }
 .f-size-small {
   font-size: 18px;
@@ -237,6 +243,49 @@ a:hover {
   /* Adds a hyphen where the word breaks, if supported (No Blink) */
 }
 /* MIXINS */
+.build-border-red {
+  border: solid red 1px;
+}
+.build-border-blue {
+  border: solid blue 1px;
+}
+.build-border-green {
+  border: solid green 1px;
+}
+.build-border-yellow {
+  border: solid yellow 1px;
+}
+.build-border-pink {
+  border: solid pink 1px;
+}
+.build-border-dashed {
+  border: dashed black 1px;
+}
+@media only screen and (min-width:1200px) and (max-width: 4000px) {
+  .body-build-border {
+    border: solid 1px red;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .body-build-border {
+    border: solid 1px blue;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .body-build-border {
+    border: solid 1px green;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .body-build-border {
+    border: solid 1px yellow;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .body-build-border {
+    border: solid 1px pink;
+  }
+}
 .cover-bg {
   -webkit-background-size: 100%;
   -moz-background-size: 100%;
@@ -787,12 +836,14 @@ select.select_1 option {
 .button-nav-arrow-grey {
   border: 1px solid #CECECE;
   color: #5B6770;
+  font-size: 20px;
+  font-weight: 600;
   background: #fff url('../imgz/icon-arrow-grey-rollover-sm.png') no-repeat 200px 22px;
   height: 60px;
   width: 230px;
   padding: 0;
   text-align: left!important;
-  padding-top: 15px;
+  padding-top: 14px;
   padding-left: 20px;
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -805,14 +856,16 @@ select.select_1 option {
   background: #5A89B4 url('../imgz/icon-arrow-grey-rollover-sm.png') no-repeat 200px -26px;
 }
 .button-nav-arrow-lt-blue {
-  border: 1px solid #CECECE;
+  border: 1px solid #fff;
   color: #5B6770;
-  background: #DEE7F0 url('../imgz/icon-arrow-grey-rollover-sm.png') no-repeat 200px 22px;
+  font-size: 20px;
+  font-weight: 600;
+  background: #BDD0E1 url('../imgz/icon-arrow-grey-rollover-sm.png') no-repeat 200px 22px;
   height: 60px;
   width: 230px;
   padding: 0;
   text-align: left!important;
-  padding-top: 15px;
+  padding-top: 14px;
   padding-left: 20px;
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -822,7 +875,7 @@ select.select_1 option {
 }
 .button-nav-arrow-lt-blue:hover {
   color: #FFF;
-  background: #DEE7F0 url('../imgz/icon-arrow-grey-rollover-sm.png') no-repeat 200px -26px;
+  background: #5A89B4 url('../imgz/icon-arrow-grey-rollover-sm.png') no-repeat 200px -26px;
 }
 .button-results-arrow-grey {
   border: 1px solid #CECECE;
@@ -1688,9 +1741,6 @@ a.nav-link:hover {
     padding-top: 120px;
   }
 }
-body.two-insights-page {
-  background: #FFF url('../imgz/insights-bg-tile.jpg') repeat-x;
-}
 @media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
   .solutions-body #hero-feature {
     background: #E3F2F1 url('../imgz/solutions-hero-lg.jpg') no-repeat center center;
@@ -1866,6 +1916,27 @@ body.two-insights-page {
 .process-body #hero-feature h1 {
   color: #FFF;
   text-shadow: 1px 1px 0px #000;
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width:1200px) and (max-width: 4000px) {
+  body.insights-body,
+  body.two-insights-page {
+    background: #FFF url('../imgz/insights-bg-tile.jpg') repeat-x;
+  }
+}
+@media only screen and (max-width: 575px) {
+  body.insights-body,
+  body.two-insights-page {
+    background: #fff;
+  }
+}
+#insights-index-head {
+  margin-top: 190px;
+  height: 200px;
+  border: solid #ccc 1px;
+  background-color: #FFF;
+}
+#insights-page-head {
+  margin-top: 170px;
 }
 .mt0 {
   margin-top: 0;
