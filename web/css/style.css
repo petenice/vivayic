@@ -1599,9 +1599,6 @@ a.nav-link:hover {
     text-align: center;
   }
 }
-.solutions #hero-feature {
-  background: url('../imgz/solutions-hero-lg.jpg') no-repeat center center;
-}
 @media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
   .solutions #hero-feature {
     background: #E3F2F1 url('../imgz/solutions-hero-lg.jpg') no-repeat center center;
@@ -1629,6 +1626,37 @@ a.nav-link:hover {
   }
 }
 .solutions #hero-feature h1 {
+  color: #FFF;
+  float: right;
+  text-shadow: 1px 1px 0px #000;
+}
+@media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .industries #hero-feature {
+    background: #E3F2F1 url('../imgz/industries-hero-lg.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  .industries #hero-feature {
+    background: #E3F2F1 url('../imgz/industries-hero-lg.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+.industries #hero-feature h1 {
   color: #FFF;
   float: right;
   text-shadow: 1px 1px 0px #000;
