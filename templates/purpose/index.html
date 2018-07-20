@@ -1,0 +1,65 @@
+{#
+PURPOSE INDEX
+/templates/purpose/index.html
+niceworld 7.18.18
+#}
+
+{% extends "_layouts/site" %}
+
+{% set pageName = 'Purpose' %}
+
+{% block head %}
+  {% set title = "" %}
+  {{ parent() }}
+  <script>
+  // js
+  </script>
+{% endblock %}
+
+{% block main %}
+
+<div id="hero-feature" class="container-fluid no-marr build-border-blue">
+  <h1>{{pageName}}</h1>
+</div>
+
+<div class="container da-main-ova v-pad build-border-red">
+  <div class="row no-padd build-border-yellow ">
+    <div class="col-12 col-lg-9">
+      <span class="breadcrumbs"><img src="/imgz/logo-vivayic-bug-red.svg"><p>what we do:</p></span>
+      <h2>{{pageName}}</h2>
+      <p>Vivayic offers solutions which strike a balance between solid research and lived experience. We offer learner centered programs based on great ideas and solid fundamentals. Our goal is to drive through completion on time, on budget and most importantly with a positive impact on the learner and on the organization’s stated objectives.</p>
+    </div><!-- /col -->
+    <div class="col-12 col-lg-3 px-0 px-md-2 text-center">
+      <img src="imgz/icon-lets-talk-lg.jpg" class="lets-talk">
+    </div><!-- /col -->
+  </div><!-- /row -->
+</div><!-- /da-main-ova -->
+
+
+<div class="container v-pad build-border-red">
+  <div class="row build-border-blue">
+    <div class="col-12">
+    <P>Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+    <P>Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+    <P>Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+    <P>Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+    <p>Go!</p>
+    <p>Go!</p>
+    <p>Go!</p>
+    <p>Go!</p>
+    <p>Go!</p>
+    <p>Go!</p>
+    <p>Go!</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock %}{#-- /main --#}
+
+{% block foot %}
+  {% include "_partials/footer_get_results" %}
+  {{ parent() }}
+{% endblock %} {#-- /foot --#}

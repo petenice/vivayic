@@ -44,3 +44,49 @@
   .white;
   background: #5A89B4 url('../imgz/icon-arrow-grey-rollover-sm.png') no-repeat 200px -26px;
 }
+
+.button-results-arrow-grey {
+  border: 1px solid #CECECE;
+  .charcoal;
+  .f-size-extra-small;
+  background: #fff url('../imgz/icon-arrow-grey-rollover-sm.png') no-repeat 250px 37px;
+  @media @medium { background: #fff url('../imgz/icon-arrow-grey-rollover-sm.png') no-repeat 170px 37px;}
+  height: 86px;
+  width: 300px;
+  @media @medium {width: 200px;}
+  @media @small {width: 300px;}
+  @media @extra-small {width: 280px;}
+  padding:0;
+  text-align: left!important;
+  padding-top: 18px;
+  padding-left: 20px;
+  .mb40;
+  @media @small, @extra-small {.mb10;}
+  .results-but-copy {display: block; .f-size-small; .f-weight-sembold;}
+}
+.button-results-arrow-grey:hover {
+  .white;
+  background: #5A89B4 url('../imgz/icon-arrow-grey-rollover-sm.png') no-repeat 250px -11px;
+  @media @medium { background: #5A89B4 url('../imgz/icon-arrow-grey-rollover-sm.png') no-repeat 170px -11px;}
+}
+
+#super-footer-get-results {
+  .award-button {
+    height:212px;
+    @media @small {height:260px; width: 300px;}
+    @media @medium {height:212px; width: 200px;}
+    @media @small {height:260px; width: 300px;}
+    @media @extra-small {height:260px; width: 280px;}
+    padding: 0 70px;
+    @media @medium {padding: 0 20px;}
+    margin: 0 auto;
+    border: 1px solid #CECECE;
+    .bg-white;
+    p, a {.charcoal; .f-size-small-16; .f-weight-light; text-decoration: none;}
+    img {.mb10;}
+  }
+  .award-button:hover {
+    .bg-blue;
+    p, a {.white; text-decoration: none; .f-size-small-16; .f-weight-light;}
+  }
+}

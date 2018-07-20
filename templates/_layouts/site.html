@@ -27,6 +27,12 @@
 	{% endblock %}
 
 	{% block main %}
-		<p>this is default main</p>
 	{% endblock %}
-{% endblock %} {#-- body --#}
+
+{% endblock %} {#-- /body --#}
+
+{% block foot %}
+	{% include "_partials/footer_form_quote" %}
+	{% include "_partials/footer_global" %}
+	{% include "_partials/nav_overlay" %}
+{% endblock %} {#-- /foot --#}

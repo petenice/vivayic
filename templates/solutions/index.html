@@ -1,7 +1,7 @@
 {#
-# SOLUTIONS INDEX
-# /templates/solutions/index.html
-# niceworld 7.18.18
+SOLUTIONS INDEX
+/templates/solutions/index.html
+niceworld 7.18.18
 #}
 
 {% extends "_layouts/site" %}
@@ -15,6 +15,76 @@
 {% endblock %}
 
 {% block main %}
-  <p>this is solutions page</p>
-  {% include "_partials/footer-default" %}
-{% endblock %}
+
+<div id="hero-feature" class="container-fluid no-marr build-border-blue">
+  <h1>Solutions that balance<br class="br-sm-resp">
+  solid research and<br class="br-sm-resp">
+  lived experience</h1>
+</div>
+
+<div class="container da-main-ova v-pad build-border-red">
+  <div class="row no-padd build-border-yellow ">
+    <div class="col-12 col-lg-9">
+      <span class="breadcrumbs"><img src="/imgz/logo-vivayic-bug-red.svg"><p>what we do:</p></span>
+      <h2>Solutions</h2>
+      <p>Vivayic offers solutions which strike a balance between solid research and lived experience. We offer learner centered programs based on great ideas and solid fundamentals. Our goal is to drive through completion on time, on budget and most importantly with a positive impact on the learner and on the organization’s stated objectives.</p>
+    </div><!-- /col -->
+    <div class="col-12 col-lg-3 px-0 px-md-2 text-center">
+      <img src="imgz/icon-lets-talk-lg.jpg" class="lets-talk">
+    </div><!-- /col -->
+  </div><!-- /row -->
+</div><!-- /da-main-ova -->
+
+
+<div class="wrap solutions-whiteboard-bg build-border-red">
+  <div class="container v-pad build-border-red">
+    <div class="row build-border-blue">
+      <div class="col-12 col-lg-9 outline-15 mr-auto bg-white build-border-green">
+        <h2>Consulting Services</h2>
+        <h3>Learning Strategy</h3>
+        <p>Helping organizations develop a long-term plan and/or set of principles related to learning and growth; also includes elements of metrics and measuring success.</p>
+        <p>Go!</p>
+        <p>Go!</p>
+        <p>Go!</p>
+        <p>Go!</p>
+        <p>Go!</p>
+        <p>Go!</p>
+        <p>Go!</p>
+        <p>Go!</p>
+        <p>Go!</p>
+        <p>Go!</p>
+        <p>Go!</p>
+        <p>Go!</p>
+        <p>Go!</p>
+        <p>Go!</p>
+        <p>Go!</p>
+        <p>Go!</p>
+        <p>Go!</p>
+      </div>
+    </div>
+  </div>
+</div><!-- /wrap -->
+
+<div class="container v-pad build-border-red">
+  <div class="row build-border-blue">
+    <div class="col-12">
+      <h2>Consulting Services</h2>
+      <h3>Learning Strategy</h3>
+      <p>Helping organizations develop a long-term plan and/or set of principles related to learning and growth; also includes elements of metrics and measuring success.</p>
+      <P>Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+        <P>Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+          <P>Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+            <P>Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock %}{#-- /main --#}
+
+{% block foot %}
+  {% include "_partials/footer_get_results" %}
+  {{ parent() }}
+{% endblock %} {#-- /foot --#}

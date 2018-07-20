@@ -10,20 +10,20 @@
 
 @imgdir: ~"/assets/img";
 
-.build-border-red {border: solid red 1px;}
-.build-border-blue {border: solid blue 1px;}
-.build-border-green {border: solid green 1px;}
-.build-border-yellow {border: solid yellow 1px;}
-.build-border-pink {border: solid pink 1px;}
-.build-border-dashed {border: dashed black 1px;}
-
-.body-build-border {
-  @media @extra-large {border: solid 1px red;}
-  @media @large {border: solid 1px blue;}
-  @media @medium {border: solid 1px green;}
-  @media @small {border: solid 1px yellow;}
-  @media @extra-small {border: solid 1px pink;}
-}
+// .build-border-red {border: solid red 1px;}
+// .build-border-blue {border: solid blue 1px;}
+// .build-border-green {border: solid green 1px;}
+// .build-border-yellow {border: solid yellow 1px;}
+// .build-border-pink {border: solid pink 1px;}
+// .build-border-dashed {border: dashed black 1px;}
+//
+// .body-build-border {
+//   @media @extra-large {border: solid 1px red;}
+//   @media @large {border: solid 1px blue;}
+//   @media @medium {border: solid 1px green;}
+//   @media @small {border: solid 1px yellow;}
+//   @media @extra-small {border: solid 1px pink;}
+// }
 
 .cover-bg {
   -webkit-background-size: 100%;
@@ -36,9 +36,24 @@
   background-size: cover;
 }
 
+.contain-bg {
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+
 .flat-bg {
 }
 
+.rwd-break-sm, .br-sm-resp {
+  @media @small, @extra-small {display: none;}
+}
+
 .rwd-break-lg {
-  @media @large @medium @small @extra-small {display: none;}
+  @media @large, @medium, @small, @extra-small {display: none;}
 }
