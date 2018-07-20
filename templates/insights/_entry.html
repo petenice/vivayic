@@ -1,29 +1,66 @@
-{% extends "_layout" %}
+{#
+INSIGHTS ENTRY
+/templates/insights/_entry.html
+niceworld 7.18.18
+#}
+
+{% extends "_layouts/site" %}
+
+{% block head %}
+  {# {% set title = "{{ entry.title }}" %} #}
+  {{ parent() }}
+{% endblock %}
 
 {% block main %}
 
-<ul class="breadcrumbs">
-    <li><a href="/">Home</a></li>
-    <li><a href="/insights">Insights</a></li>
-    <li>{{ entry.title }}</li>
-</ul>
-<div class="full-bleed-header" style="background-size: 100%; height: 200px; background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(/images/brews/dark-horse-tres-blueberry-stout-2.jpg); background-repeat: no-repeat, repeat;">
-    <div class="page-title text-center">
-        <h2 class="logo"><span class="scripty">Insights</h2>
-        <p class="tagline reverse">tagline here, this is a test</p>
+{# <div id="hero-page" class="container-fluid no-marr build-border-blue">
+  <h1>test</h1>
+</div> #}
+
+
+
+<div id="home-insights" class="container build-border-red">
+  <div class="row insights-hero build-border-dashed">
+    <div class="col-12 no-padd no-marr">
+      <img src="{{ siteUrl }}imgz/insights-page-hero-placeholder.jpg" class="img-fluid">
     </div>
-</div>
-<div class="row">
-    <div class="large-12 small-12 columns">
-        <div class="intro large-12 small-12 columns text-center">
-            <p>{{ entry.body }}</p>
-        </div>
-
-        <h1>{{ entry.title }}</h1>
-        <p class="byline">by {{ entry.author.fullName }}</p>
-        {{ entry.body }}
+  </div>
+  <div class="row insights-container px-0 px-md-2 py-2 py-md-4 build-border-pink">
+    <div class="col-12 col-md-9 px-0 px-md-2">
+      <h2><a href="#">How Market Segmentation Strategy can be Powered by Clear Competency Models</a></h2>
+      <div class="read-time"><p>5 minute read</p></div>
+      <div class="excerpt"><p>Competency model <a href="#">development</a> doesn’t need to be a burdensome, many months process.</p></div>
+      <a href="#" class="btn button-arrow-grey mt40 d-none d-md-inline-block">Read More</a>
     </div>
+    <div class="col-12 col-md-3">
+      <div class="author-img"><a href="#"><img src="imgz/person-seth-lg.png"></a></div>
+      <div class="author-name"><p><a href="#">Seth Derner</a></p></div>
+      <a href="#" class="btn button-arrow-grey mt40 d-block d-md-none">Read More</a>
+    </div>
+  </div><!-- /row -->
+</div><!-- /home-insights -->
+
+<div class="container v-pad build-border-red">
+  <div class="row build-border-blue">
+    <div class="col-12">
+      <h1>{{ entry.title }}</h1>
+      {{ entry.body }}
+    </div>
+  </div>
 </div>
 
+<p>go!</p>
+<p>go!</p>
+<p>go!</p>
+<p>go!</p>
+<p>go!</p>
+<p>go!</p>
+<p>go!</p>
+<p>go!</p>
 
-{% endblock %}
+{% endblock %}{#-- /main --#}
+
+{% block foot %}
+  {% include "_partials/footer_get_results" %}
+  {{ parent() }}
+{% endblock %} {#-- /foot --#}

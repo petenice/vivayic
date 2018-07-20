@@ -58,8 +58,12 @@
 .no-text-shadow {text-shadow: none;}
 
 ::selection {
-  background: #ffb522; /* WebKit/Blink Browsers */
+  .bg-light-blue; /* WebKit/Blink Browsers */
 }
 ::-moz-selection {
-  background: #ffb522; /* Gecko Browsers */
+  .bg-light-blue; /* Gecko Browsers */
+}
+
+.outline-15 {outline: solid white 15px;
+  @media @medium, @small, @extra-small {outline: 0;}
 }

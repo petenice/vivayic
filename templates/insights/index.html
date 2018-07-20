@@ -1,22 +1,59 @@
-{% extends "_layout" %}
+{#
+INSIGHTS INDEX
+/templates/insights/index.html
+niceworld 7.18.18
+#}
+
+{% extends "_layouts/site" %}
+
+{% set pageName = 'Insights' %}
+
+{% block head %}
+  {% set title = "" %}
+  {{ parent() }}
+  <script>
+  // js
+  </script>
+{% endblock %}
+
 {% block main %}
-<ul class="breadcrumbs">
-    <li><a href="/">Home</a></li>
-    <li>Insights</li>
-</ul>
-<div class="full-bleed-header" style="background-size: 100%; height: 200px; background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(/images/brews/dark-horse-tres-blueberry-stout-2.jpg); background-repeat: no-repeat, repeat;">
-    <div class="page-title text-center">
-        <h2 class="logo"><span class="scripty">Insights</h2>
-        <p class="tagline reverse">This a tagline here</p>
-    </div>
+
+<div id="hero-feature" class="container-fluid no-marr build-border-blue">
+  <h1>{{pageName}}</h1>
 </div>
+
+<div class="container da-main-ova v-pad build-border-red">
+  <div class="row no-padd build-border-yellow ">
+    <div class="col-12 col-lg-9">
+      <span class="breadcrumbs"><img src="/imgz/logo-vivayic-bug-red.svg"><p>what we do:</p></span>
+      <h2>{{pageName}}</h2>
+      <p>Vivayic offers solutions which strike a balance between solid research and lived experience. We offer learner centered programs based on great ideas and solid fundamentals. Our goal is to drive through completion on time, on budget and most importantly with a positive impact on the learner and on the organization’s stated objectives.</p>
+    </div><!-- /col -->
+    <div class="col-12 col-lg-3 px-0 px-md-2 text-center">
+      <img src="imgz/icon-lets-talk-lg.jpg" class="lets-talk">
+    </div><!-- /col -->
+  </div><!-- /row -->
+</div><!-- /da-main-ova -->
+
 {% for item in craft.entries.section('insights').limit(10) %}
-<div class="row news-item first">
-    <div class="large-12 small-12 columns">
-        <h1><a href="{{ item.url }}">{{ item.title }}</a></h1>
-        <p class="byline">by {{ item.author.fullName }} on {{ item.postDate | date('F d, Y') }}</p>
-        {{ item.body }}
+<div class="container v-pad build-border-red">
+  <div class="row build-border-blue">
+    <div class="col-12">
+      <h1><a href="{{ item.url }}">{{ item.title }}</a></h1>
+      <p class="byline">by {{ item.author.fullName }} on {{ item.postDate | date('F d, Y') }}</p>
+      {{ item.body }}
     </div>
+  </div>
 </div>
 {% endfor %}
-{% endblock %}
+
+
+
+
+
+{% endblock %}{#-- /main --#}
+
+{% block foot %}
+  {% include "_partials/footer_get_results" %}
+  {{ parent() }}
+{% endblock %} {#-- /foot --#}

@@ -6,21 +6,31 @@
 	{% set bodyClass = entry is defined ? entry.section.handle : craft.request.firstSegment %}
 {% endif %}
 
+{% if (craft.request.getSegment('2') != '') and (craft.request.getSegment('1') == 'insights') %}
+	{% set pageClass = 'two-insights' %}
+{% elseif (craft.request.getSegment('2') != '') %}
+	{% set pageClass = 'two' %}
+{% else %}
+	{% set pageClass = 'one' %}
+{% endif %}
+
+
+
 {% block body %}
 	{% block nav %}
 			<div class="container">
 			<nav class="top-nav fixed-top row no-mar">
 					<div class="col-6 col-md-6 col-lg-4 align-self-center pl-4 build-border-blue">
-							<a href="/"><img src="imgz/logo-vivayic.svg"></a>
+							<a href="/"><img src="{{ siteUrl }}imgz/logo-vivayic.svg"></a>
 					</div>
 					<div class="col-lg-7 align-self-center no-padd d-none d-lg-block build-border-blue">
-							<a class="nav-link float-right" href="{{ siteUrl }}stories">Stories</a>
+							<a class="nav-link float-right" href="{{ siteUrl }}insights">Insights</a>
 							<a class="nav-link float-right" href="{{ siteUrl }}positive-impact">Positive Impact</a>
 							<a class="nav-link float-right" href="{{ siteUrl }}industries">Industries</a>
 							<a class="nav-link float-right" href="{{ siteUrl }}solutions">Solutions</a>
 					</div>
 					<div class="col-6 col-md-6 col-lg-1 align-self-center pr-2 build-border-blue">
-						<a class="nav-open float-right" href="#"><img src="imgz/icon-hamburger-search.svg"></a>
+						<a class="nav-open float-right" href="#"><img src="{{ siteUrl }}imgz/icon-hamburger-search.svg"></a>
 					</div>
 			</nav>
 			</div><!-- /container -->
