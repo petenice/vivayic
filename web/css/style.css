@@ -243,49 +243,6 @@ a:hover {
   /* Adds a hyphen where the word breaks, if supported (No Blink) */
 }
 /* MIXINS */
-.build-border-red {
-  border: solid red 1px;
-}
-.build-border-blue {
-  border: solid blue 1px;
-}
-.build-border-green {
-  border: solid green 1px;
-}
-.build-border-yellow {
-  border: solid yellow 1px;
-}
-.build-border-pink {
-  border: solid pink 1px;
-}
-.build-border-dashed {
-  border: dashed black 1px;
-}
-@media only screen and (min-width:1200px) and (max-width: 4000px) {
-  .body-build-border {
-    border: solid 1px red;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .body-build-border {
-    border: solid 1px blue;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .body-build-border {
-    border: solid 1px green;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .body-build-border {
-    border: solid 1px yellow;
-  }
-}
-@media only screen and (max-width: 575px) {
-  .body-build-border {
-    border: solid 1px pink;
-  }
-}
 .cover-bg {
   -webkit-background-size: 100%;
   -moz-background-size: 100%;
