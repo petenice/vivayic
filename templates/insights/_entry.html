@@ -7,7 +7,8 @@ niceworld 7.18.18
 {% extends "_layouts/site" %}
 
 {% block head %}
-  {# {% set title = "{{ entry.title }}" %} #}
+  {% if entry.seoTitle|length %}{% set title = entry.seoTitle %}{% else %}{% set title = entry.title %}{% endif %}
+  {% if entry.seoDescription|length %}{% set description = entry.seoDescription %}{% else %}{% set description = entry.insightExcerpt %}{% endif %}
   {{ parent() }}
 {% endblock %}
 
@@ -19,7 +20,14 @@ niceworld 7.18.18
 <div id="home-insights" class="container build-border-red">
   <div class="row insights-hero build-border-dashed">
     <div class="col-12 no-padd no-marr">
-      <img src="{{ siteUrl }}imgz/insights-page-hero-placeholder.jpg" class="img-fluid">
+      {% set hero = entry.insightsHero.first() %}
+      <img
+      sizes="100vw"
+      srcset="{{ hero.url('insightsHeroBig') }} 1205w,
+              {{ hero.url('insightsHeroMedium') }} 1000w,
+              {{ hero.url('insightsHeroSmall') }} 770w"
+      src="{{ hero.url('insightsHeroBig') }}" class="img-fluid" alt="{{ hero.title }}"
+      >
     </div>
   </div>
   <div class="row insights-container px-0 px-md-2 py-2 py-md-4 build-border-pink">
@@ -32,7 +40,7 @@ niceworld 7.18.18
       {% if rel %}
         {% set headshot = rel.talentHeadshot.first() %}
         <div class="author-img"><a href="{{ rel.url }}"><img src="{{ headshot.url }}"></a></div>
-        <div class="author-name"><a href="{{ rel.url }}"><p>{{rel.firstAndLast}}</a></p></div>
+        <div class="author-name"><a href="{{ rel.url }}"><p>{{rel.talentFirstAndLast}}</a></p></div>
       {% endif %}
     </div>
   </div><!-- /row -->
@@ -41,7 +49,6 @@ niceworld 7.18.18
 {% set step = 0 %}{# this is so we can loop the bullets #}
 
 {% for block in entry.insightsMain %}
-
 
   {% if block.type == 'introCopy' %}
   <div class="container v-pad-45 build-border-red">
@@ -58,8 +65,6 @@ niceworld 7.18.18
     </div>
   </div>
   {% endif %}
-
-
 
 
   {% if block.type == 'colorfulBullets' %}
@@ -109,35 +114,6 @@ niceworld 7.18.18
   {% endif %}
 
 {% endfor %}
-
-{# --
-<div class="container v-pad build-border-red">
-  <div class="row build-border-blue">
-    <div class="col-12">
-      <h1>{{ entry.title }}</h1>
-      {{ entry.body }}
-      {% if entry.insightsHero | length %}
-          {% for asset in entry.insightsHero %}
-              <img src="{{ asset.url('insightsThumb') }}">
-          {% endfor %}
-      {% endif %}
-
-      {% set image = entry.insightsHero.first() %}
-      <img src="{{ image.url }}">
-
-      <hr>
-    </div>
-  </div>
-</div>
--- #}
-
-
-
-
-      <hr>
-      {{entry.metaDescription}}
-
-
 
 
 

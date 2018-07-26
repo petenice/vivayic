@@ -147,7 +147,7 @@ a.nav-link:hover {.red;}
   }
 }
 
-#home-insights-excerpts {
+#home-insights-excerpts, .insights-index-excerpts, .insights-talent-excerpts {
   .row {margin-right: 10px; margin-left: 10px;}
   .read-time {
       display: inline-block;
@@ -169,6 +169,14 @@ a.nav-link:hover {.red;}
     @media @small, @extra-small {.mb20;}
   }
 }
+
+.insights-index-excerpts {
+  .row {margin: 5px 15px;}
+}
+.insights-talent-excerpts {
+  .row {margin: 0;}
+}
+
 
 
 #super-footer-get-results {
@@ -284,9 +292,9 @@ a.nav-link:hover {.red;}
 }
 
 #hero-page {
-  @media @extra-large, @large {height:1000px; .pt120; .prl40;}
-  @media @medium {height:715px; .pt120; .prl40;}
-  @media @small, @extra-small  {height:670px; .pt120;}
+  @media @extra-large, @large {height:400px; .pt120; .prl40;}
+  @media @medium {height:300px; .pt120; .prl40;}
+  @media @small, @extra-small  {height:200px; .pt120;}
 }
 
 .solutions-body {
@@ -328,7 +336,7 @@ a.nav-link:hover {.red;}
 }
 
 .talent-body {
-  #hero-feature {
+  #hero-feature, #hero-page {
       @media @extra-large, @large, @medium { background: #E3F2F1 url('../imgz/talent-hero-lg.jpg') no-repeat center center; .cover-bg;}
       @media @small, @extra-small {background:  #E3F2F1 url('../imgz/talent-hero-lg.jpg') no-repeat center center; .cover-bg;}
     h1 {
@@ -336,6 +344,7 @@ a.nav-link:hover {.red;}
       .black-text-shadow;
     }
   }
+  .da-main-ova {padding-bottom:0;}
 }
 
 .process-body {
@@ -356,6 +365,11 @@ body.insights-body, body.two-insights-page {
 body.two-insights-page {
   background-position: 0px -200px;
 }
+body.two-insights-paginate-page {
+  background-position: 0px -700px;
+  margin-top: 200px;
+}
+
 
 .insights-body {
   #hero-page {
@@ -383,10 +397,46 @@ body.two-insights-page {
 }
 
 .insights-big-quote {
-  p {
-  .f-size-extra-large;
-  .l-height-extra-large;
-  .f-weight-light-ital;
+  p {.f-weight-light-ital;}
+  @media @large, @extra-large {
+    p {
+    .f-size-extra-large;
+    .l-height-extra-large;
+    }
+  }
+  @media @small, @medium {
+    p {
+    .f-size-large;
+    .l-height-large;
+    }
+  }
+  @media @extra-small {
+    p {
+    .f-size-medium;
+    .l-height-medium;
+    }
+  }
+}
+
+.talent-big-quote {
+  p {.f-weight-light-ital;}
+  @media @large, @extra-large {
+    p {
+    .f-size-large;
+    .l-height-large;
+    }
+  }
+  @media @small, @medium {
+    p {
+    .f-size-medium;
+    .l-height-medium;
+    }
+  }
+  @media @extra-small {
+    p {
+    .f-size-medium;
+    .l-height-medium;
+    }
   }
 }
 
@@ -407,8 +457,6 @@ body.two-insights-page {
   @media @large, @extra-large {width: 60px; height: 60px; border-radius: 30px;}
   @media @small, @medium {width: 46px; height: 46px; border-radius: 23px;}
   @media @extra-small { width: 30px; height: 30px; border-radius: 15px;}
-
-
   P {
     .white;
     .f-weight-med;
@@ -423,4 +471,69 @@ body.two-insights-page {
       &.big-bullet-two-digis {.f-size-small; line-height: 30px;}
     }
   }
+}
+
+.entry-body {
+  p {margin-bottom: 2%;}
+}
+.entry-hashtags {
+  @media @large, @extra-large { p {.green; .f-size-medium; .l-height-medium;}}
+  @media @extra-small, @small, @medium { p {.green; .f-size-medium; .l-height-medium;}}
+}
+
+.pagination {
+  margin-bottom: 50px;
+  display: block;
+  text-align: center;
+    ul {
+      list-style-type: none;
+      display: inline-block;
+      text-align: center;
+      margin-top: 0;
+    }
+   li {
+    display: inline-block;
+    text-align: center;
+    font-family: "montserratbold", clean, sans-serif;
+    padding: 5px;
+   }
+   li.current {
+       .red;
+       border-bottom: 2px solid #cf6a34;
+   }
+}
+
+.pag-prev-link, .pag-next-link {
+    width: 20px;
+    height: auto;
+    font-size: 0;
+    position: relative;
+    display: block;
+}
+
+.pag-prev-link:after, .pag-next-link:after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 0;
+    top: 50%;
+    margin-top: -13px;
+    background: url(../imgz/icon-arrow.svg) no-repeat right center;
+    background-size: 20px 20px;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.pag-prev-link:after {
+    left: -5px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
 }

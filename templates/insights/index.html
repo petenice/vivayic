@@ -18,66 +18,111 @@ niceworld 7.18.18
 
 {% block main %}
 
-<div id="insights-index-head" class="container build-border-blue">
-  <div class="row h-100 build-border-yellow ">
-    <div class="col-12 col-lg-9 align-self-center">
-      <span class="breadcrumbs"><img src="/imgz/logo-vivayic-bug-red.svg"><p>what we do:</p></span>
-      <h2>Insights</h2>
-    </div><!-- /col -->
-    <div class="col-12 col-lg-3 px-0 px-md-2 align-self-center">
-      <p>search here</p>
-    </div><!-- /col -->
-  </div><!-- /row -->
-</div>
+{% paginate craft.entries.section('insights').limit('9') as insightEntries %}
 
-<div id="home-insights" class="container build-border-red">
-  <div class="row insights-hero build-border-dashed">
-    <div class="col-12 no-padd no-marr">
-      <img src="{{ siteUrl }}imgz/insights-page-hero-placeholder.jpg" class="img-fluid">
-    </div>
-  </div>
-  <div class="row insights-container px-0 px-md-2 py-2 py-md-4 build-border-pink">
-    <div class="col-12 col-md-9 px-0 px-md-2">
-      <h2><a href="#">How Market Segmentation Strategy can be Powered by Clear Competency Models</a></h2>
-      <div class="read-time"><p>5 minute read</p></div>
-      <div class="excerpt"><p>Competency model <a href="#">development</a> doesn’t need to be a burdensome, many months process.</p></div>
-      <a href="#" class="btn button-arrow-grey mt40 d-none d-md-inline-block">Read More</a>
-    </div>
-    <div class="col-12 col-md-3">
-      <div class="author-img"><a href="#"><img src="imgz/person-seth-lg.png"></a></div>
-      <div class="author-name"><p><a href="#">Seth Derner</a></p></div>
-      <a href="#" class="btn button-arrow-grey mt40 d-block d-md-none">Read More</a>
-    </div>
-  </div><!-- /row -->
-</div><!-- /home-insights -->
+  {% for insightEntry in insightEntries %}
+    {% if loop.first and craft.request.pageNum == 1 %}
 
-<div id="home-insights-excerpts" class="container build-border-blue">
-  <div class="row build-border-red">
-    <div class="insights-excerpt-tile col-12 col-md-4">
-      <img src="imgz/blog-thumb-1.jpg" class="img-fluid">
-      <div class="author-name"><p><a href="#">Whitney Thurmond</a></p></div>
-      <div class="read-time"><p>3 minute read</p></div>
-      <h4><a href="#">How Market Segmentation Strategy can be Powered by Clear Competency Models</a></h4>
-    </div>
-    <div class="insights-excerpt-tile col-12 col-md-4">
-      <img src="imgz/blog-thumb-2.jpg" class="img-fluid">
-      <div class="author-name"><p><a href="#">Miranda Carls</a></p></div>
-      <div class="read-time"><p>3 minute read</p></div>
-      <h4><a href="#">What a Cookbook From College Taught me About Improving Performance Support Tools</a></h4>
-    </div>
-    <div class="insights-excerpt-tile col-12 col-md-4">
-      <img src="imgz/blog-thumb-3.jpg" class="img-fluid">
-      <div class="author-name"><p><a href="#">Seth Derner</a></p></div>
-      <div class="read-time"><p>3 minute read</p></div>
-      <h4><a href="#">Celebrating with Audrey! (And the Story of how Fast Company Failed Me)</a></h4>
-    </div>
-  </div><!-- /row -->
+      <div id="insights-index-head" class="container build-border-blue">
+        <div class="row h-100 build-border-yellow ">
+          <div class="col-12 col-lg-9 align-self-center">
+            <span class="breadcrumbs"><img src="/imgz/logo-vivayic-bug-red.svg"><p>what we do:</p></span>
+            <h2>Insights</h2>
+          </div><!-- /col -->
+          <div class="col-12 col-lg-3 px-0 px-md-2 align-self-center">
+            <p>search here</p>
+          </div><!-- /col -->
+        </div><!-- /row -->
+      </div>
+
+
+      <div id="home-insights" class="container build-border-red">
+        <div class="row insights-hero build-border-dashed">
+          <div class="col-12 no-padd no-marr">
+            {% set hero = insightEntry.insightsHero.first() %}
+            <a href="{{ insightEntry.url }}">
+              <img
+              sizes="100vw"
+              srcset="{{ hero.url('insightsHeroBig') }} 1205w,
+                      {{ hero.url('insightsHeroMedium') }} 1000w,
+                      {{ hero.url('insightsHeroSmall') }} 770w"
+              src="{{ hero.url('insightsHeroBig') }}" class="img-fluid" alt="{{ hero.title }}"
+              >
+          </div>
+        </div>
+        <div class="row insights-container px-0 px-md-2 py-2 py-md-4 build-border-pink">
+          <div class="col-12 col-md-9 px-0 px-md-2">
+            <h2><a href="{{ insightEntry.url }}">{{ insightEntry.title }}</a></h2>
+            <div class="read-time"><p>{{ insightEntry.readTime }} minute read</p></div>
+            <div class="excerpt">{{ insightEntry.insightExcerpt }}</p></div>
+            <a href="{{ insightEntry.url }}" class="btn button-arrow-grey mt40 d-none d-md-inline-block">Read More</a>
+          </div>
+          <div class="col-12 col-md-3">
+            {% set rel = insightEntry.insightAuthor.one() %}
+            {% if rel %}
+              {% set headshot = rel.talentHeadshot.first() %}
+              <div class="author-img"><a href="{{ rel.url }}"><img src="{{ headshot.url }}"></a></div>
+              <div class="author-name"><a href="{{ rel.url }}"><p>{{rel.talentFirstAndLast}}</a></p></div>
+            {% endif %}
+            <a href="{{ insightEntry.url }}" class="btn button-arrow-grey mt40 d-block d-md-none">Read More</a>
+          </div>
+        </div><!-- /row -->
+      </div><!-- /home-insights -->
+      {% endif %}
+
+      {% if loop.index0 is divisible by(3) %}
+          <div class="insights-index-excerpts container v-pad build-border-dashed">
+          <div class="row build-border-red">
+      {% endif %}
+
+          <div class="insights-excerpt-tile col-12 col-md-4">
+            {% set thumbImage = insightEntry.insightsHero.first() %}
+            <a href="{{ insightEntry.url }}"><img src="{{ thumbImage.url('insightsThumb') }}" class="img-fluid"></a>
+            {% set rel = insightEntry.insightAuthor.one() %}
+              {% if rel %}
+                <div class="author-name"><a href="{{ rel.url }}"><p>{{rel.talentFirstAndLast}}</a></p></div>
+              {% endif %}
+              <div class="read-time"><p>{{ insightEntry.readTime }} minute read</p></div>
+            <h4><a href="{{ insightEntry.url }}">{{ insightEntry.title }}</a></h4>
+          </div>
+
+     {% if loop.index is divisible by(3) or loop.last %}
+        </div><!-- /row -->
+      </div><!-- /insights-index-excerpts -->
+     {% endif %}
+
+  {% endfor %}
+
+  {% if paginate.currentPage == 1 %}
   <div class="row justify-content-center my-3 my-md-5">
-    <a href="#" class="btn button-arrow-grey">Read More Insights</a>
+    <a href="{{ paginate.nextURL }}" class="btn button-arrow-grey">Read More Insights</a>
   </div>
+  {% endif %}
 
-</div><!-- /home-insights-excerpts -->
+  <div class="pagination">
 
+    {% if paginate.prevUrl %}
+      <li><a href="{{ paginate.prevURL }}" class="pag-prev-link">prev</a></li>
+    {% endif %}
+
+    {% for page, url in paginate.getPrevUrls(5) %}
+      <li><a href="{{url}}">{{page}}</a></li>
+    {% endfor %}
+
+    <li class="current">{{ paginate.currentPage }}</li>
+
+    {% for page, url in paginate.getNextUrls(5) %}
+        <li><a href="{{ url }}">{{ page }}</a></li>
+    {% endfor %}
+
+    {% if paginate.nextUrl %}
+      <li><a href="{{ paginate.nextURL }}" class="pag-next-link">next</a></li>
+    {% endif %}
+
+  </div><!-- /end pagination -->
+
+
+{#--
 {% for item in craft.entries.section('insights').limit(10) %}
 <div class="container v-pad build-border-red">
   <div class="row build-border-blue">
@@ -93,6 +138,8 @@ niceworld 7.18.18
   </div>
 </div>
 {% endfor %}
+ --#}
+
 
 
 

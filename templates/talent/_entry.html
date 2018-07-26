@@ -1,0 +1,100 @@
+{#
+TALENT ENTRY
+/templates/talent/_entry.html
+niceworld 7.26.18
+#}
+
+{% extends "_layouts/site" %}
+
+{% block head %}
+  {% if entry.seoTitle|length %}{% set title = entry.seoTitle %}{% else %}{% set title = entry.talentFirstAndLast %}{% endif %}
+  {% if entry.seoDescription|length %}{% set description = entry.seoDescription %}{% else %}{% set description = entry.talentFirstAndLast %}{% endif %}
+  {{ parent() }}
+{% endblock %}
+
+{% block main %}
+
+<div id="hero-page" class="container-fluid no-marr build-border-blue"></div>
+
+<div class="container da-main-ova v-pad build-border-red">
+  <div class="row no-padd build-border-yellow ">
+    <div class="col-12 col-lg-9">
+      <span class="breadcrumbs"><img src="/imgz/logo-vivayic-bug-red.svg"><p>Vivayic Talent:</p></span>
+      <h2>{{entry.talentFirstAndLast}}</h2>
+    </div><!-- /col -->
+    <div class="col-12 col-lg-3 px-0 px-md-2 text-center">
+      social icons
+    </div><!-- /col -->
+  </div><!-- /row -->
+</div><!-- /da-main-ova -->
+
+
+<div class="container v-pad build-border-red">
+  <div class="row h-100 build-border-blue">
+    <div class="col-12 col-md-4 py-2 text-center text-md-left build-border-yellow">
+      {% set headshot = entry.talentHeadshot.first() %}
+      <img src="{{ headshot.url('talentHeadshot260') }}" class="img-fluid">
+    </div>
+    <div class="col-12 col-md-8 talent-big-quote no-padd align-self-center build-border-yellow">
+      {{entry.talentBigQuote}}
+    </div>
+  </div>
+</div>
+
+<div class="container v-pad build-border-red">
+  <div class="row build-border-blue">
+    <div class="col-12 col-md-9 px-0 py-2 px-md-2">
+      <div class="entry-body">{{entry.talentBody}}</div>
+      <div class="entry-hashtags">{{entry.talentHashtags}}</div>
+
+    </div>
+    <div class="col-12 col-md-3 text-center text-md-left">
+      {% for sidebarpic in entry.talentSidebarImages %}
+        <img src="{{ sidebarpic.url('talentSidebarPic190') }}" class="img-fluid">
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="insights-talent-excerpts container mb40 build-border-red">
+  <div class="row build-border-blue">
+    <div class="col-12">
+
+      {% set relatedEntries = entry.talentArticlesBy.all() %}
+
+        {% if relatedEntries|length %}
+        <h2>Articles by {{ entry.talentFirstAndLast }}</h2>
+            {% for rel in relatedEntries %}
+
+              {% if loop.index0 is divisible by(3) %}
+                  <div class="row build-border-red">
+              {% endif %}
+
+                  <div class="col-12 col-md-4">
+                  {% set thumbImage = rel.insightsHero.first() %}
+                  <a href="{{ rel.url }}"><img src="{{ thumbImage.url('insightsThumb') }}" class="img-fluid"></a>
+                  <h4><a href="{{ rel.url }}">{{ rel.title }}</a></h4>
+                  <div class="author-name"><a href="{{ rel.url }}"><p>{{rel.talentFirstAndLast}}</a></p></div>
+                  <div class="read-time"><p>{{ rel.readTime }} minute read</p></div>
+                  </div>
+
+              {% if loop.index is divisible by(3) or loop.last %}
+                 </div><!-- /row -->
+              {% endif %}
+
+            {% endfor %}
+        {% endif %}
+
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock %}{#-- /main --#}
+
+{% block foot %}
+  {% include "_partials/footer_get_results" %}
+  {{ parent() }}
+{% endblock %} {#-- /foot --#}
