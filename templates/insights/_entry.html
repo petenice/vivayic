@@ -24,36 +24,122 @@ niceworld 7.18.18
   </div>
   <div class="row insights-container px-0 px-md-2 py-2 py-md-4 build-border-pink">
     <div class="col-12 col-md-9 px-0 px-md-2">
-      <h2><a href="#">How Market Segmentation Strategy can be Powered by Clear Competency Models</a></h2>
-      <div class="read-time"><p>5 minute read</p></div>
-      <div class="excerpt"><p>Competency model <a href="#">development</a> doesn’t need to be a burdensome, many months process.</p></div>
+      <h2><a href="#">{{ entry.title }}</a></h2>
+      <div class="date"><p>{{ entry.postDate | date("M d, Y") }}{% if entry.readTime | length %}</p></div><div class="read-time"><p>{{ entry.readTime }} minute read</p></div>{% endif %}
     </div>
     <div class="col-12 col-md-3">
-      <div class="author-img"><a href="#"><img src="{{ siteUrl }}imgz/person-seth-lg.png"></a></div>
-      <div class="author-name"><p><a href="#">Seth Derner</a></p></div>
+      {% set rel = entry.insightAuthor.one() %}
+      {% if rel %}
+        {% set headshot = rel.talentHeadshot.first() %}
+        <div class="author-img"><a href="{{ rel.url }}"><img src="{{ headshot.url }}"></a></div>
+        <div class="author-name"><a href="{{ rel.url }}"><p>{{rel.firstAndLast}}</a></p></div>
+      {% endif %}
     </div>
   </div><!-- /row -->
 </div><!-- /home-insights -->
 
+{% set step = 0 %}{# this is so we can loop the bullets #}
+
+{% for block in entry.insightsMain %}
+
+
+  {% if block.type == 'introCopy' %}
+  <div class="container v-pad-45 build-border-red">
+    <div class="col-12 col-md-9 insights-intro build-border-blue">
+    <p>{{ block.enterIntroCopy }}</p>
+    </div>
+  </div>
+  {% endif %}
+
+  {% if block.type == 'generalCopy' %}
+  <div class="container v-pad-45 {% if not loop.first %}loop-marr{% endif %} build-border-red">
+    <div class="col-12 col-md-9 build-border-blue">
+    {{ block.enterGeneralCopy }}
+    </div>
+  </div>
+  {% endif %}
+
+
+
+
+  {% if block.type == 'colorfulBullets' %}
+  {% set step = step + 1 %}
+  <div class="container v-pad-45 {% if not loop.first %}loop-marr{% endif %} build-border-red">
+    <div class="col-12 col-md-9 build-border-blue">
+    <div class="row">
+      <div class="col-2 d-flex no-padd justify-content-center build-border-yellow">
+      <div class="big-bullet {% if block.bulletColor | length %}{{ block.bulletColor }}{% else %}bg-charcoal{% endif %}"><p {% if step >="10"%}class="big-bullet-two-digis"{% endif %}>{{ step }}</p></div>
+      </div>
+      <div class="col-10 build-border-yellow">
+      {{ block.bulletCopy }} <p>{{ step }}</p>
+      </div>
+    </div><!--/ row -->
+  </div><!--/ col -->
+</div><!--/ container -->
+  {% endif %}
+
+
+  {% if block.type == 'bigQuote' %}
+  <div class="container v-pad-45 {% if not loop.first %}loop-marr{% endif %} build-border-red">
+    <div class="col-12 col-md-9 insights-big-quote build-border-blue">
+    {{ block.enterBigQuote }}
+    </div><!--/ col -->
+  </div><!--/ container -->
+  {% endif %}
+
+  {% if block.type == 'wideImage' %}
+  <div class="wrap
+  {% if block.wideImageBgColor | length %}{{ block.wideImageBgColor }}{% else %}bg-charcoal{% endif %}
+  {% if not loop.first %}loop-marr{% endif %} build-border-red">
+    <div class="container v-pad-45 build-border-red">
+      <div class="row align-items-end">
+      <div class="col-12 col-md-9 insights-big-image no-padd build-border-blue">
+        {% set blockImage = block.addWideImage.first() %}
+        <img src="{{ blockImage.url }}">
+      </div>
+      <div class="col-12 col-md-3 insights-big-image
+      {% if block.wideImageBgColor == "bg-light-blue" %}dark-text
+      {% elseif block.wideImageBgColor == "bg-light-green" %}dark-text
+      {% endif %} build-border-blue">
+        {{ block.wideImageCaption }}
+      </div>
+    </div><!-- /row -->
+  </div><!-- /container -->
+  </div><!-- /wrap -->
+  {% endif %}
+
+{% endfor %}
+
+{# --
 <div class="container v-pad build-border-red">
   <div class="row build-border-blue">
     <div class="col-12">
       <h1>{{ entry.title }}</h1>
       {{ entry.body }}
+      {% if entry.insightsHero | length %}
+          {% for asset in entry.insightsHero %}
+              <img src="{{ asset.url('insightsThumb') }}">
+          {% endfor %}
+      {% endif %}
+
+      {% set image = entry.insightsHero.first() %}
+      <img src="{{ image.url }}">
+
       <hr>
-      {{entry.metaDescription}}
     </div>
   </div>
 </div>
+-- #}
 
-<p>go!</p>
-<p>go!</p>
-<p>go!</p>
-<p>go!</p>
-<p>go!</p>
-<p>go!</p>
-<p>go!</p>
-<p>go!</p>
+
+
+
+      <hr>
+      {{entry.metaDescription}}
+
+
+
+
 
 {% endblock %}{#-- /main --#}
 

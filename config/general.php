@@ -43,6 +43,7 @@ return [
         // Base site URL
         //'siteUrl' => null,
         'siteUrl' => 'http://dev.vivayic.com',
+        'basePath' => '/var/www/dev.vivayic.com/public/',
 
     ],
 

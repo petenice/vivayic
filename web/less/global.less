@@ -19,7 +19,13 @@ a.nav-link {
 a.nav-link:hover {.red;}
 .nav-open {margin-right: 2%;}
 
+.date {
+  display: inline-block;
+  p {.f-size-extra-small; .mr10;}
+}
+
 .read-time {
+    display: inline-block;
     background: url('../imgz/icon-star.png') no-repeat left 2px;
     p {.f-size-extra-small; .pl20;}
   }
@@ -121,7 +127,8 @@ a.nav-link:hover {.red;}
   .insights-container {
       position: relative;
       top: -60px;
-        @media @small, @extra-small {top: 0px;}
+      margin-bottom: -60px;
+        @media @small, @extra-small {top: 0px; margin-bottom: 0;}
       margin-left: 30px;
       margin-right: 30px;
         @media @small, @extra-small {margin: 0px;}
@@ -346,6 +353,9 @@ body.insights-body, body.two-insights-page {
   @media @small, @medium, @large, @extra-large {background: #FFF url('../imgz/insights-bg-tile.jpg') repeat-x;}
   @media @extra-small { background: #fff;}
 }
+body.two-insights-page {
+  background-position: 0px -200px;
+}
 
 .insights-body {
   #hero-page {
@@ -362,5 +372,55 @@ body.insights-body, body.two-insights-page {
 }
 
 #insights-page-head {
-  margin-top:170px;  
+  margin-top:170px;
+}
+
+.insights-intro {
+  p {
+  .f-size-medium;
+  .l-height-medium;
+  }
+}
+
+.insights-big-quote {
+  p {
+  .f-size-extra-large;
+  .l-height-extra-large;
+  .f-weight-light-ital;
+  }
+}
+
+.insights-big-image {
+  img {width:100%;}
+  p {
+    .f-size-extra-small;
+    .white;
+    .mb10; .ml10;
+  }
+  a {.white; text-decoration: underline;}
+  &.dark-text { p, a {.charcoal; } }
+}
+
+.big-bullet {
+  text-align: center;
+  display: block;
+  @media @large, @extra-large {width: 60px; height: 60px; border-radius: 30px;}
+  @media @small, @medium {width: 46px; height: 46px; border-radius: 23px;}
+  @media @extra-small { width: 30px; height: 30px; border-radius: 15px;}
+
+
+  P {
+    .white;
+    .f-weight-med;
+    @media @large, @extra-large {.f-size-extra-large; line-height: 56px;
+      &.big-bullet-two-digis {.f-size-large; line-height: 62px;}
+    }
+    @media @small, @medium {.f-size-large; line-height: 47px;
+      &.big-bullet-two-digis {.f-size-large-32; line-height: 44px;}
+    }
+    @media @extra-small {.f-weight-light;
+      .f-size-small; line-height: 30px;
+      &.big-bullet-two-digis {.f-size-small; line-height: 30px;}
+    }
+  }
 }
