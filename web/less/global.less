@@ -40,6 +40,12 @@ a.nav-link:hover {.red;}
   @media @small, @extra-small {.mt20; }
 }
 
+.insight-credit-foot {
+  .author-img {}
+ .author-name {text-align: left;}
+}
+
+
 .home-features {
   h2 {
       @media @large {.f-size-large; .l-height-large;}
@@ -171,10 +177,11 @@ a.nav-link:hover {.red;}
 }
 
 .insights-index-excerpts {
-  .row {margin: 5px 15px;}
+  .row {margin: 25px 15px;}
 }
 .insights-talent-excerpts {
   .row {margin: 0;}
+  .col-12 {padding: 0 5px;}
 }
 
 
@@ -360,13 +367,18 @@ a.nav-link:hover {.red;}
 
 body.insights-body, body.two-insights-page {
   @media @small, @medium, @large, @extra-large {background: #FFF url('../imgz/insights-bg-tile.jpg') repeat-x;}
-  @media @extra-small { background: #fff;}
+  @media @extra-small {background: #FFF url('../imgz/insights-bg-tile.jpg') repeat-x;}
 }
 body.two-insights-page {
   background-position: 0px -200px;
+  @media @extra-large {background-position: 0px -200px;}
+  @media @large {background-position: 0px -320px;}
+  @media @medium {background-position: 0px -460px;}
+  @media @small {background-position: 0px -660px;}
+  @media @extra-small {background-position: 0px -860px;}
 }
 body.two-insights-paginate-page {
-  background-position: 0px -700px;
+  background-position: 0px -850px;
   margin-top: 200px;
 }
 
@@ -387,6 +399,7 @@ body.two-insights-paginate-page {
 
 #insights-page-head {
   margin-top:170px;
+  @media @extra-small, @small {margin-top: 92px;}
 }
 
 .insights-intro {

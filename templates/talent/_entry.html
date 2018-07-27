@@ -56,14 +56,14 @@ niceworld 7.26.18
   </div>
 </div>
 
-<div class="insights-talent-excerpts container mb40 build-border-red">
+<div class="insights-talent-excerpts container mtb40 build-border-red">
   <div class="row build-border-blue">
     <div class="col-12">
 
       {% set relatedEntries = entry.talentArticlesBy.all() %}
 
         {% if relatedEntries|length %}
-        <h2>Articles by {{ entry.talentFirstAndLast }}</h2>
+        <h2 class="mb20">Articles by {{ entry.talentFirstAndLast }}</h2>
             {% for rel in relatedEntries %}
 
               {% if loop.index0 is divisible by(3) %}

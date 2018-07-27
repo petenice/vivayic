@@ -246,49 +246,6 @@ a:hover {
   /* Adds a hyphen where the word breaks, if supported (No Blink) */
 }
 /* MIXINS */
-.build-border-red {
-  border: solid red 1px;
-}
-.build-border-blue {
-  border: solid blue 1px;
-}
-.build-border-green {
-  border: solid green 1px;
-}
-.build-border-yellow {
-  border: solid yellow 1px;
-}
-.build-border-pink {
-  border: solid pink 1px;
-}
-.build-border-dashed {
-  border: dashed black 1px;
-}
-@media only screen and (min-width:1200px) and (max-width: 4000px) {
-  .body-build-border {
-    border: solid 1px red;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .body-build-border {
-    border: solid 1px blue;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .body-build-border {
-    border: solid 1px green;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .body-build-border {
-    border: solid 1px yellow;
-  }
-}
-@media only screen and (max-width: 575px) {
-  .body-build-border {
-    border: solid 1px pink;
-  }
-}
 .cover-bg {
   -webkit-background-size: 100%;
   -moz-background-size: 100%;
@@ -354,10 +311,10 @@ a:hover {
   padding-left: 45px;
   padding-right: 45px;
 }
-@media only screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) {
   .v-pad-45 {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width:1200px) and (max-width: 4000px) {
@@ -1140,6 +1097,9 @@ a.nav-link:hover {
     margin-top: 20px;
   }
 }
+.insight-credit-foot .author-name {
+  text-align: left;
+}
 .home-features h2 {
   margin-bottom: 2%;
 }
@@ -1554,10 +1514,13 @@ a.nav-link:hover {
   }
 }
 .insights-index-excerpts .row {
-  margin: 5px 15px;
+  margin: 25px 15px;
 }
 .insights-talent-excerpts .row {
   margin: 0;
+}
+.insights-talent-excerpts .col-12 {
+  padding: 0 5px;
 }
 #super-footer-get-results {
   background-color: #E3F2F1;
@@ -1992,14 +1955,39 @@ a.nav-link:hover {
 @media only screen and (max-width: 575px) {
   body.insights-body,
   body.two-insights-page {
-    background: #fff;
+    background: #FFF url('../imgz/insights-bg-tile.jpg') repeat-x;
   }
 }
 body.two-insights-page {
   background-position: 0px -200px;
 }
+@media only screen and (min-width:1200px) and (max-width: 4000px) {
+  body.two-insights-page {
+    background-position: 0px -200px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  body.two-insights-page {
+    background-position: 0px -320px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  body.two-insights-page {
+    background-position: 0px -460px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  body.two-insights-page {
+    background-position: 0px -660px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  body.two-insights-page {
+    background-position: 0px -860px;
+  }
+}
 body.two-insights-paginate-page {
-  background-position: 0px -700px;
+  background-position: 0px -850px;
   margin-top: 200px;
 }
 #insights-index-head {
@@ -2010,6 +1998,11 @@ body.two-insights-paginate-page {
 }
 #insights-page-head {
   margin-top: 170px;
+}
+@media only screen and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) {
+  #insights-page-head {
+    margin-top: 92px;
+  }
 }
 .insights-intro p {
   font-size: 24px;

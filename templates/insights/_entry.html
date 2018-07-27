@@ -39,7 +39,7 @@ niceworld 7.18.18
       {% set rel = entry.insightAuthor.one() %}
       {% if rel %}
         {% set headshot = rel.talentHeadshot.first() %}
-        <div class="author-img"><a href="{{ rel.url }}"><img src="{{ headshot.url }}"></a></div>
+        <div class="author-img"><a href="{{ rel.url }}"><img src="{{ headshot.url('talentHeadshot260') }}"></a></div>
         <div class="author-name"><a href="{{ rel.url }}"><p>{{rel.talentFirstAndLast}}</a></p></div>
       {% endif %}
     </div>
@@ -76,7 +76,7 @@ niceworld 7.18.18
       <div class="big-bullet {% if block.bulletColor | length %}{{ block.bulletColor }}{% else %}bg-charcoal{% endif %}"><p {% if step >="10"%}class="big-bullet-two-digis"{% endif %}>{{ step }}</p></div>
       </div>
       <div class="col-10 build-border-yellow">
-      {{ block.bulletCopy }} <p>{{ step }}</p>
+      {{ block.bulletCopy }}
       </div>
     </div><!--/ row -->
   </div><!--/ col -->
@@ -114,6 +114,24 @@ niceworld 7.18.18
   {% endif %}
 
 {% endfor %}
+
+<div class="container insight-credit-foot v-pad-45 build-border-pink">
+  <div class="row h-100">
+    <div class="col-12 col-lg-6 d-table align-self-center build-border-blue">
+      <div class="row align-items-center">
+      {% set rel = entry.insightAuthor.one() %}
+      {% if rel %}
+        {% set headshot = rel.talentHeadshot.first() %}
+          <div class="col-4 author-img"><a href="{{ rel.url }}"><img src="{{ headshot.url('talentHeadshot260') }}"></a></div>
+          <div class="col-8 author-name"><a href="{{ rel.url }}"><p>{{rel.talentFirstAndLast}}</a></p></div>
+      {% endif %}
+      </div>
+    </div>
+    <div class="col-12 col-lg-6 align-self-center build-border-blue">
+      <a href="{{ siteUrl }}insights" class="btn button-arrow-grey">Return to Insights</a>
+    </div>
+  </div><!-- /row -->
+</div><!-- /container -->
 
 
 
