@@ -6,6 +6,8 @@ niceworld 7.18.18
 
 {% extends "_layouts/site" %}
 
+
+
 {% block head %}
   {% if entry.seoTitle|length %}{% set title = entry.seoTitle %}{% else %}{% set title = entry.title %}{% endif %}
   {% if entry.seoDescription|length %}{% set description = entry.seoDescription %}{% else %}{% set description = entry.insightExcerpt %}{% endif %}
@@ -13,7 +15,6 @@ niceworld 7.18.18
 {% endblock %}
 
 {% block main %}
-
 
 <div id="insights-page-head" class="container build-border-blue"></div>
 
@@ -40,7 +41,7 @@ niceworld 7.18.18
       {% if rel %}
         {% set headshot = rel.talentHeadshot.first() %}
         <div class="author-img"><a href="{{ rel.url }}"><img src="{{ headshot.url('talentHeadshot260') }}"></a></div>
-        <div class="author-name"><a href="{{ rel.url }}"><p>{{rel.talentFirstAndLast}}</a></p></div>
+        <div class="author-name"><a href="{{ rel.url }}"><p>{{ rel.talentFirstAndLast }}</a><br> {{ rel.talentTitle }}</p></div>
       {% endif %}
     </div>
   </div><!-- /row -->
@@ -116,23 +117,29 @@ niceworld 7.18.18
 {% endfor %}
 
 <div class="container insight-credit-foot v-pad-45 build-border-pink">
-  <div class="row h-100">
-    <div class="col-12 col-lg-6 d-table align-self-center build-border-blue">
-      <div class="row align-items-center">
+  <div class="row no-marr h-100">
+    <div class="col-12 col-lg-6 build-border-blue">
+      <div class="row no-marr align-items-center">
       {% set rel = entry.insightAuthor.one() %}
       {% if rel %}
         {% set headshot = rel.talentHeadshot.first() %}
           <div class="col-4 author-img"><a href="{{ rel.url }}"><img src="{{ headshot.url('talentHeadshot260') }}"></a></div>
-          <div class="col-8 author-name"><a href="{{ rel.url }}"><p>{{rel.talentFirstAndLast}}</a></p></div>
+          <div class="col-8 author-name"><a href="{{ rel.url }}">
+            <p>{{rel.talentFirstAndLast}}</a></p>
+            <p>{{rel.talentTitle}}</a></p>
+            <p>social icons</p>
+          </div>
       {% endif %}
       </div>
     </div>
-    <div class="col-12 col-lg-6 align-self-center build-border-blue">
+    <div class="col-12 col-lg-6 align-self-center text-center build-border-blue">
       <a href="{{ siteUrl }}insights" class="btn button-arrow-grey">Return to Insights</a>
     </div>
   </div><!-- /row -->
 </div><!-- /container -->
 
+
+{% include "_partials/you_might_like_share" %}
 
 
 {% endblock %}{#-- /main --#}

@@ -94,7 +94,7 @@ niceworld 7.18.18
   {% endfor %}
 
   {% if paginate.currentPage == 1 %}
-  <div class="row justify-content-center my-3 my-md-5">
+  <div class="row no-padd no-marr justify-content-center my-3 my-md-5">
     <a href="{{ paginate.nextURL }}" class="btn button-arrow-grey">Read More Insights</a>
   </div>
   {% endif %}
@@ -120,25 +120,6 @@ niceworld 7.18.18
     {% endif %}
 
   </div><!-- /end pagination -->
-
-
-{#--
-{% for item in craft.entries.section('insights').limit(10) %}
-<div class="container v-pad build-border-red">
-  <div class="row build-border-blue">
-    <div class="col-12">
-      <h1><a href="{{ item.url }}">{{ item.title }}</a></h1>
-      <p class="byline">by {{ item.author.fullName }} on {{ item.postDate | date('F d, Y') }}</p>
-      {{ item.body }}
-
-      {% set image = item.insightsHero.first() %}
-      <img src="{{ image.url('insightsThumb') }}">
-
-    </div>
-  </div>
-</div>
-{% endfor %}
- --#}
 
 
 

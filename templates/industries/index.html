@@ -27,15 +27,37 @@ niceworld 7.18.18
 <div class="container da-main-ova v-pad build-border-red">
   <div class="row no-padd build-border-yellow ">
     <div class="col-12 col-lg-9">
-      <span class="breadcrumbs"><img src="/imgz/logo-vivayic-bug-red.svg"><p>what we do:</p></span>
-      <h2>{{pageName}}</h2>
-      <p>Vivayic offers solutions which strike a balance between solid research and lived experience. We offer learner centered programs based on great ideas and solid fundamentals. Our goal is to drive through completion on time, on budget and most importantly with a positive impact on the learner and on the organization’s stated objectives.</p>
+      <span class="breadcrumbs"><a href="{{ siteUrl }}"><img src="/imgz/logo-vivayic-bug-red.svg"></a>
+      <p><a href="{{ siteUrl }}{{ craft.request.getSegment(1) }}">who we help:</a></p>
+
+      <h2>{{ pageName }}</h2>
+      <p>Vivayic draws on knowledge gained from deeply rooted experience across a wide range of industries. We understand what you’re trying to accomplish because we’ve been there (and we’ve done that). This informs a unique perspective and helps us to solve problems like a good partner should - with insight, innovation and efficiency.</p>
     </div><!-- /col -->
     <div class="col-12 col-lg-3 px-0 px-md-2 text-center">
       <img src="imgz/icon-lets-talk-lg.jpg" class="lets-talk">
     </div><!-- /col -->
   </div><!-- /row -->
 </div><!-- /da-main-ova -->
+
+
+{% set industries = craft.entries.section('industries') %}
+
+{% nav industry in industries %}
+
+    {% if industry.level == 1 %}
+      <h4>{{ industry.title }}</h4><br>
+      {{ industry.excerpt }}<br>
+      <a href="{{ industry.url }}">read more</a>
+    {% else %}
+      <ul>
+        <p>{{ industry.title }}<br>
+          {{ industry.body }}<br>
+          <a href="{{ industry.url }}">read more</a></p>
+      </ul>
+    {% endif %}
+
+{% endnav %}
+
 
 
 <div class="container v-pad build-border-red">
@@ -51,6 +73,8 @@ niceworld 7.18.18
     </div>
   </div>
 </div>
+
+
 
 
 

@@ -1,0 +1,108 @@
+{#
+INDUSTRIES ENTRY
+/templates/industries/_entry.html
+niceworld 8.1.18
+#}
+
+{% extends "_layouts/site" %}
+
+{% block head %}
+  {% if entry.seoTitle|length %}{% set title = entry.seoTitle %}{% else %}{% set title = entry.title %}{% endif %}
+  {% if entry.seoDescription|length %}{% set description = entry.seoDescription %}{% else %}{% set description = entry.insightExcerpt %}{% endif %}
+  {{ parent() }}
+{% endblock %}
+
+{% block main %}
+
+<div id="hero-feature" class="{{craft.request.lastSegment}} container-fluid no-marr build-border-blue"></div>
+
+<div class="container da-main-ova v-pad build-border-red">
+  <div class="row no-padd build-border-yellow ">
+    <div class="col-12 col-lg-9">
+      <span class="breadcrumbs"><a href="{{ siteUrl }}"><img src="/imgz/logo-vivayic-bug-red.svg"></a>
+        <p><a href="{{ siteUrl }}{{ craft.request.getSegment(1) }}">who we help:</a></p>
+      {% set parent = craft.entries.ancestorOf(entry).level(1).first() %}
+        {% if parent|length %}
+        <h3><a href="{{ parent.url }}">{{ parent.title }}</a></h3>
+        {% endif %}
+      </span>
+      <h2>{{ entry.title }}</h2>
+      <p>{{ entry.excerpt }}</p>
+    </div><!-- /col -->
+    <div class="col-12 col-lg-3 px-0 px-md-2 text-center">
+      <img src="{{ siteUrl }}imgz/icon-lets-talk-lg.jpg" class="lets-talk">
+    </div><!-- /col -->
+  </div><!-- /row -->
+</div><!-- /da-main-ova -->
+
+          {% for block in entry.industriesGrid %}
+
+            {% if block.type == 'challengesResults' %}
+            <div class="container v-pad build-border-red">
+              <div class="row">
+                <div class="col-12 col-md-6 bg-light-blue build-border-blue">
+                  <p>Your Challenge</p>
+                  <h3>{{ block.challenge }}</h3>
+                </div>
+                <div class="col-12 col-md-6 bg-light-green build-border-blue">
+                  <p>How we drive results</p>
+                  <ul>
+                  {% for row in block.results %}
+                    <li class="drive-results">{{ row.resultsRow }}</li>
+                  {% endfor %}
+                  </ul>
+                </div>
+              </div><!-- /row -->
+            </div><!-- /container -->
+            {% endif %}
+
+          {% endfor %}
+
+
+          {% set relatedSpecialist = entry.industriesSpecialist.all() %}
+          {% if relatedSpecialist|length %}
+          <div class="container v-pad build-border-red">
+            <div class="row">
+            <h2>Team Specialists</h2>
+            </div>
+          </div>
+
+            {% for rel in relatedSpecialist %}
+            <div class="container industry-specialist v-pad build-border-red">
+              <div class="row">
+                <div class="col-12 col-md-4 d-flex align-items-center justify-content-center bg-light-blue">
+                {% set thumbImage = rel.talentHeadshot.first() %}
+                  <a href="{{ rel.url }}"><img src="{{ thumbImage.url('insightsThumb') }}" class="img-fluid m-auto"></a>
+                </div>
+                <div class="col-12 col-md-8 align-self-center bg-light-green">
+                  <h4><a href="{{ rel.url }}">{{ rel.title }}</a></h4>
+                  <p>{{rel.talentBody | chop(limit=140, unit='w', allowedTags="<p>", append='...') }}</p>
+                  <p><a href="{{ rel.url }}"><img src="{{ siteUrl }}imgz/read-more-arrow-extra-small.svg"></a></p>
+                </div>
+              </div><!-- /row -->
+            </div><!-- /container -->
+          {% endfor %}
+        {% endif %}
+
+
+
+    {#--
+    <div class="container v-pad build-border-red">
+      <div class="row build-border-blue">
+        <div class="col-12">
+          {{ entry.title }}
+          {{ entry.body }}
+          {{ entry.excerpt }}
+        </div>
+      </div>
+    </div>
+    --#}
+
+
+{% endblock %}{#-- /main --#}
+
+
+{% block foot %}
+  {% include "_partials/footer_get_results" %}
+  {{ parent() }}
+{% endblock %} {#-- /foot --#}

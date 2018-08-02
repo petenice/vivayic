@@ -12,16 +12,22 @@ input {
 	transition: background-color 0.2s;
 }
 
+
+body.insights-body .footer_contact_form {
+	padding-left: 30px; padding-right: 30px;
+	@media @extra-small, @small {padding-left: 0; padding-right: 0;}
+}
+
 .footer_contact_form {
     width: 100%;
 		.mtb40;
 		.mr40;
 		@media @medium {.mr20;}
 		@media @small, @extra-small {.mr0;}
-		@media @extra-large {max-width: 500px;}
-		@media @large {max-width: 411px;}
-		@media @medium {max-width: 340px;}
-		@media @small {max-width: 540px;}
+		@media @extra-large {max-width: 488px;}
+		@media @large {max-width: 395px;}
+		@media @medium {max-width: 294px;}
+		@media @small {max-width: 488px;}
 	 h3 {
 	    font-family: @o;
 			.f-size-medium;
@@ -31,6 +37,7 @@ input {
 		}
 	 form {.mt20;}
 }
+
 .txt[type="text"] {
     border: 1px solid #ccc;
 		border-radius: 4px;
