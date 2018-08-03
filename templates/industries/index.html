@@ -29,9 +29,8 @@ niceworld 7.18.18
     <div class="col-12 col-lg-9">
       <span class="breadcrumbs"><a href="{{ siteUrl }}"><img src="/imgz/logo-vivayic-bug-red.svg"></a>
       <p><a href="{{ siteUrl }}{{ craft.request.getSegment(1) }}">who we help:</a></p>
-
       <h2>{{ pageName }}</h2>
-      <p>Vivayic draws on knowledge gained from deeply rooted experience across a wide range of industries. We understand what you’re trying to accomplish because we’ve been there (and we’ve done that). This informs a unique perspective and helps us to solve problems like a good partner should - with insight, innovation and efficiency.</p>
+      <div class="section-intro"><p>Vivayic draws on knowledge gained from deeply rooted experience across a wide range of industries. We understand what you’re trying to accomplish because we’ve been there (and we’ve done that). This informs a unique perspective and helps us to solve problems like a good partner should - with insight, innovation and efficiency.</p></div>
     </div><!-- /col -->
     <div class="col-12 col-lg-3 px-0 px-md-2 text-center">
       <img src="imgz/icon-lets-talk-lg.jpg" class="lets-talk">
@@ -44,40 +43,84 @@ niceworld 7.18.18
 
 {% nav industry in industries %}
 
-    {% if industry.level == 1 %}
-      <h4>{{ industry.title }}</h4><br>
-      {{ industry.excerpt }}<br>
-      <a href="{{ industry.url }}">read more</a>
-    {% else %}
-      <ul>
-        <p>{{ industry.title }}<br>
-          {{ industry.body }}<br>
-          <a href="{{ industry.url }}">read more</a></p>
-      </ul>
+    {% if loop.index == 1 %}
+    <div class="container mtb20 v-pad build-border-red">
+      <div class="row build-border-blue">
+        <div class="col-12 col-md-9">
+    {% endif %}
+
+    {% if loop.index == 6 %}
+    <div class="wrap industries-office-bg build-border-red">
+    <div class="container mtb20 v-pad build-border-red">
+      <div class="row build-border-blue">
+        <div class="col-12 col-md-9 bg-white">
+    {% endif %}
+
+    {% if loop.index == 8 %}
+    <div class="container mtb20 v-pad build-border-red">
+      <div class="row build-border-blue">
+        <div class="col-12 col-md-9">
+    {% endif %}
+
+    {% if loop.index == 14 %}
+    <div class="wrap industries-cool-window-bg build-border-red">
+      <div class="container mtb20 v-pad build-border-red">
+        <div class="row build-border-blue">
+          <div class="col-12 col-md-9  bg-white">
+    {% endif %}
+
+    {% if loop.index == 17 %}
+    <div class="container mtb20 v-pad build-border-red">
+      <div class="row build-border-blue">
+        <div class="col-12 col-md-9">
+    {% endif %}
+
+          {% if industry.level == 1 %}
+            <h3 class="list-view">{{ industry.title }}</h3>
+            {{ industry.excerpt }}
+            <p class="mb20"><a href="{{ industry.url }}" class="add-arrow">read more</a></p>
+          {% else %}
+              <div class="wrap-btn">
+                <a href="{{industry.url}}" class="btn button-fixed-arrow-grey">{{ industry.title }}</a>
+              </div>
+          {% endif %}
+
+
+    {% if loop.index == 5 %}
+        </div><!-- /col -->
+      </div><!-- /row -->
+    </div><!-- /container -->
+    {% endif %}
+
+    {% if loop.index == 7 %}
+          </div><!-- /col -->
+        </div><!-- /row -->
+      </div><!-- /container -->
+    </div><!-- /wrap -->
+    {% endif %}
+
+    {% if loop.index == 13 %}
+        </div><!-- /col -->
+      </div><!-- /row -->
+    </div><!-- /container -->
+    {% endif %}
+
+    {% if loop.index == 16 %}
+        </div><!-- /col -->
+      </div><!-- /row -->
+    </div><!-- /container -->
+    </div><!-- /wrap -->
+    {% endif %}
+
+    {% if loop.index == 21 %}
+        </div><!-- /col -->
+      </div><!-- /row -->
+    </div><!-- /container -->
     {% endif %}
 
 {% endnav %}
 
-
-
-<div class="container v-pad build-border-red">
-  <div class="row build-border-blue">
-    <div class="col-12">
-      <h2>Consulting Services</h2>
-      <h3>Learning Strategy</h3>
-      <p>Helping organizations develop a long-term plan and/or set of principles related to learning and growth; also includes elements of metrics and measuring success.</p>
-      <P>Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-        <P>Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-          <P>Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-            <P>Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-    </div>
-  </div>
-</div>
-
-
-
-
-
+<div class="mtb100"></div>
 
 {% endblock %}{#-- /main --#}
 

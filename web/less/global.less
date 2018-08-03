@@ -321,6 +321,10 @@ a.nav-link:hover {.red;}
   a:hover {.green;}
 }
 
+.meta {
+  p {.f-size-small-16; .mb0;}
+}
+
 #hero-feature {
   @media @extra-large, @large {height:1000px; .pt120; .prl40;}
   @media @medium {height:715px; .pt120; .prl40;}
@@ -371,15 +375,30 @@ a.nav-link:hover {.red;}
     @media @small, @extra-small {background:  #E3F2F1 url('../imgz/industries-manufacture-hero-lg.jpg') no-repeat center center; .cover-bg;}
   }
 
-  .da-main-ova {padding-bottom:0;}
+  .da-main-ova {padding-bottom:30px;}
   .industry-specialist { p {.f-size-small; .l-height-medium-24;}}
-  li.drive-results { .f-size-medium; .l-height-medium; }
+  ul.drive-results {margin-left:-14px; .mt20;}
+  li.drive-results { .f-size-medium; .l-height-medium; .black; .mb20;}
+  p.chalres { .f-size-small-16; .black;}
+
+  h3.list-view {.f-size-medium; .f-weight-sembold; .mb10; .mt20; display: inline-block;}
+  h3.challenge {.f-size-medium; .f-weight-sembold; .mb10; .mt20;}
+  h4.specialist {.f-size-medium; .f-weight-sembold; .mtb20;}
+
+  .industries-office-bg {
+      @media @extra-large, @large, @medium { background: #E3F2F1 url('../imgz/industries-office-lg.jpg') no-repeat center center; .cover-bg;}
+      @media @small, @extra-small {background:  #E3F2F1 url('../imgz/industries-office-lg.jpg') no-repeat center center; .cover-bg;}
+    }
+  .industries-cool-window-bg {
+    @media @extra-large, @large, @medium { background: #E3F2F1 url('../imgz/industries-cool-window-lg.jpg') no-repeat center center; .cover-bg;}
+    @media @small, @extra-small {background:  #E3F2F1 url('../imgz/industries-cool-window-lg.jpg') no-repeat center center; .cover-bg;}
+  }
 }
 
 
 
-.positive-impact-body {
-  #hero-feature {
+.positive-impact-body, .positiveImpact-body {
+  #hero-feature, #hero-page {
       @media @extra-large, @large, @medium { background: #E3F2F1 url('../imgz/positive-impact-hero-lg.jpg') no-repeat center center; .cover-bg;}
       @media @small, @extra-small {background:  #E3F2F1 url('../imgz/positive-impact-hero-lg.jpg') no-repeat center center; .cover-bg;}
     h1 {
@@ -450,7 +469,7 @@ body.two-insights-paginate-page {
   @media @extra-small, @small {margin-top: 92px;}
 }
 
-.insights-intro {
+.insights-intro, .section-intro {
   p {
   .f-size-medium;
   .l-height-medium;

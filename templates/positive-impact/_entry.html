@@ -1,0 +1,54 @@
+{#
+POSITIVE IMPACT ENTRY
+/templates/positive-impact/_entry.html
+niceworld 8.2.18
+#}
+
+{% extends "_layouts/site" %}
+
+{% block head %}
+  {% if entry.seoTitle|length %}{% set title = entry.seoTitle %}{% else %}{% set title = entry.title %}{% endif %}
+  {% if entry.seoDescription|length %}{% set description = entry.seoDescription %}{% else %}{% set description = entry.title %}{% endif %}
+  {{ parent() }}
+{% endblock %}
+
+{% block main %}
+
+<div id="hero-page" class="container-fluid no-marr build-border-blue"></div>
+
+<div class="container da-main-ova v-pad build-border-red">
+  <div class="row no-padd build-border-yellow ">
+    <div class="col-12 col-lg-9">
+      <span class="breadcrumbs"><a href="{{ siteUrl }}"><img src="/imgz/logo-vivayic-bug-red.svg"></a>
+        <p><a href="{{ siteUrl }}{{ craft.request.getSegment(1) }}">positive impact stories & studies:</a></p>
+      </span>
+      <h2>{{ entry.title }}</h2>
+    </div><!-- /col -->
+    <div class="col-12 col-lg-3 px-0 px-md-2 text-center">
+      <a href="{{ siteUrl }}contact"><img src="{{ siteUrl }}imgz/icon-lets-talk-lg.jpg" class="lets-talk"></a>
+    </div><!-- /col -->
+  </div><!-- /row -->
+</div><!-- /da-main-ova -->
+
+
+<div class="container v-pad build-border-red">
+  <div class="row build-border-blue">
+    <div class="col-12">
+      {% set positiveThum = entry.positiveImpactThumb.first() %}
+      <img src="{{ positiveThum.url('positiveImpactThumb') }}" class="img-fluid" alt="{{ positiveThum.title }}">
+
+      {{ entry.title }}
+      {{ entry.excerpt }}
+      {{ entry.body }}
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}{#-- /main --#}
+
+{% block foot %}
+  {% include "_partials/footer_get_results" %}
+  {{ parent() }}
+{% endblock %} {#-- /foot --#}

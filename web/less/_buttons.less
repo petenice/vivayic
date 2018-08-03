@@ -7,6 +7,28 @@
 }
 .btn:focus {outline: 0;}
 
+.add-arrow {
+  .charcoal;
+  text-decoration: none;
+  .f-size-extra-small;
+  padding-right: 2px;
+  .mb20;
+}
+.add-arrow:after {
+  content: url('../imgz/icon-arrow-grey-wide-tiny.png');
+}
+
+.add-arrow-reg {
+  .charcoal;
+  text-decoration: none;
+  .f-size-small;
+  padding-right: 2px;
+  .mb20;
+}
+.add-arrow-reg:after {
+  content: url('../imgz/icon-arrow-grey-wide-sm.png');
+}
+
 .button-arrow-grey {
   border: 1px solid #CECECE;
   .charcoal;
@@ -16,6 +38,25 @@
   .white;
   background: #5A89B4 url('../imgz/icon-arrow-grey-rollover-sm.png') no-repeat 90% 195%;
 }
+
+.button-fixed-arrow-grey {
+  border: 1px solid #CECECE;
+  white-space:normal !important;
+  text-align: left!important;
+  justify-content: space-between;
+  display:flex;
+  align-items:center;
+  height: 70px;
+  width: 300px;
+  .charcoal;
+  background: #fff url('../imgz/icon-arrow-grey-rollover-sm.png') no-repeat 265px 28px;;
+}
+.button-fixed-arrow-grey:hover {
+  .white;
+  background: #5A89B4 url('../imgz/icon-arrow-grey-rollover-sm.png') no-repeat 265px -20px;;
+}
+
+.wrap-btn {display: inline-flex; margin: 0 10px 10px 0; float:left;}
 
 .button-arrow-blue {
   border: 1px solid @white;
@@ -75,6 +116,7 @@
   @media @medium { background: #fff url('../imgz/icon-arrow-grey-rollover-sm.png') no-repeat 170px 37px;}
   height: 86px;
   width: 300px;
+  @media @large {width: 280px;}
   @media @medium {width: 200px;}
   @media @small {width: 300px;}
   @media @extra-small {width: 280px;}

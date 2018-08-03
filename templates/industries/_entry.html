@@ -27,10 +27,10 @@ niceworld 8.1.18
         {% endif %}
       </span>
       <h2>{{ entry.title }}</h2>
-      <p>{{ entry.excerpt }}</p>
+      <div class="section-intro">{{ entry.excerpt }}</div>
     </div><!-- /col -->
     <div class="col-12 col-lg-3 px-0 px-md-2 text-center">
-      <img src="{{ siteUrl }}imgz/icon-lets-talk-lg.jpg" class="lets-talk">
+      <a href="{{ siteUrl }}contact"><img src="{{ siteUrl }}imgz/icon-lets-talk-lg.jpg" class="lets-talk"></a>
     </div><!-- /col -->
   </div><!-- /row -->
 </div><!-- /da-main-ova -->
@@ -38,15 +38,15 @@ niceworld 8.1.18
           {% for block in entry.industriesGrid %}
 
             {% if block.type == 'challengesResults' %}
-            <div class="container v-pad build-border-red">
+            <div class="container v-pad mb20 build-border-red">
               <div class="row">
-                <div class="col-12 col-md-6 bg-light-blue build-border-blue">
-                  <p>Your Challenge</p>
-                  <h3>{{ block.challenge }}</h3>
+                <div class="col-12 col-md-6 ptb40 px-5 bg-light-blue build-border-blue">
+                  <p class="chalres">Your Challenge</p>
+                  <h3 class="challenge">{{ block.challenge }}</h3>
                 </div>
-                <div class="col-12 col-md-6 bg-light-green build-border-blue">
-                  <p>How we drive results</p>
-                  <ul>
+                <div class="col-12 col-md-6 ptb40 px-5 bg-light-green build-border-blue">
+                  <p class="chalres">How we drive results</p>
+                  <ul class="drive-results">
                   {% for row in block.results %}
                     <li class="drive-results">{{ row.resultsRow }}</li>
                   {% endfor %}
@@ -59,44 +59,71 @@ niceworld 8.1.18
           {% endfor %}
 
 
+          {% set relatedPositiveImpactStory = entry.industriesPositiveImpactStories.all() %}
+          {% if relatedPositiveImpactStory|length %}
+            <div class="container v-pad mt40 mb20 build-border-red">
+              <div class="row">
+                <div class="col-12">
+                  <div class="meta"><p>Stories & Studies</p></div>
+                  <h2>Positive Impact</h2>
+                </div>
+              </div>
+            </div>
+
+              {% for positiveEntry in relatedPositiveImpactStory %}
+
+              <div class="container mb40 v-pad build-border-red">
+                <div class="row h-100">
+                  <div class="col-12 col-md-4 no-padd bg-light-blue">
+                    {% set positiveThum = positiveEntry.positiveImpactThumb.first() %}
+                    <a href="{{ positiveThum.url }}"><img src="{{ positiveThum.url('positiveImpactThumb') }}" class="img-fluid" alt="{{ positiveThum.title }}"></a>
+                  </div>
+                  <div class="col-12 col-md-8 px-4 py-4 bg-light-green">
+                        <h4 class="specialist"><a href="{{ positiveEntry.url }}">{{ positiveEntry.title }}</a></h4>
+                        {{ positiveEntry.excerpt }}
+                        <p class="pt20"><a href="{{ positiveEntry.url }}" class="add-arrow-reg">read more</a></p>
+                  </div>
+                </div><!-- /row -->
+              </div><!-- /container -->
+              {% endfor %}
+          {% endif %}
+
+
+
           {% set relatedSpecialist = entry.industriesSpecialist.all() %}
           {% if relatedSpecialist|length %}
-          <div class="container v-pad build-border-red">
+          <div class="container v-pad mt40 mb20 build-border-red">
             <div class="row">
-            <h2>Team Specialists</h2>
+              <div class="col-12">
+                <h2>Team Specialists</h2>
+              </div>
             </div>
           </div>
 
             {% for rel in relatedSpecialist %}
-            <div class="container industry-specialist v-pad build-border-red">
+            <div class="container industry-specialist mb40 v-pad build-border-red">
               <div class="row">
-                <div class="col-12 col-md-4 d-flex align-items-center justify-content-center bg-light-blue">
+                <div class="col-12 col-md-4 py-4 d-flex align-items-center justify-content-center bg-light-blue">
                 {% set thumbImage = rel.talentHeadshot.first() %}
                   <a href="{{ rel.url }}"><img src="{{ thumbImage.url('insightsThumb') }}" class="img-fluid m-auto"></a>
                 </div>
-                <div class="col-12 col-md-8 align-self-center bg-light-green">
-                  <h4><a href="{{ rel.url }}">{{ rel.title }}</a></h4>
-                  <p>{{rel.talentBody | chop(limit=140, unit='w', allowedTags="<p>", append='...') }}</p>
-                  <p><a href="{{ rel.url }}"><img src="{{ siteUrl }}imgz/read-more-arrow-extra-small.svg"></a></p>
+                <div class="col-12 col-md-8 px-4 py-4 align-self-center bg-light-green">
+                  <h4 class="specialist"><a href="{{ rel.url }}">{{ rel.title }}</a></h4>
+                  {{rel.talentBody | chop(limit=100, unit='w', allowedTags="<p>", append='...') }}
+                  <p class="pt20"><a href="{{ rel.url }}" class="add-arrow-reg">read more</a></p>
                 </div>
               </div><!-- /row -->
             </div><!-- /container -->
           {% endfor %}
         {% endif %}
 
-
-
-    {#--
-    <div class="container v-pad build-border-red">
-      <div class="row build-border-blue">
-        <div class="col-12">
-          {{ entry.title }}
-          {{ entry.body }}
-          {{ entry.excerpt }}
+        <div class="container v-pad mtb40 build-border-red">
+          <div class="row">
+            <div class="col-12">
+              <a href="{{ siteUrl }}{{ craft.request.getSegment(1) }}" class="btn button-fixed-arrow-grey float-right">Return to Industries</a>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    --#}
 
 
 {% endblock %}{#-- /main --#}

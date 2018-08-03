@@ -203,6 +203,9 @@ a:hover {
 .l-height-extra-large {
   line-height: 50px;
 }
+.l-height-large-48 {
+  line-height: 48px;
+}
 .f-size-large {
   font-size: 36px;
 }
@@ -255,49 +258,6 @@ a:hover {
   /* Adds a hyphen where the word breaks, if supported (No Blink) */
 }
 /* MIXINS */
-.build-border-red {
-  border: solid red 1px;
-}
-.build-border-blue {
-  border: solid blue 1px;
-}
-.build-border-green {
-  border: solid green 1px;
-}
-.build-border-yellow {
-  border: solid yellow 1px;
-}
-.build-border-pink {
-  border: solid pink 1px;
-}
-.build-border-dashed {
-  border: dashed black 1px;
-}
-@media only screen and (min-width:1200px) and (max-width: 4000px) {
-  .body-build-border {
-    border: solid 1px red;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .body-build-border {
-    border: solid 1px blue;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .body-build-border {
-    border: solid 1px green;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .body-build-border {
-    border: solid 1px yellow;
-  }
-}
-@media only screen and (max-width: 575px) {
-  .body-build-border {
-    border: solid 1px pink;
-  }
-}
 .cover-bg {
   -webkit-background-size: 100%;
   -moz-background-size: 100%;
@@ -889,6 +849,26 @@ select.select_1 option {
 .btn:focus {
   outline: 0;
 }
+.add-arrow {
+  color: #5B6770;
+  text-decoration: none;
+  font-size: 12px;
+  padding-right: 2px;
+  margin-bottom: 20px;
+}
+.add-arrow:after {
+  content: url('../imgz/icon-arrow-grey-wide-tiny.png');
+}
+.add-arrow-reg {
+  color: #5B6770;
+  text-decoration: none;
+  font-size: 18px;
+  padding-right: 2px;
+  margin-bottom: 20px;
+}
+.add-arrow-reg:after {
+  content: url('../imgz/icon-arrow-grey-wide-sm.png');
+}
 .button-arrow-grey {
   border: 1px solid #CECECE;
   color: #5B6770;
@@ -897,6 +877,27 @@ select.select_1 option {
 .button-arrow-grey:hover {
   color: #FFF;
   background: #5A89B4 url('../imgz/icon-arrow-grey-rollover-sm.png') no-repeat 90% 195%;
+}
+.button-fixed-arrow-grey {
+  border: 1px solid #CECECE;
+  white-space: normal !important;
+  text-align: left!important;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  width: 300px;
+  color: #5B6770;
+  background: #fff url('../imgz/icon-arrow-grey-rollover-sm.png') no-repeat 265px 28px;
+}
+.button-fixed-arrow-grey:hover {
+  color: #FFF;
+  background: #5A89B4 url('../imgz/icon-arrow-grey-rollover-sm.png') no-repeat 265px -20px;
+}
+.wrap-btn {
+  display: inline-flex;
+  margin: 0 10px 10px 0;
+  float: left;
 }
 .button-arrow-blue {
   border: 1px solid #FFF;
@@ -968,6 +969,11 @@ select.select_1 option {
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .button-results-arrow-grey {
     background: #fff url('../imgz/icon-arrow-grey-rollover-sm.png') no-repeat 170px 37px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .button-results-arrow-grey {
+    width: 280px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -1867,6 +1873,10 @@ a.nav-link:hover {
 .breadcrumbs a:hover {
   color: #19988B;
 }
+.meta p {
+  font-size: 16px;
+  margin-bottom: 0;
+}
 @media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px) {
   #hero-feature {
     height: 1000px;
@@ -2054,18 +2064,102 @@ a.nav-link:hover {
   }
 }
 .industries-body .da-main-ova {
-  padding-bottom: 0;
+  padding-bottom: 30px;
 }
 .industries-body .industry-specialist p {
   font-size: 18px;
   line-height: 24px;
 }
+.industries-body ul.drive-results {
+  margin-left: -14px;
+  margin-top: 20px;
+}
 .industries-body li.drive-results {
   font-size: 24px;
   line-height: 33px;
+  color: #000;
+  margin-bottom: 20px;
+}
+.industries-body p.chalres {
+  font-size: 16px;
+  color: #000;
+}
+.industries-body h3.list-view {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  display: inline-block;
+}
+.industries-body h3.challenge {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.industries-body h4.specialist {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 @media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
-  .positive-impact-body #hero-feature {
+  .industries-body .industries-office-bg {
+    background: #E3F2F1 url('../imgz/industries-office-lg.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  .industries-body .industries-office-bg {
+    background: #E3F2F1 url('../imgz/industries-office-lg.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .industries-body .industries-cool-window-bg {
+    background: #E3F2F1 url('../imgz/industries-cool-window-lg.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  .industries-body .industries-cool-window-bg {
+    background: #E3F2F1 url('../imgz/industries-cool-window-lg.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .positive-impact-body #hero-feature,
+  .positiveImpact-body #hero-feature,
+  .positive-impact-body #hero-page,
+  .positiveImpact-body #hero-page {
     background: #E3F2F1 url('../imgz/positive-impact-hero-lg.jpg') no-repeat center center;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -2078,7 +2172,10 @@ a.nav-link:hover {
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
-  .positive-impact-body #hero-feature {
+  .positive-impact-body #hero-feature,
+  .positiveImpact-body #hero-feature,
+  .positive-impact-body #hero-page,
+  .positiveImpact-body #hero-page {
     background: #E3F2F1 url('../imgz/positive-impact-hero-lg.jpg') no-repeat center center;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -2090,7 +2187,10 @@ a.nav-link:hover {
     background-size: cover;
   }
 }
-.positive-impact-body #hero-feature h1 {
+.positive-impact-body #hero-feature h1,
+.positiveImpact-body #hero-feature h1,
+.positive-impact-body #hero-page h1,
+.positiveImpact-body #hero-page h1 {
   color: #FFF;
   text-shadow: 1px 1px 0px #000;
 }
@@ -2222,7 +2322,8 @@ body.two-insights-paginate-page {
     margin-top: 92px;
   }
 }
-.insights-intro p {
+.insights-intro p,
+.section-intro p {
   font-size: 24px;
   line-height: 33px;
 }

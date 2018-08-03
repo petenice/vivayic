@@ -38,23 +38,22 @@ of our clients</h1>
 </div><!-- /da-main-ova -->
 
 
-<div class="container v-pad build-border-red">
-  <div class="row build-border-blue">
-    <div class="col-12">
-    <P>Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-    <P>Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-    <P>Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-    <P>Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-    <p>Go!</p>
-    <p>Go!</p>
-    <p>Go!</p>
-    <p>Go!</p>
-    <p>Go!</p>
-    <p>Go!</p>
-    <p>Go!</p>
+{% for positiveEntry in craft.entries.section('positiveImpact').limit(2) %}
+
+<div class="container mb40 v-pad build-border-red">
+  <div class="row h-100">
+    <div class="col-12 col-md-4 no-padd bg-light-blue">
+      {% set positiveThum = positiveEntry.positiveImpactThumb.first() %}
+      <a href="{{ positiveEntry.url }}"><img src="{{ positiveThum.url('positiveImpactThumb') }}" class="img-fluid" alt="{{ positiveThum.title }}"></a>
     </div>
-  </div>
-</div>
+    <div class="col-12 col-md-8 px-4 py-4 bg-light-green">
+          <h4><a href="{{ positiveEntry.url }}">{{ positiveEntry.title }}</a></h4>
+          {{ positiveEntry.excerpt }}
+          <p class="pt20"><a href="{{ positiveEntry.url }}" class="add-arrow-reg">read more</a></p>
+    </div>
+  </div><!-- /row -->
+</div><!-- /container -->
+{% endfor %}
 
 
 
