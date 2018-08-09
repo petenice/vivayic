@@ -156,6 +156,12 @@ label {
   font-weight: 300;
   color: #5B6770;
 }
+p {
+  margin-bottom: 10px;
+}
+p strong {
+  color: #000;
+}
 p.white {
   color: #FFF;
 }
@@ -278,6 +284,9 @@ a:hover {
   -o-background-size: contain;
   background-size: contain;
 }
+figure.img-resp img {
+  max-width: 100%;
+}
 @media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
   .rwd-break-sm,
   .br-sm-resp,
@@ -304,6 +313,26 @@ a:hover {
 .no-marr {
   margin-left: 0!important;
   margin-right: 0!important;
+}
+.no-marr-sm {
+  margin-left: 0!important;
+  margin-right: 0!important;
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .no-marr-sm {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.no-padd-sm {
+  margin-left: 0!important;
+  margin-right: 0!important;
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .no-padd-sm {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .row-no-padding [class*="col-"] {
   padding-left: 0 !important;
@@ -513,6 +542,24 @@ body.insights-body .v-pad-glob-insights {
   margin-top: 200px;
   margin-bottom: 200px;
 }
+.p0 {
+  padding: 0;
+}
+.pr0 {
+  padding-right: 0;
+}
+.pt0 {
+  padding-top: 0;
+}
+.pb0 {
+  padding-bottom: 0;
+}
+.pl0 {
+  padding-left: 0;
+}
+.pr0 {
+  padding-right: 0;
+}
 .p10 {
   padding: 10px;
 }
@@ -575,6 +622,9 @@ body.insights-body .v-pad-glob-insights {
 .pr20 {
   padding-right: 20px;
 }
+.pl30 {
+  padding-left: 30px;
+}
 .pt40 {
   padding-top: 40px;
 }
@@ -586,6 +636,10 @@ body.insights-body .v-pad-glob-insights {
 }
 .pl40 {
   padding-left: 40px;
+}
+.ptb80 {
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 .prl40 {
   padding-right: 40px;
@@ -893,6 +947,25 @@ select.select_1 option {
 .button-fixed-arrow-grey:hover {
   color: #FFF;
   background: #5A89B4 url('../imgz/icon-arrow-grey-rollover-sm.png') no-repeat 265px -20px;
+}
+.button-icon-impact-arrow {
+  border: 1px solid #CECECE;
+  white-space: normal !important;
+  text-align: left!important;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  width: 280px;
+  padding-left: 56px!important;
+  padding-right: 16px!important;
+  color: #5B6770;
+  font-size: 12px;
+  background: #fff url('../imgz/icon-book-arrow.jpg') no-repeat center -22px;
+}
+.button-icon-impact-arrow:hover {
+  background: #fff url('../imgz/icon-book-arrow.jpg') no-repeat center -146px;
+  color: #FFF;
 }
 .wrap-btn {
   display: inline-flex;
@@ -1230,6 +1303,27 @@ a.nav-link:hover {
 }
 .you-might {
   margin-bottom: 20px;
+}
+.download-study {
+  margin-bottom: 20px;
+  display: block;
+}
+.download-study img {
+  display: inline-block;
+  position: relative;
+  top: -10px;
+}
+.download-study img:hover {
+  cursor: pointer;
+}
+.download-study h2 {
+  display: inline-block;
+  margin-left: 10px;
+  color: #000;
+  text-decoration: none;
+}
+.download-study h2:hover {
+  color: #19988B;
 }
 .share-row {
   width: 134px;
@@ -1833,6 +1927,9 @@ a.nav-link:hover {
     margin-top: 40px;
   }
 }
+.lets-talk.sm-talk-mar {
+  margin-top: 10px;
+}
 .da-main-ova {
   background-color: #FFF;
   padding-top: 30px;
@@ -2194,6 +2291,15 @@ a.nav-link:hover {
   color: #FFF;
   text-shadow: 1px 1px 0px #000;
 }
+.positive-impact-body .da-main-ova,
+.positiveImpact-body .da-main-ova {
+  padding-bottom: 20px;
+}
+.positive-impact-body h4,
+.positiveImpact-body h4 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
 @media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
   .talent-body #hero-feature,
   .talent-body #hero-page {
@@ -2327,24 +2433,28 @@ body.two-insights-paginate-page {
   font-size: 24px;
   line-height: 33px;
 }
-.insights-big-quote p {
+.insights-big-quote p,
+.big-quote p {
   font-weight: 300;
   font-style: italic;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width:1200px) and (max-width: 4000px) {
-  .insights-big-quote p {
+  .insights-big-quote p,
+  .big-quote p {
     font-size: 46px;
     line-height: 50px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px) {
-  .insights-big-quote p {
+  .insights-big-quote p,
+  .big-quote p {
     font-size: 36px;
     line-height: 40px;
   }
 }
 @media only screen and (max-width: 575px) {
-  .insights-big-quote p {
+  .insights-big-quote p,
+  .big-quote p {
     font-size: 24px;
     line-height: 33px;
   }
@@ -2448,6 +2558,41 @@ body.two-insights-paginate-page {
     line-height: 30px;
   }
 }
+.copy-quote h1,
+.copy-quote h2,
+.copy-quote h3,
+.copy-quote h4 {
+  font-weight: 300;
+  font-style: italic;
+  color: #FFF;
+}
+.copy-quote p {
+  color: #FFF;
+}
+.copy-quote.dark-text h1 {
+  color: #5B6770;
+}
+.copy-quote.dark-text p {
+  color: #5B6770;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width:1200px) and (max-width: 4000px) {
+  .copy-quote h1 {
+    font-size: 46px;
+    line-height: 50px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .copy-quote h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .copy-quote h1 {
+    font-size: 24px;
+    line-height: 33px;
+  }
+}
 .entry-body p {
   margin-bottom: 2%;
 }
@@ -2519,8 +2664,5 @@ body.two-insights-paginate-page {
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
-}
-.mt0 {
-  margin-top: 0;
 }
 /*# sourceMappingURL=http://local-new.vivayic.com/css/style.css.map */

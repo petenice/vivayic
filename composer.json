@@ -25,7 +25,10 @@
     "mikestecker/craft-readability": "1.0.4",
     "aelvan/inlin": "^2.0",
     "doublesecretagency/craft-cpjs": "2.1.0",
-    "topshelfcraft/wordsmith": "3.0.2"
+    "topshelfcraft/wordsmith": "3.0.2",
+    "carlcs/craft-redactorcustomstyles": "v3.0.2",
+    "mmikkel/retcon": "2.0.7",
+    "verbb/field-manager": "2.0.2"
   },
   "autoload": {
     "psr-4": {

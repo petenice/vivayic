@@ -1,0 +1,44 @@
+<div class="container you-might-also-like build-border-pink">
+  <div class="row no-marr">
+    <div class="col-12 col-lg-6 build-border-blue">
+      <h4>You might also like</h4>
+      {% for insight in craft.entries.section('insights').limit(3) %}
+        <div class="you-might">
+          <p>{{insight.title}}</p>
+          <p><a href="{{insight.url}}"><img src="{{ siteUrl }}imgz/read-more-arrow-extra-small.svg"></a></p>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="col-12 col-lg-6 text-center build-border-blue">
+
+
+
+      <h4>Was this article<br>helpful to you?</h4>
+
+      <div class="thumbs-row">
+        <a href="#" class="thumb-tog-up"><img src="{{ siteUrl }}imgz/icon-thumb-up-off.png" class="lnk-up thumbs-up"></a>
+        <a href="#" class="thumb-tog-down"><img src="{{ siteUrl }}imgz/icon-thumb-down-off.png" class="lnk-down thumbs-down"></a>
+      </div>
+
+
+      <p><em>Tell your friends</em></p>
+
+      <div class="share-row">
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ craft.request.getURL() }}" alt="{{ entry.title }}" title="Share on Facebook" class="sideshare facebook" target="_blank"><img src="{{ siteUrl }}imgz/icon-share-fb.gif"></a>
+        <a href="https://www.twitter.com/share?url={{ craft.request.getURL() }}" alt="{{ entry.title }}" title="Share on Twitter" target="_blank" class="sideshare twitter"><img src="{{ siteUrl }}imgz/icon-share-tw.gif"></a>
+      </div>
+
+      <div class="share-row">
+        <a href="http://www.reddit.com/submit?url={{ craft.request.getURL() }}" alt="{{ entry.title }}" title="Share on Reddit" target="_blank" class="sideshare reddit"><img src="{{ siteUrl }}imgz/icon-share-red.gif"></a>
+        <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ craft.request.getURL() }}" alt="{{ entry.title }}" title="Share on Linkedin" class="sideshare linkedin" target="_blank"><img src="{{ siteUrl }}imgz/icon-share-li.gif"></a>
+      </div>
+
+      <div class="share-row">
+        <a href="mailto:?subject=A%20great%20page%20on%20the%20Vivayic%20website&amp;body=Greetings,%0D%0A%0D%0AHere%20is%20a%20page%20on%20the%20Vivayic%20website%20that%20I%20would%20like%20to%20share%20with%20you%0D%0A%0D%0A{{ craft.request.getURL() }}" title="Share via email" class="sideshare email"><img src="{{ siteUrl }}imgz/icon-share-email.gif"></a>
+        <div class="print-this-page"><a href="javascript:window.print()" class="sideshare"><img src="{{ siteUrl }}imgz/icon-share-print.gif"></a></div>
+      </div>
+
+
+    </div>
+  </div><!-- /row -->
+</div><!-- /container -->

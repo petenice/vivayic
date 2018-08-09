@@ -87,7 +87,7 @@ niceworld 7.18.18
 
   {% if block.type == 'bigQuote' %}
   <div class="container v-pad-45 {% if not loop.first %}loop-marr{% endif %} build-border-red">
-    <div class="col-12 col-md-9 insights-big-quote build-border-blue">
+    <div class="col-12 col-md-9 big-quote build-border-blue">
     {{ block.enterBigQuote }}
     </div><!--/ col -->
   </div><!--/ container -->
@@ -99,7 +99,7 @@ niceworld 7.18.18
   {% if not loop.first %}loop-marr{% endif %} build-border-red">
     <div class="container v-pad-45 build-border-red">
       <div class="row align-items-end">
-      <div class="col-12 col-md-9 insights-big-image no-padd build-border-blue">
+      <div class="col-12 col-md-9 insights-big-image pl30 pr0 build-border-blue">
         {% set blockImage = block.addWideImage.first() %}
         <img src="{{ blockImage.url }}">
       </div>

@@ -41,25 +41,22 @@ niceworld 7.18.18
     <div class="row build-border-blue">
       <div class="col-12 col-lg-9 outline-15 mr-auto bg-white build-border-green">
         <h2>Consulting Services</h2>
-        <h3>Learning Strategy</h3>
-        <p>Helping organizations develop a long-term plan and/or set of principles related to learning and growth; also includes elements of metrics and measuring success.</p>
-        <p>Go!</p>
-        <p>Go!</p>
-        <p>Go!</p>
-        <p>Go!</p>
-        <p>Go!</p>
-        <p>Go!</p>
-        <p>Go!</p>
-        <p>Go!</p>
-        <p>Go!</p>
-        <p>Go!</p>
-        <p>Go!</p>
-        <p>Go!</p>
-        <p>Go!</p>
-        <p>Go!</p>
-        <p>Go!</p>
-        <p>Go!</p>
-        <p>Go!</p>
+
+        {% for block in entry.solutionsConsultingServices  %}
+
+              {{ block.enterTitleAndDescription }}
+
+              {% set relatedPositiveImpactStory = block.positiveImpactStory.all() %}
+              {% if relatedPositiveImpactStory|length %}
+
+              {% for positiveEntry in relatedPositiveImpactStory %}
+                <a href="{{ positiveEntry.url }}" class="btn button-icon-impact-arrow">{{ positiveEntry.title }}</a>
+              {% endfor %}
+              {% endif %}
+
+
+        {% endfor %}
+
       </div>
     </div>
   </div>

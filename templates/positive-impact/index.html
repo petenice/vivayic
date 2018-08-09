@@ -9,7 +9,7 @@ niceworld 7.18.18
 {% set pageName = 'Positive Impact' %}
 
 {% block head %}
-  {% set title = "Positive Impact" %}
+  {% set title = "Positive Impact Stories" %}
   {{ parent() }}
   <script>
   // js
@@ -24,7 +24,7 @@ to build the capacity<br class="resp-br">
 of our clients</h1>
 </div>
 
-<div class="container da-main-ova v-pad build-border-red">
+<div class="container da-main-ova pb40 v-pad build-border-red">
   <div class="row no-padd build-border-yellow ">
     <div class="col-12 col-lg-9">
       <span class="breadcrumbs"><img src="/imgz/logo-vivayic-bug-red.svg"><p>what we do:</p></span>
@@ -38,7 +38,7 @@ of our clients</h1>
 </div><!-- /da-main-ova -->
 
 
-{% for positiveEntry in craft.entries.section('positiveImpact').limit(2) %}
+{% for positiveEntry in craft.entries.section('positiveImpact').limit(10) %}
 
 <div class="container mb40 v-pad build-border-red">
   <div class="row h-100">

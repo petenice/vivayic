@@ -61,6 +61,15 @@ a.nav-link:hover {.red;}
 
 .you-might {.mb20;}
 
+.download-study {
+  .mb20;
+  display: block;
+  img {display:inline-block; position: relative; top: -10px;}
+  img:hover {cursor: pointer;}
+  h2 {display: inline-block; .ml10; .black; text-decoration: none;}
+  h2:hover {.green;}
+}
+
 .share-row {width: 134px;
   margin: 0 auto;
   padding-left: 4px;
@@ -300,6 +309,7 @@ a.nav-link:hover {.red;}
   max-width: 160px;
   .mt90;
   @media @medium, @small, @extra-small {.mt40;}
+  &.sm-talk-mar {.mt10;}
 }
 
 .da-main-ova {
@@ -396,7 +406,6 @@ a.nav-link:hover {.red;}
 }
 
 
-
 .positive-impact-body, .positiveImpact-body {
   #hero-feature, #hero-page {
       @media @extra-large, @large, @medium { background: #E3F2F1 url('../imgz/positive-impact-hero-lg.jpg') no-repeat center center; .cover-bg;}
@@ -406,6 +415,8 @@ a.nav-link:hover {.red;}
       .black-text-shadow;
     }
   }
+  .da-main-ova {.pb20;}
+  h4 {.f-weight-sembold; .mb20;}
 }
 
 .talent-body {
@@ -476,7 +487,7 @@ body.two-insights-paginate-page {
   }
 }
 
-.insights-big-quote {
+.insights-big-quote, .big-quote {
   p {.f-weight-light-ital;}
   @media @large, @extra-large {
     p {
@@ -551,6 +562,30 @@ body.two-insights-paginate-page {
       &.big-bullet-two-digis {.f-size-small; line-height: 30px;}
     }
   }
+}
+
+.copy-quote {
+    h1, h2, h3, h4 {.f-weight-light-ital; .white;}
+    p {.white;}
+    &.dark-text { h1 {.charcoal; } p {.charcoal;}}
+    @media @large, @extra-large {
+      h1 {
+      .f-size-extra-large;
+      .l-height-extra-large;
+      }
+    }
+    @media @small, @medium {
+      h1 {
+      .f-size-large;
+      .l-height-large;
+      }
+    }
+    @media @extra-small {
+      h1 {
+      .f-size-medium;
+      .l-height-medium;
+      }
+    }
 }
 
 .entry-body {
