@@ -1,0 +1,3 @@
+{% if entry is defined and currentUser and currentUser.can('editEntries:' ~ entry.id) %}
+  <a href="{{ entry.cpEditUrl }}" class="edit-this section-{{ entry.sectionId }}" target="_new">- e d i t -</a>
+{% endif %}

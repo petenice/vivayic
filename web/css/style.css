@@ -1304,6 +1304,17 @@ a.nav-link:hover {
 .you-might {
   margin-bottom: 20px;
 }
+.edit-this {
+  display: block;
+  position: absolute;
+  left: 2px;
+  top: 140px;
+  z-index: 99;
+  background-color: #E3F2F1;
+  padding: 2px 2px;
+  transform: rotate(90deg);
+  text-decoration: none;
+}
 .download-study {
   margin-bottom: 20px;
   display: block;

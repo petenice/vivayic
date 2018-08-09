@@ -13,7 +13,6 @@ niceworld 8.2.18
 {% endblock %}
 
 {% block main %}
-
 <div id="hero-page" class="container-fluid no-marr build-border-blue"></div>
 
 <div class="container da-main-ova v-pad pb0 build-border-red">
@@ -38,7 +37,7 @@ niceworld 8.2.18
   {% if block.type == 'generalCopy' %}
   <div class="container {% if not loop.first %}loop-marr{% endif %} build-border-red">
     <div class="col-12 col-md-9 build-border-blue">
-    {{ block.enterGeneralCopy }}
+    {{ block.enterGeneralCopy | retconAttr('figure', { class: 'img-resp' }) }}
     </div>
   </div>
   {% endif %}
@@ -121,7 +120,6 @@ niceworld 8.2.18
   </div><!-- /row -->
 </div><!-- /container -->
 
-
 {% include "_partials/you_might_like_share_pos" %}
 
 {% endblock %}{#-- /main --#}
@@ -130,4 +128,5 @@ niceworld 8.2.18
 {% block foot %}
   {% include "_partials/footer_get_results" %}
   {{ parent() }}
+  {% include '_partials/edit-this' %}
 {% endblock %} {#-- /foot --#}
