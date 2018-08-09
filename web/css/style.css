@@ -949,7 +949,7 @@ select.select_1 option {
   background: #5A89B4 url('../imgz/icon-arrow-grey-rollover-sm.png') no-repeat 265px -20px;
 }
 .button-icon-impact-arrow {
-  border: 1px solid #CECECE;
+  border-top: 1px solid #CECECE;
   white-space: normal !important;
   text-align: left!important;
   justify-content: space-between;
@@ -958,14 +958,66 @@ select.select_1 option {
   height: 70px;
   width: 280px;
   padding-left: 56px!important;
-  padding-right: 16px!important;
+  padding-right: 26px!important;
   color: #5B6770;
   font-size: 12px;
   background: #fff url('../imgz/icon-book-arrow.jpg') no-repeat center -22px;
 }
+@media small {
+  .button-icon-impact-arrow {
+    height: 70px;
+    width: 280px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .button-icon-impact-arrow {
+    height: 70px;
+    width: 270px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .button-icon-impact-arrow {
+    height: auto;
+    width: 240px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .button-icon-impact-arrow {
+    padding-left: 2px!important;
+    padding-right: 2px!important;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .button-icon-impact-arrow {
+    background: none;
+  }
+}
 .button-icon-impact-arrow:hover {
   background: #fff url('../imgz/icon-book-arrow.jpg') no-repeat center -146px;
   color: #FFF;
+}
+@media only screen and (max-width: 320px) {
+  .button-icon-impact-arrow:hover {
+    background: none;
+  }
+}
+.button-icon-impact-arrow:first-child {
+  border-top: none;
+}
+.wrap-btn-bar {
+  border-left: solid #F5F5F5 12px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 575px) {
+  .wrap-btn-bar {
+    border: none;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .wrap-btn-bar {
+    padding-left: 0;
+  }
 }
 .wrap-btn {
   display: inline-flex;
@@ -2075,6 +2127,10 @@ a.nav-link:hover {
   color: #FFF;
   text-shadow: 1px 1px 0px #000;
 }
+.solutions-body strong {
+  font-weight: 700;
+  font-size: 24px;
+}
 @media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
   .solutions-whiteboard-bg {
     background: #E3F2F1 url('../imgz/solutions-whiteboard-lg.jpg') no-repeat center center;
@@ -2091,6 +2147,45 @@ a.nav-link:hover {
 @media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
   .solutions-whiteboard-bg {
     background: #E3F2F1 url('../imgz/solutions-whiteboard-lg.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px) {
+  .solutions-hand-whiteboard-cu-bg {
+    background: #E3F2F1 url('../imgz/solutions-hand-whiteboard-cu-bg.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .solutions-hand-whiteboard-cu-bg {
+    background: #E3F2F1 url('../imgz/solutions-hand-whiteboard-cu-bg.jpg') no-repeat -200px center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  .solutions-hand-whiteboard-cu-bg {
+    background: #E3F2F1 url('../imgz/solutions-hand-whiteboard-cu-bg.jpg') no-repeat -200px center;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;

@@ -7,7 +7,7 @@ niceworld 7.18.18
 {% extends "_layouts/site" %}
 
 {% block head %}
-  {% set title = "Solutions" %}
+  {% set title = "Solutions that Balance Research and Experience" %}
   {{ parent() }}
   <script>
   // js
@@ -25,12 +25,12 @@ niceworld 7.18.18
 <div class="container da-main-ova v-pad build-border-red">
   <div class="row no-padd build-border-yellow ">
     <div class="col-12 col-lg-9">
-      <span class="breadcrumbs"><img src="/imgz/logo-vivayic-bug-red.svg"><p>what we do:</p></span>
+      <span class="breadcrumbs"><img src="{{ siteUrl }}/imgz/logo-vivayic-bug-red.svg"><p>what we do:</p></span>
       <h2>Solutions</h2>
       <div class="section-intro"><p>Vivayic offers solutions which strike a balance between solid research and lived experience. We offer learner centered programs based on great ideas and solid fundamentals. Our goal is to drive through completion on time, on budget and most importantly with a positive impact on the learner and on the organization’s stated objectives.</p></div>
     </div><!-- /col -->
     <div class="col-12 col-lg-3 px-0 px-md-2 text-center">
-      <img src="imgz/icon-lets-talk-lg.jpg" class="lets-talk">
+      <img src="{{ siteUrl }}imgz/icon-lets-talk-lg.jpg" class="lets-talk">
     </div><!-- /col -->
   </div><!-- /row -->
 </div><!-- /da-main-ova -->
@@ -40,7 +40,7 @@ niceworld 7.18.18
   <div class="container v-pad build-border-red">
     <div class="row build-border-blue">
       <div class="col-12 col-lg-9 outline-15 mr-auto bg-white build-border-green">
-        <h2>Consulting Services</h2>
+        <h2 class="mb30 mt20">Consulting Services</h2>
 
         {% for block in entry.solutionsConsultingServices  %}
 
@@ -48,12 +48,13 @@ niceworld 7.18.18
 
               {% set relatedPositiveImpactStory = block.positiveImpactStory.all() %}
               {% if relatedPositiveImpactStory|length %}
-
-              {% for positiveEntry in relatedPositiveImpactStory %}
-                <a href="{{ positiveEntry.url }}" class="btn button-icon-impact-arrow">{{ positiveEntry.title }}</a>
-              {% endfor %}
+                <div class="wrap-btn-bar">
+                {% for positiveEntry in relatedPositiveImpactStory %}
+                  <a href="{{ positiveEntry.url }}" class="btn button-icon-impact-arrow">{{ positiveEntry.title }}</a>
+                {% endfor %}
+                </div>
               {% endif %}
-
+              <div class="mb20"></div>
 
         {% endfor %}
 
@@ -64,18 +65,84 @@ niceworld 7.18.18
 
 <div class="container v-pad build-border-red">
   <div class="row build-border-blue">
-    <div class="col-12">
-      <h2>Consulting Services</h2>
-      <h3>Learning Strategy</h3>
-      <p>Helping organizations develop a long-term plan and/or set of principles related to learning and growth; also includes elements of metrics and measuring success.</p>
-      <P>Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-        <P>Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-          <P>Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-            <P>Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+    <div class="col-12 col-lg-9 outline-15 mr-auto bg-white build-border-green">
+      <h2 class="mb30 mt60">Program Design</h2>
+
+      {% for block in entry.solutionsProgramDesign  %}
+
+            {{ block.enterTitleAndDescription }}
+
+            {% set relatedPositiveImpactStory = block.positiveImpactStory.all() %}
+            {% if relatedPositiveImpactStory|length %}
+              <div class="wrap-btn-bar">
+              {% for positiveEntry in relatedPositiveImpactStory %}
+                <a href="{{ positiveEntry.url }}" class="btn button-icon-impact-arrow">{{ positiveEntry.title }}</a>
+              {% endfor %}
+              </div>
+            {% endif %}
+            <div class="mb20"></div>
+
+      {% endfor %}
+
     </div>
   </div>
-</div>
+</div><!-- /container -->
 
+
+<div class="wrap solutions-hand-whiteboard-cu-bg build-border-red">
+  <div class="container v-pad build-border-red">
+    <div class="row build-border-blue">
+      <div class="col-12 col-lg-9 outline-15 mr-auto bg-white build-border-green">
+        <h2 class="mb30 mt20">Experience Design</h2>
+
+        {% for block in entry.solutionsExperienceDesign  %}
+
+              {{ block.enterTitleAndDescription }}
+
+              {% set relatedPositiveImpactStory = block.positiveImpactStory.all() %}
+              {% if relatedPositiveImpactStory|length %}
+                <div class="wrap-btn-bar">
+                {% for positiveEntry in relatedPositiveImpactStory %}
+                  <a href="{{ positiveEntry.url }}" class="btn button-icon-impact-arrow">{{ positiveEntry.title }}</a>
+                {% endfor %}
+                </div>
+              {% endif %}
+              <div class="mb20"></div>
+
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>
+</div><!-- /wrap -->
+
+
+<div class="container v-pad build-border-red">
+  <div class="row build-border-blue">
+    <div class="col-12 col-lg-9 outline-15 mr-auto bg-white build-border-green">
+      <h2 class="mb30 mt60">K-12, College and Workforce</h2>
+
+      {% for block in entry.solutionsK12CollegeAndWorkforce  %}
+
+            {{ block.enterTitleAndDescription }}
+
+            {% set relatedPositiveImpactStory = block.positiveImpactStory.all() %}
+            {% if relatedPositiveImpactStory|length %}
+              <div class="wrap-btn-bar">
+              {% for positiveEntry in relatedPositiveImpactStory %}
+                <a href="{{ positiveEntry.url }}" class="btn button-icon-impact-arrow">{{ positiveEntry.title }}</a>
+              {% endfor %}
+              </div>
+            {% endif %}
+            <div class="mb20"></div>
+
+      {% endfor %}
+
+    </div>
+  </div>
+</div><!-- /container -->
+
+<div class="mb80"></div>
 
 
 
