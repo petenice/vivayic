@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="37px" height="37px" viewBox="0 0 37 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" fill-rule="nonzero">
+            <g id="icon-social-fb-blue-circle" fill="#5A89B4">
+                <circle id="Oval-4" cx="18.5" cy="18.5" r="18.5"></circle>
+            </g>
+            <path d="M23.0399286,11.5814286 L23.0243214,13.1615714 L21.82325,13.1898571 C20.5115714,13.2194286 20.4728928,13.2297143 20.1845,13.5948571 C20.0745714,13.7324286 20.061,13.8359286 20.0440357,14.8702857 L20.0270714,15.9914286 L22.7053928,15.9914286 L22.7053928,19.1832143 L20.0345357,19.1832143 L20.0345357,28.3632143 L16.0323214,28.3632143 L16.0323214,19.1832143 L14,19.1832143 L14.0318928,15.9914286 L16.0228214,15.9914286 L16.0458928,14.4935714 C16.0682857,13.1840714 16.0866071,12.9442857 16.1972143,12.5682143 C16.5588928,11.3133571 17.2965,10.5830714 18.5586428,10.2262857 C19.1897143,10.0488571 19.8207857,10 21.5009286,10 L23.0548571,10 L23.0399286,11.5814286 Z" id="Shape" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

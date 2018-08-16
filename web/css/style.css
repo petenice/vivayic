@@ -284,6 +284,9 @@ a:hover {
   -o-background-size: contain;
   background-size: contain;
 }
+.fixed-bg {
+  background-attachment: fixed;
+}
 figure.img-resp img {
   max-width: 100%;
 }
@@ -2039,7 +2042,7 @@ a.nav-link:hover {
 }
 @media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px) {
   #hero-feature {
-    height: 1000px;
+    height: 800px;
     padding-top: 120px;
     padding-right: 40px;
     padding-left: 40px;
@@ -2473,6 +2476,36 @@ a.nav-link:hover {
   }
 }
 .process-body #hero-feature h1 {
+  color: #FFF;
+  text-shadow: 1px 1px 0px #000;
+}
+@media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .purpose-body #hero-feature {
+    background: #E3F2F1 url('../imgz/placeholder-hero-lg.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  .purpose-body #hero-feature {
+    background: #E3F2F1 url('../imgz/placeholder-hero-lg.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+.purpose-body #hero-feature h1 {
   color: #FFF;
   text-shadow: 1px 1px 0px #000;
 }

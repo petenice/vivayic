@@ -24,9 +24,16 @@ niceworld 7.26.18
       <p class="talent-title">{{ entry.talentTitle }}</p>
     </div><!-- /col -->
     <div class="col-12 col-lg-3 px-0 px-md-2 text-left text-lg-right">
-      <img src="{{ siteUrl }}imgz/icon-social-tw-blue-circle.svg" class="mr10 ml15">
-      <img src="{{ siteUrl }}imgz/icon-social-li-blue-circle.svg" class="mr10">
-      <img src="{{ siteUrl }}imgz/icon-email-blue-circle.svg">
+
+
+      {% for block in entry.talentSocialLinks|slice(0, 4) %}
+          {% if block.facebookUrl %}<a href="{{ block.facebookUrl}}" target="_new"><img src="{{ siteUrl }}imgz/icon-social-fb-blue-circle.svg" class="mr10"></a>{% endif %}
+          {% if block.twitterUrl %}<a href="{{ block.twitterUrl}}" target="_new"><img src="{{ siteUrl }}imgz/icon-social-tw-blue-circle.svg" class="mr10"></a>{% endif %}
+          {% if block.linkedinUrl %}<a href="{{ block.linkedinUrl}}" target="_new"><img src="{{ siteUrl }}imgz/icon-social-insta-blue-circle.svg" class="mr10"></a>{% endif %}
+          {% if block.instagramUrl %}<a href="{{ block.instagramUrl}}" target="_new"><img src="{{ siteUrl }}imgz/icon-social-li-blue-circle.svg" class="mr10"></a>{% endif %}
+      {% endfor %}
+      {% if entry.talentEmail %}<a href="mailto:{{ entry.talentEmail }}"><img src="{{ siteUrl }}imgz/icon-email-blue-circle.svg"></a>{% endif %}
+
     </div><!-- /col -->
   </div><!-- /row -->
 </div><!-- /da-main-ova -->
