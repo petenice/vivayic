@@ -54,14 +54,26 @@ background-attachment: fixed;
 figure.img-resp {
   img {max-width: 100%;}
 }
+img.img-resp {max-width: 100%;}
 
 .flat-bg {
 }
 
-.rwd-break-sm, .br-sm-resp, .resp-br {
+.rwd-break-sm, .br-sm-resp, .resp-br, .br-resp {
   @media @small, @extra-small {display: none;}
 }
 
 .rwd-break-lg {
   @media @large, @medium, @small, @extra-small {display: none;}
+}
+
+.hover-grow {
+  -webkit-transition: all .6s ease-in-out;
+          transition: all .6s ease-in-out;
+}
+
+.hover-grow:hover {
+  -webkit-transform: scale(1.08);
+  -ms-transform: scale(1.08);
+      transform: scale(1.08);
 }

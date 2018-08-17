@@ -9,7 +9,7 @@ niceworld 7.18.18
 {% set pageName = 'Talent' %}
 
 {% block head %}
-  {% set title = "" %}
+  {% set title = "Talent" %}
   {{ parent() }}
   <script>
   // js
@@ -27,32 +27,158 @@ niceworld 7.18.18
     <div class="col-12 col-lg-9">
       <span class="breadcrumbs"><img src="/imgz/logo-vivayic-bug-red.svg"><p>what we do:</p></span>
       <h2>{{pageName}}</h2>
-      <p>Vivayic offers solutions which strike a balance between solid research and lived experience. We offer learner centered programs based on great ideas and solid fundamentals. Our goal is to drive through completion on time, on budget and most importantly with a positive impact on the learner and on the organization’s stated objectives.</p>
+      <p>Our people are our strength. Our team members are experienced, innovative, intelligent, committed and hard-working individuals who share in your purpose and sense of mission. We are committed to maintaining a core team that can provide the very highest level of service and solutions.</p>
     </div><!-- /col -->
     <div class="col-12 col-lg-3 px-0 px-md-2 text-center">
-      <img src="imgz/icon-lets-talk-lg.jpg" class="lets-talk">
+      <img src="imgz/icon-lets-talk-lg.jpg" class="lets-talk hover-grow">
     </div><!-- /col -->
   </div><!-- /row -->
 </div><!-- /da-main-ova -->
 
 
-<div class="container v-pad build-border-red">
+<div class="container v-pad mt60 build-border-red">
   <div class="row build-border-blue">
-    <div class="col-12">
-    <P>Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-    <P>Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-    <P>Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-    <P>Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-    <p>Go!</p>
-    <p>Go!</p>
-    <p>Go!</p>
-    <p>Go!</p>
-    <p>Go!</p>
-    <p>Go!</p>
-    <p>Go!</p>
+    <div class="col-12 col-md-4">
+      <img src="{{ siteUrl }}imgz/180607-group-pix3.jpg" class="img-resp my-2 my-md-0">
+    </div>
+    <div class="col-12 col-md-4">
+      <img src="{{ siteUrl }}imgz/180607-group-pix2.jpg" class="img-resp my-2 my-md-0">
+    </div>
+    <div class="col-12 col-md-4">
+      <img src="{{ siteUrl }}imgz/180607-group-pix4.jpg" class="img-resp my-2 my-md-0">
+    </div>
+    <div class="col-12 text-center">
+      <img src="{{ siteUrl }}imgz/180607-group-pix1.jpg" class="img-resp mt20 mb10 d-none d-md-block">
+      <p>Our quarterly in-person meetings energize the team and get us<br class="br-resp"> motivated to create more innovative learning solutions.</p>
     </div>
   </div>
 </div>
+
+
+<div class="container v-pad mt80 build-border-red">
+  <div class="row build-border-blue">
+    <div class="col-12 col-md-6">
+      <h3>We’re virtually everywhere</h3>
+      <p>Our team is completely virtual because we believe in hiring and retaining the absolute best people, no matter their location.  We are unified by an intense desire to continuously learn about learning, about the technology that enhances our work and our lives, and a deep passion for sharing what we learn with others. That’s what brought us together and what brings joy to our work every day.</p>
+    </div>
+    <div class="col-12 col-md-6">
+      <img src="{{ siteUrl }}imgz/usa-map.jpg" class="img-resp">
+    </div>
+  </div>
+</div>
+
+
+<div class="container v-pad mtb80 build-border-red">
+  <div class="row build-border-blue">
+    <div class="col-12 col-md-6 offset-md-3 text-center">
+      <h3>Three principles we work by</h3>
+      <p>We created a set of three guiding principles by which all of employees operate and why we believe <br class="br-resp">we are a <a href="#">Best Place to Work</a>.</p>
+    </div>
+    <div class="col-12 col-md-4 text-center">
+      <div class="big-bullet bg-amber mx-auto mtb20"><p>1</p></div>
+      <h3>Live our core<br class="br-resp"> values daily</h3>
+      <p>We apply our core values with each other and with our clients </p>
+    </div>
+    <div class="col-12 col-md-4 text-center">
+      <div class="big-bullet bg-red mx-auto mtb20"><p>2</p></div>
+      <h3>Build a rockstar<br class="br-resp"> environment</h3>
+      <p>We all show-up and take responsibility for our work</p>
+    </div>
+    <div class="col-12 col-md-4 text-center">
+      <div class="big-bullet bg-blue mx-auto mtb20"><p>3</p></div>
+      <h3>Grow with an iron<br class="rwd-break-lg"> sharpens iron mentality</h3>
+      <p>We all contribute to each other and make each other better</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="wrap bg-light-blue ptb40 build-border-red">
+  <div class="container v-pad build-border-red">
+    <div class="row justify-content-center">
+
+    {% set talentEntry = craft.entries.section('talent').order('title').limit('12') %}
+    {% for entry in talentEntry if entry.talentSpecialForces != 'specialForces' %}
+      {% set talentHead = entry.talentHeadshot.first() %}
+
+        {% if talentHead|length %}
+          <div class="col-12 col-md-4 col-lg-3 col-xl-3 text-center mb30 build-border-blue">
+            <a href="{{ entry.url }}"><img src="{{ talentHead.url('talentSidebarPic190') }}" class="mb20 hover-grow"></a>
+            <h4><a href="{{ entry.url }}" class="hover-grow-parent">{{ entry.talentFirstAndLast }}</a></h4>
+          </div><!-- /col -->
+        {% endif %}
+    {% endfor %}
+  </div><!-- /row -->
+</div><!-- /container -->
+</div><!-- /wrap -->
+
+
+<div class="container v-pad mtb80 build-border-red">
+  <div class="row build-border-blue">
+    <div class="col-12 col-md-8 offset-md-2 text-center big-quote">
+      <p>We value our employees not only for the individual strengths they each
+      bring to the table, but more importantly, for our inherent worth as human beings.</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="wrap bg-light-blue ptb40 build-border-red">
+  <div class="container v-pad build-border-red">
+    <div class="row justify-content-center">
+
+    {% set talentEntry = craft.entries.section('talent').order('title').offset(12) %}
+    {% for entry in talentEntry if entry.talentSpecialForces != 'specialForces' %}
+      {% set talentHead = entry.talentHeadshot.first() %}
+
+        {% if talentHead|length %}
+          <div class="col-12 col-md-4 col-lg-3 col-xl-3 text-center mb30 build-border-blue">
+            <a href="{{ entry.url }}"><img src="{{ talentHead.url('talentSidebarPic190') }}" class="mb20 hover-grow"></a>
+            <h4><a href="{{ entry.url }}" class="hover-grow-parent">{{ entry.talentFirstAndLast }}</a></h4>
+          </div><!-- /col -->
+        {% endif %}
+    {% endfor %}
+  </div><!-- /row -->
+</div><!-- /container -->
+</div><!-- /wrap -->
+
+
+<div class="container v-pad mtb80 build-border-red">
+  <div class="row build-border-blue">
+    <div class="col-12 col-md-8 offset-md-2 text-center big-quote">
+      <p>This is the place where you're expected to bring your A-game every day, yet you're also encouraged to be involved with community and family as much as possible -- a leader at work and at home.</p>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="wrap bg-light-grey ptb40 build-border-red">
+  <div class="container v-pad build-border-red">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6 offset-md-3 text-center">
+        <h3>Special Forces</h3>
+        <p>In addition to our incredible team, Vivayic also leverages a network of
+          trusted consultants to deliver specialized expertise for your project.</p>
+      </div>
+      <div class="col-3"></div>
+      {% set talentEntry = craft.entries.section('talent') %}
+      {% for entry in talentEntry if entry.talentSpecialForces == 'specialForces' %}
+        {% set talentHead = entry.talentHeadshot.first() %}
+
+          {% if talentHead|length %}
+            <div class="col-12 col-md-4 col-lg-3 col-xl-3 text-center mb30 build-border-blue">
+              <a href="{{ entry.url }}"><img src="{{ talentHead.url('talentSidebarPic190') }}" class="mb20 hover-grow"></a>
+              <h4><a href="{{ entry.url }}" class="hover-grow-parent">{{ entry.talentFirstAndLast }}</a></h4>
+            </div><!-- /col -->
+          {% endif %}
+      {% endfor %}
+
+  </div><!-- /row -->
+</div><!-- /container -->
+</div><!-- /wrap -->
 
 
 

@@ -62,7 +62,7 @@ niceworld 7.18.18
   {% if block.type == 'generalCopy' %}
   <div class="container v-pad-45 {% if not loop.first %}loop-marr{% endif %} build-border-red">
     <div class="col-12 col-md-9 build-border-blue">
-    {{ block.enterGeneralCopy }}
+    {{ block.enterGeneralCopy | retconAttr('figure', { class: 'img-resp' }) }}
     </div>
   </div>
   {% endif %}
