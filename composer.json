@@ -30,7 +30,12 @@
     "mmikkel/retcon": "2.0.7",
     "verbb/field-manager": "2.0.2",
     "doublesecretagency/craft-cpbodyclasses": "2.1.0",
-    "doublesecretagency/craft-cpcss": "2.1.0"
+    "doublesecretagency/craft-cpcss": "2.1.0",
+    "craftcms/simple-text": "2.0.2",
+    "superbig/craft-entry-instructions": "1.0.0",
+    "nystudio107/craft-minify": "1.2.9",
+    "dolphiq/redirect": "v1.0.18",
+    "luwes/craft3-codemirror": "v1.0.0"
   },
   "autoload": {
     "psr-4": {

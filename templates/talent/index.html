@@ -19,42 +19,54 @@ niceworld 7.18.18
 {% block main %}
 
 <div id="hero-feature" class="container-fluid no-marr build-border-blue">
-  <h1>{{pageName}}</h1>
+  <h1>We're laughter, curiosity and love.<br class="resp-br">
+      We're grit, vision, excellence.<br class="resp-br">
+      We're Vivayic.</h1>
 </div>
 
 <div class="container da-main-ova v-pad build-border-red">
   <div class="row no-padd build-border-yellow ">
     <div class="col-12 col-lg-9">
-      <span class="breadcrumbs"><img src="/imgz/logo-vivayic-bug-red.svg"><p>what we do:</p></span>
+      <span class="breadcrumbs"><img src="{{ siteUrl }}imgz/logo-vivayic-bug-red.svg"><p>what we do:</p></span>
       <h2>{{pageName}}</h2>
-      <p>Our people are our strength. Our team members are experienced, innovative, intelligent, committed and hard-working individuals who share in your purpose and sense of mission. We are committed to maintaining a core team that can provide the very highest level of service and solutions.</p>
+      <div class="section-intro">
+        <p>Our people are our strength. Our team members are experienced, innovative, intelligent, committed and hard-working individuals who share in your purpose and sense of mission. We are committed to maintaining a core team that can provide the very highest level of service and solutions.</p>
+      </div>
     </div><!-- /col -->
     <div class="col-12 col-lg-3 px-0 px-md-2 text-center">
-      <img src="imgz/icon-lets-talk-lg.jpg" class="lets-talk hover-grow">
+      <img src="{{ siteUrl }}imgz/icon-lets-talk-lg.jpg" class="lets-talk hover-grow">
     </div><!-- /col -->
   </div><!-- /row -->
 </div><!-- /da-main-ova -->
 
 
+{# moved code chunks into the CMS so they can be managed from the backend #}
+{% for entry in entry.codeBlock  %}
+  {{ entry.enterCodeBlock|raw }}
+{% endfor %}
+
+
+{#
+<!-- images from quarterly in person meetings -->
 <div class="container v-pad mt60 build-border-red">
   <div class="row build-border-blue">
     <div class="col-12 col-md-4">
-      <img src="{{ siteUrl }}imgz/180607-group-pix3.jpg" class="img-resp my-2 my-md-0">
+      <img src="/imgz/180607-group-pix3.jpg" class="img-resp my-2 my-md-0">
     </div>
     <div class="col-12 col-md-4">
-      <img src="{{ siteUrl }}imgz/180607-group-pix2.jpg" class="img-resp my-2 my-md-0">
+      <img src="/imgz/180607-group-pix2.jpg" class="img-resp my-2 my-md-0">
     </div>
     <div class="col-12 col-md-4">
-      <img src="{{ siteUrl }}imgz/180607-group-pix4.jpg" class="img-resp my-2 my-md-0">
+      <img src="/imgz/180607-group-pix4.jpg" class="img-resp my-2 my-md-0">
     </div>
     <div class="col-12 text-center">
-      <img src="{{ siteUrl }}imgz/180607-group-pix1.jpg" class="img-resp mt20 mb10 d-none d-md-block">
+      <img src="/imgz/180607-group-pix1.jpg" class="img-resp mt20 mb10 d-none d-md-block">
       <p>Our quarterly in-person meetings energize the team and get us<br class="br-resp"> motivated to create more innovative learning solutions.</p>
     </div>
   </div>
 </div>
 
-
+<!-- virtual team and USA map -->
 <div class="container v-pad mt80 build-border-red">
   <div class="row build-border-blue">
     <div class="col-12 col-md-6">
@@ -62,12 +74,13 @@ niceworld 7.18.18
       <p>Our team is completely virtual because we believe in hiring and retaining the absolute best people, no matter their location.  We are unified by an intense desire to continuously learn about learning, about the technology that enhances our work and our lives, and a deep passion for sharing what we learn with others. That’s what brought us together and what brings joy to our work every day.</p>
     </div>
     <div class="col-12 col-md-6">
-      <img src="{{ siteUrl }}imgz/usa-map.jpg" class="img-resp">
+      <img src="/imgz/usa-map.jpg" class="img-resp">
     </div>
   </div>
 </div>
 
 
+<!-- principles we work by -->
 <div class="container v-pad mtb80 build-border-red">
   <div class="row build-border-blue">
     <div class="col-12 col-md-6 offset-md-3 text-center">
@@ -91,7 +104,7 @@ niceworld 7.18.18
     </div>
   </div>
 </div>
-
+#}
 
 <div class="wrap bg-light-blue ptb40 build-border-red">
   <div class="container v-pad build-border-red">
@@ -116,8 +129,7 @@ niceworld 7.18.18
 <div class="container v-pad mtb80 build-border-red">
   <div class="row build-border-blue">
     <div class="col-12 col-md-8 offset-md-2 text-center big-quote">
-      <p>We value our employees not only for the individual strengths they each
-      bring to the table, but more importantly, for our inherent worth as human beings.</p>
+      <p>{{ entry.talentIndexQuoteOne }}</p>
     </div>
   </div>
 </div>
@@ -148,7 +160,7 @@ niceworld 7.18.18
 <div class="container v-pad mtb80 build-border-red">
   <div class="row build-border-blue">
     <div class="col-12 col-md-8 offset-md-2 text-center big-quote">
-      <p>This is the place where you're expected to bring your A-game every day, yet you're also encouraged to be involved with community and family as much as possible -- a leader at work and at home.</p>
+      <p>{{ entry.talentIndexQuoteTwo }}</p>
     </div>
   </div>
 </div>

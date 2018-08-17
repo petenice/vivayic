@@ -52,8 +52,8 @@ niceworld 7.18.18
       <div class="col-12 col-md-9 px-0 px-md-2">
         <h2><a href="{{ insightEntry.url }}">{{ insightEntry.title }}</a></h2>
         <div class="read-time"><p>{{ insightEntry.readTime }} minute read</p></div>
-        <div class="excerpt">{{ insightEntry.insightExcerpt }}</p></div>
-        <a href="{{ insightEntry.url }}" class="btn button-arrow-grey mt40 d-none d-md-inline-block">Read More</a>
+        <div class="excerpt"><p>{{ insightEntry.insightExcerpt }}</p></div>
+        <a href="{{ insightEntry.url }}" class="btn button-arrow-grey mt20 d-none d-md-inline-block">Read More</a>
       </div>
       <div class="col-12 col-md-3">
         {% set rel = insightEntry.insightAuthor.one() %}
@@ -62,7 +62,7 @@ niceworld 7.18.18
           <div class="author-img"><a href="{{ rel.url }}"><img src="{{ headshot.url }}"></a></div>
           <div class="author-name"><a href="{{ rel.url }}"><p>{{rel.talentFirstAndLast}}</a></p></div>
         {% endif %}
-        <a href="{{ insightEntry.url }}" class="btn button-arrow-grey mt40 d-block d-md-none">Read More</a>
+        <a href="{{ insightEntry.url }}" class="btn button-arrow-grey mt20 d-block d-md-none">Read More</a>
       </div>
     </div><!-- /row -->
   </div><!-- /home-insights -->

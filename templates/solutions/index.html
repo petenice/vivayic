@@ -12,18 +12,25 @@ niceworld 7.18.18
   <script>
   // js
   </script>
-  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script> -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+  <script src="{{ siteUrl }}js/gsap.js"></script>
 {% endblock %}
 
 {% block main %}
 
-<div id="hero-feature" class="container-fluid no-marr build-border-blue">
-  <h1>Solutions that balance<br class="br-sm-resp">
-  solid research and<br class="br-sm-resp">
-  lived experience</h1>
+<div id="sec1"></div>
+<div class="parallaxParent">
+  <div id="hero-feature" class="container-fluid parallax no-marr build-border-blue">
+    <h1>Solutions that balance<br class="br-sm-resp">
+    solid research and<br class="br-sm-resp">
+    lived experience</h1>
+  </div>
 </div>
 
+
+<div class="scroll-magi build-border-dashed"><!-- testing scroll trick -->
 <div class="container da-main-ova v-pad build-border-red">
   <div class="row no-padd build-border-yellow ">
     <div class="col-12 col-lg-9">

@@ -27,24 +27,18 @@ $(document).ready(function () {
 });
 
 
-  // $(function () { // wait for document ready
-  //   // init
-  //   var controller = new ScrollMagic.Controller({
-  //     globalSceneOptions: {
-  //       triggerHook: 'onLeave'
-  //     }
-  //   });
-  //
-  //   // get all slides
-  //   var slides = document.querySelectorAll("#hero-feature");
-  //
-  //   // create scene for every slide
-  //   for (var i=0; i<slides.length; i++) {
-  //     new ScrollMagic.Scene({
-  //         triggerElement: slides[i]
-  //       })
-  //       .setPin(slides[i])
-  //       // .addIndicators() // add indicators (requires plugin)
-  //       .addTo(controller);
-  //   }
-  // });
+  $(function () { // wait for document ready
+    // init controller
+  	var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: 0}});
+
+    // var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+
+  	// build scenes
+  	new ScrollMagic.Scene({triggerElement: "#sec1"})
+            .setPin("#hero-feature")
+            // .setTween(".parallax", {y: "20%", ease: Linear.easeNone})
+
+  					// .setClassToggle("#hero-feature", "scroll-low") // add class toggle
+  					.addIndicators() // add indicators (requires plugin)
+  					.addTo(controller);
+  });
