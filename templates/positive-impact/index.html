@@ -44,11 +44,13 @@ of our clients</h1>
   <div class="row h-100">
     <div class="col-12 col-md-4 no-padd bg-light-blue">
       {% set positiveThum = positiveEntry.positiveImpactThumb.first() %}
-      <a href="{{ positiveEntry.url }}"><img src="{{ positiveThum.url('positiveImpactThumb') }}" class="img-fluid" alt="{{ positiveThum.title }}"></a>
+      <div class="d-flex h-100 align-items-center">
+        <a href="{{ positiveEntry.url }}"><img src="{{ positiveThum.url('positiveImpactThumb') }}" class="img-fluid" alt="{{ positiveThum.title }}"></a>
+      </div>
     </div>
     <div class="col-12 col-md-8 px-4 py-4 bg-light-green">
           <h4><a href="{{ positiveEntry.url }}">{{ positiveEntry.title }}</a></h4>
-          {{ positiveEntry.excerpt }}
+          <div class="excerpt">{{ positiveEntry.excerpt }}</div>
           <p class="pt20"><a href="{{ positiveEntry.url }}" class="add-arrow-reg">read more</a></p>
     </div>
   </div><!-- /row -->

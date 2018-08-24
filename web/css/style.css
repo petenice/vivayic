@@ -160,6 +160,12 @@ h3 {
 h4 {
   font-size: 18px;
 }
+.gen-copy h1,
+.gen-copy h2,
+.gen-copy h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 p,
 ul li,
 label {
@@ -436,6 +442,14 @@ body.insights-body .v-pad-glob-insights {
     margin: 20px auto;
   }
 }
+.mrl0 {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+.mlr0 {
+  margin-right: 0px;
+  margin-left: 0px;
+}
 .mt0 {
   margin-top: 0;
 }
@@ -482,6 +496,9 @@ body.insights-body .v-pad-glob-insights {
 }
 .ml20 {
   margin-left: 20px;
+}
+.mr20 {
+  margin-right: 20px;
 }
 .mlr20 {
   margin-left: 20px;
@@ -800,6 +817,9 @@ body.insights-body .v-pad-glob-insights {
   .margin-tb-resp-big {
     margin: 20px 0;
   }
+}
+.max-width-300 {
+  max-width: 300px;
 }
 /* FORM CONFIGURATION */
 input {
@@ -1348,6 +1368,9 @@ a.nav-link:hover {
   font-size: 12px;
   padding-left: 20px;
 }
+.excerpt P {
+  font-size: 18px;
+}
 .author-img,
 .author-name {
   text-align: center;
@@ -1356,6 +1379,10 @@ a.nav-link:hover {
 .author-name img {
   max-width: 100px;
   margin-bottom: 10px;
+}
+.author-img img.bottom,
+.author-name img.bottom {
+  max-width: 100%;
 }
 .author-img p,
 .author-name p {
@@ -1373,6 +1400,25 @@ a.nav-link:hover {
 }
 .insight-credit-foot .author-name {
   text-align: left;
+}
+@media only screen and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 992px) and (max-width: 1199px) {
+  .gen-img-right,
+  .gen-img-left,
+  .gen-img-center {
+    max-width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}
+.gen-img-right {
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+.gen-img-left {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
 }
 .you-might-also-like {
   border-top: #19988B 2px solid;
@@ -2427,54 +2473,6 @@ a.nav-link:hover {
   }
 }
 @media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
-  .positive-impact-body #hero-feature,
-  .positiveImpact-body #hero-feature,
-  .positive-impact-body #hero-page,
-  .positiveImpact-body #hero-page {
-    background: #E3F2F1 url('../imgz/positive-impact-hero-lg.jpg') no-repeat center center;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
-  .positive-impact-body #hero-feature,
-  .positiveImpact-body #hero-feature,
-  .positive-impact-body #hero-page,
-  .positiveImpact-body #hero-page {
-    background: #E3F2F1 url('../imgz/positive-impact-hero-lg.jpg') no-repeat center center;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-}
-.positive-impact-body #hero-feature h1,
-.positiveImpact-body #hero-feature h1,
-.positive-impact-body #hero-page h1,
-.positiveImpact-body #hero-page h1 {
-  color: #FFF;
-  text-shadow: 1px 1px 0px #000;
-}
-.positive-impact-body .da-main-ova,
-.positiveImpact-body .da-main-ova {
-  padding-bottom: 20px;
-}
-.positive-impact-body h4,
-.positiveImpact-body h4 {
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-@media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
   .talent-body #hero-feature,
   .talentIndex-body #hero-feature,
   .talent-body #hero-page,
@@ -2527,7 +2525,8 @@ a.nav-link:hover {
   margin-bottom: 10px;
 }
 @media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
-  .process-body #hero-feature {
+  .process-body #hero-feature,
+  .values-body #hero-feature {
     background: #E3F2F1 url('../imgz/placeholder-hero-lg.jpg') no-repeat center center;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -2540,7 +2539,8 @@ a.nav-link:hover {
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
-  .process-body #hero-feature {
+  .process-body #hero-feature,
+  .values-body #hero-feature {
     background: #E3F2F1 url('../imgz/placeholder-hero-lg.jpg') no-repeat center center;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -2552,7 +2552,38 @@ a.nav-link:hover {
     background-size: cover;
   }
 }
-.process-body #hero-feature h1 {
+.process-body #hero-feature h1,
+.values-body #hero-feature h1 {
+  color: #FFF;
+  text-shadow: 1px 1px 0px #000;
+}
+@media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .about-body #hero-feature {
+    background: #E3F2F1 url('../imgz/about-hero-lg.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  .about-body #hero-feature {
+    background: #E3F2F1 url('../imgz/about-hero-lg.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+.about-body #hero-feature h1 {
   color: #FFF;
   text-shadow: 1px 1px 0px #000;
 }
@@ -2585,6 +2616,82 @@ a.nav-link:hover {
 .purpose-body #hero-feature h1 {
   color: #FFF;
   text-shadow: 1px 1px 0px #000;
+}
+@media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .positive-impact-body #hero-feature,
+  .positiveImpact-body #hero-feature,
+  .giving-back-body #hero-feature,
+  .givingBack-body #hero-feature,
+  .positive-impact-body #hero-page,
+  .positiveImpact-body #hero-page,
+  .giving-back-body #hero-page,
+  .givingBack-body #hero-page {
+    background: #E3F2F1 url('../imgz/positive-impact-hero-lg.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  .positive-impact-body #hero-feature,
+  .positiveImpact-body #hero-feature,
+  .giving-back-body #hero-feature,
+  .givingBack-body #hero-feature,
+  .positive-impact-body #hero-page,
+  .positiveImpact-body #hero-page,
+  .giving-back-body #hero-page,
+  .givingBack-body #hero-page {
+    background: #E3F2F1 url('../imgz/positive-impact-hero-lg.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+.positive-impact-body #hero-feature h1,
+.positiveImpact-body #hero-feature h1,
+.giving-back-body #hero-feature h1,
+.givingBack-body #hero-feature h1,
+.positive-impact-body #hero-page h1,
+.positiveImpact-body #hero-page h1,
+.giving-back-body #hero-page h1,
+.givingBack-body #hero-page h1 {
+  color: #FFF;
+  text-shadow: 1px 1px 0px #000;
+}
+.positive-impact-body .da-main-ova,
+.positiveImpact-body .da-main-ova,
+.giving-back-body .da-main-ova,
+.givingBack-body .da-main-ova {
+  padding-bottom: 20px;
+}
+.positive-impact-body h4,
+.positiveImpact-body h4,
+.giving-back-body h4,
+.givingBack-body h4 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.positive-impact-body .excerpt P,
+.positiveImpact-body .excerpt P,
+.giving-back-body .excerpt P,
+.givingBack-body .excerpt P {
+  font-size: 16px;
+}
+.giving-back-body .author-name,
+.givingBack-body .author-name {
+  text-align: left;
+  display: inline-block;
+  margin-right: 5px;
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width:1200px) and (max-width: 4000px) {
   body.insights-body,
@@ -2649,6 +2756,20 @@ body.two-insights-paginate-page {
   font-size: 24px;
   line-height: 33px;
 }
+.insights-big-quote.bg-amber p,
+.big-quote.bg-amber p,
+.insights-big-quote.bg-green p,
+.big-quote.bg-green p,
+.insights-big-quote.bg-blue p,
+.big-quote.bg-blue p,
+.insights-big-quote.bg-red p,
+.big-quote.bg-red p,
+.insights-big-quote.bg-purple p,
+.big-quote.bg-purple p,
+.insights-big-quote.bg-grey p,
+.big-quote.bg-grey p {
+  color: #FFF;
+}
 .insights-big-quote p,
 .big-quote p {
   font-weight: 300;
@@ -2697,14 +2818,27 @@ body.two-insights-paginate-page {
     line-height: 33px;
   }
 }
+.insights-big-image {
+  padding-left: 30px;
+}
 .insights-big-image img {
   width: 100%;
+}
+@media only screen and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) {
+  .insights-big-image img {
+    margin-bottom: 10px;
+  }
 }
 .insights-big-image p {
   font-size: 12px;
   color: #FFF;
   margin-bottom: 10px;
   margin-left: 10px;
+}
+@media only screen and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) {
+  .insights-big-image p {
+    text-align: center;
+  }
 }
 .insights-big-image a {
   color: #FFF;
@@ -2713,6 +2847,11 @@ body.two-insights-paginate-page {
 .insights-big-image.dark-text p,
 .insights-big-image.dark-text a {
   color: #5B6770;
+}
+@media only screen and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) {
+  .insights-big-image {
+    padding-left: 0;
+  }
 }
 .big-bullet {
   text-align: center;

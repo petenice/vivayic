@@ -40,7 +40,7 @@ niceworld 7.18.18
       {% set rel = entry.insightAuthor.one() %}
       {% if rel %}
         {% set headshot = rel.talentHeadshot.first() %}
-        <div class="author-img"><a href="{{ rel.url }}"><img src="{{ headshot.url('talentHeadshot260') }}"></a></div>
+        <div class="author-img"><a href="{{ rel.url }}"><img src="{{ headshot.url('talentHeadshot260') }}" class="hover-grow"></a></div>
         <div class="author-name"><a href="{{ rel.url }}"><p>{{ rel.talentFirstAndLast }}</a><br> {{ rel.talentTitle }}</p></div>
       {% endif %}
     </div>
@@ -99,7 +99,7 @@ niceworld 7.18.18
   {% if not loop.first %}loop-marr{% endif %} build-border-red">
     <div class="container v-pad-45 build-border-red">
       <div class="row align-items-end">
-      <div class="col-12 col-md-9 insights-big-image pl30 pr0 build-border-blue">
+      <div class="col-12 col-md-9 insights-big-image pr0 build-border-blue">
         {% set blockImage = block.addWideImage.first() %}
         <img src="{{ blockImage.url }}">
       </div>
@@ -123,11 +123,20 @@ niceworld 7.18.18
       {% set rel = entry.insightAuthor.one() %}
       {% if rel %}
         {% set headshot = rel.talentHeadshot.first() %}
-          <div class="col-4 author-img"><a href="{{ rel.url }}"><img src="{{ headshot.url('talentHeadshot260') }}"></a></div>
+          <div class="col-4 author-img"><a href="{{ rel.url }}"><img src="{{ headshot.url('talentHeadshot260') }}" class="bottom hover-grow"></a></div>
           <div class="col-8 author-name"><a href="{{ rel.url }}">
-            <p>{{rel.talentFirstAndLast}}</a></p>
-            <p>{{rel.talentTitle}}</a></p>
-            <p>social icons</p>
+            <p><b>{{rel.talentFirstAndLast}}</b></a><br>
+            {{rel.talentTitle}}</a></p>
+
+            {% for block in rel.talentSocialLinks|slice(0, 4) %}
+                {% if block.facebookUrl %}<a href="{{ block.facebookUrl}}" target="_new"><img src="{{ siteUrl }}imgz/icon-social-fb-blue-circle.svg" class="mr10"></a>{% endif %}
+                {% if block.twitterUrl %}<a href="{{ block.twitterUrl}}" target="_new"><img src="{{ siteUrl }}imgz/icon-social-tw-blue-circle.svg" class="mr10"></a>{% endif %}
+                {% if block.linkedinUrl %}<a href="{{ block.linkedinUrl}}" target="_new"><img src="{{ siteUrl }}imgz/icon-social-insta-blue-circle.svg" class="mr10"></a>{% endif %}
+                {% if block.instagramUrl %}<a href="{{ block.instagramUrl}}" target="_new"><img src="{{ siteUrl }}imgz/icon-social-li-blue-circle.svg" class="mr10"></a>{% endif %}
+            {% endfor %}
+            {% if rel.talentEmail %}<a href="mailto:{{ rel.talentEmail }}"><img src="{{ siteUrl }}imgz/icon-email-blue-circle.svg"></a>{% endif %}
+
+
           </div>
       {% endif %}
       </div>
@@ -147,4 +156,5 @@ niceworld 7.18.18
 {% block foot %}
   {% include "_partials/footer_get_results" %}
   {{ parent() }}
+  {% include '_partials/edit-this' %}
 {% endblock %} {#-- /foot --#}

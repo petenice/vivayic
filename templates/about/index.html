@@ -1,0 +1,47 @@
+{#
+ABOUT INDEX
+/templates/about/index.html
+niceworld 8.24.18
+#}
+
+{% extends "_layouts/site" %}
+
+{% set pageName = 'About' %}
+
+{% block head %}
+  {% set title = "About" %}
+  {{ parent() }}
+  <script>
+  // js
+  </script>
+{% endblock %}
+
+{% block main %}
+
+<div id="hero-feature" class="container-fluid no-marr build-border-blue">
+  <h1>Wisdom from Experience</h1>
+</div>
+
+<div class="container da-main-ova v-pad build-border-red">
+  <div class="row no-padd build-border-yellow ">
+    <div class="col-12 col-lg-9">
+      <span class="breadcrumbs"><img src="/imgz/logo-vivayic-bug-red.svg"><p>who we are:</p></span>
+      <h2>{{ pageName }}</h2>
+      <div class="section-intro"><p>{{ entry.introCopy }}</p></div>
+    </div><!-- /col -->
+    <div class="col-12 col-lg-3 px-0 px-md-2 text-center">
+      {% include "_partials/lets_talk" %}
+    </div><!-- /col -->
+  </div><!-- /row -->
+</div><!-- /da-main-ova -->
+
+{% include "_partials/entry_general" %}
+
+
+{% endblock %}{#-- /main --#}
+
+{% block foot %}
+  {% include "_partials/footer_get_results" %}
+  {{ parent() }}
+  {% include '_partials/edit-this' %}
+{% endblock %} {#-- /foot --#}

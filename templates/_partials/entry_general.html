@@ -1,0 +1,117 @@
+
+{% set step = 0 %}{# this is so we can loop the bullets #}
+
+{% for block in entry.generalMain %}
+
+  {% if block.type == 'rawCode' %}
+   {{ block.enterRawCode|raw }}
+  {% endif %}
+
+
+  {% if block.type == 'generalCopy' %}
+  <div class="container {% if not loop.first %}loop-marr{% endif %} build-border-red">
+    <div class="col-12 col-md-9 gen-copy build-border-blue">
+    {{ block.enterGeneralCopy | retconAttr('figure', { class: 'img-resp' }) }}
+    </div>
+  </div>
+  {% endif %}
+
+
+  {% if block.type == 'colorfulBullets' %}
+  {% set step = step + 1 %}
+  <div class="container {% if not loop.first %}loop-marr{% endif %} build-border-red">
+    <div class="col-12 col-md-9 build-border-blue">
+    <div class="row">
+      <div class="col-2 d-flex no-padd justify-content-center build-border-yellow">
+      <div class="big-bullet {% if block.bulletColor | length %}{{ block.bulletColor }}{% else %}bg-charcoal{% endif %}"><p {% if step >="10"%}class="big-bullet-two-digis"{% endif %}>{{ step }}</p></div>
+      </div>
+      <div class="col-10 build-border-yellow">
+      {{ block.bulletCopy }}
+      </div>
+    </div><!--/ row -->
+    </div><!--/ col -->
+  </div><!--/ container -->
+  {% endif %}
+
+
+  {% if block.type == 'bigQuote' %}
+  <div class="wrap
+  {% if block.QuoteBgColor | length %}{{ block.QuoteBgColor }}{% endif %}
+  {% if not loop.first %}loop-marr{% endif %} build-border-red">
+    <div class="container build-border-red">
+    <div class="col-12 col-md-9 big-quote  {% if block.QuoteBgColor | length %}{{ block.QuoteBgColor }}{% endif %} build-border-blue">
+      <div class="{{block.verticalPadding}}">{{ block.enterBigQuote }}</div>
+    </div><!--/ col -->
+  </div><!--/ container -->
+  </div><!-- /wrap -->
+  {% endif %}
+
+
+  {% if block.type == 'blankVerticalSpace' %}
+    {% if blockSoloImage | length %}
+    <div class="container {% if not loop.first %}loop-marr{% endif %} build-border-red"><div class="col-12 {{ block.addVerticalSpace }}  build-border-blue"></div></div>
+    {% endif %}
+  {% endif %}
+
+  {% if block.type == 'soloImage' %}
+      {% set blockSoloImage = block.addImage.first() %}
+      {% if blockSoloImage | length %}
+      <div class="container {% if not loop.first %}loop-marr{% endif %} build-border-red">
+        <div class="col-12 col-md-9 gen-copy build-border-blue">
+           <img src="{{ blockSoloImage.url('genImgFullWidth') }}" class="gen-img-center">
+         </div>
+       </div>
+      {% endif %}
+  {% endif %}
+
+  {% if block.type == 'copyAndFGImage' %}
+      {% set blockFGImage = block.addImage.first() %}
+      {% if blockFGImage | length %}
+      <div class="container {% if not loop.first %}loop-marr{% endif %} build-border-red">
+        <div class="col-12 col-md-9 gen-copy build-border-blue">
+       {% switch block.imageType %}
+         {% case "fullWidth" %}
+           {{ block.enterCopy }}
+           <img src="{{ blockFGImage.url('genImgFullWidth') }}" class="gen-img-center">
+         {% case "rightHalf" %}
+           <img src="{{ blockFGImage.url('genImgHalfWidth') }}" class="gen-img-right">
+           {{ block.enterCopy }}
+         {% case "leftHalf" %}
+           <img src="{{ blockFGImage.url('genImgHalfWidth') }}" class="gen-img-left">
+           {{ block.enterCopy }}
+         {% endswitch %}
+           </div>
+         </div>
+       {% endif %}
+  {% endif %}
+
+ {% if block.type == 'copyAndBGImage' %}
+   {% set blockImage = block.addImage.first() %}
+   {% if blockImage | length %}
+   <style>
+     .the-img{{ loop.index }} {background: url({{ blockImage.url }}) center center no-repeat; background-size: cover;}}
+   </style>
+   {% endif %}
+
+ <div class="wrap mtb40
+ {% if block.backgroundColor|length %}{{ block.backgroundColor }}{% else %}bg-charcoal{% endif %}
+ {% if blockImage|length %}the-img{{ loop.index }}{% endif %}
+ {% if not loop.first %}loop-marr{% endif %} build-border-red">
+   <div class="container v-pad build-border-red">
+     <div class="row h-100 align-items-end">
+     <div class="col-12 col-md-9 copy-quote
+     {% if block.paddingTopAndBottom|length %}{{ block.paddingTopAndBottom }}{% else %}py-4{% endif %}
+     {% if block.backgroundColor|length %}{{ block.backgroundColor }}{% endif %}
+     {% if block.backgroundColor == "bg-light-blue" %}dark-text
+     {% elseif block.backgroundColor == "bg-light-green" %}dark-text
+     {% endif %} build-border-blue">
+       {{ block.enterCopy | retconAttr('figure', { class: 'img-resp' }) }}
+     </div>
+     <div class="col-12 col-md-3 build-border-blue">
+     </div>
+   </div><!-- /row -->
+ </div><!-- /container -->
+ </div><!-- /wrap -->
+ {% endif %}
+
+{% endfor %}

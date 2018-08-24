@@ -1,0 +1,72 @@
+{#
+GIVING BACK INDEX
+/templates/giving-back/index.html
+niceworld 8.24.18
+#}
+
+{% extends "_layouts/site" %}
+
+{% set pageName = 'Giving Back' %}
+
+{% block head %}
+  {% set title = "Giving Back" %}
+  {{ parent() }}
+  <script>
+  // js
+  </script>
+{% endblock %}
+
+{% block main %}
+
+<div id="hero-page" class="container-fluid no-marr build-border-blue"></div>
+
+<div class="container da-main-ova v-pad build-border-red">
+  <div class="row no-padd build-border-yellow ">
+    <div class="col-12 col-lg-9">
+      <span class="breadcrumbs"><img src="/imgz/logo-vivayic-bug-red.svg"><p>who we help:</p></span>
+      <h2>{{pageName}}</h2>
+      <div class="section-intro"><p>{{ entry.introCopy }}</p></div>
+    </div><!-- /col -->
+    <div class="col-12 col-lg-3 px-0 px-md-2 text-center">
+      {% include "_partials/lets_talk" %}
+    </div><!-- /col -->
+  </div><!-- /row -->
+</div><!-- /da-main-ova -->
+
+{% include "_partials/entry_general" %}
+
+{% for entry in craft.entries.section('insights').limit(3) %}
+
+<div class="container mb40 v-pad-45 build-border-red">
+  <div class="row h-100">
+    <div class="col-12 col-md-4 no-padd bg-light-blue">
+      {% set imgThum = entry.insightsHero.first() %}
+      <div class="d-flex h-100 align-items-center">
+      <a href="{{ entry.url }}"><img src="{{ imgThum.url('positiveImpactThumb') }}" class="img-fluid" alt="{{ entry.title }}"></a>
+      </div>
+    </div>
+    <div class="col-12 col-md-5 px-4 py-4 bg-light-green">
+
+      {% set rel = entry.insightAuthor.one() %}
+        {% if rel %}
+          <div class="author-name"><a href="{{ rel.url }}"><p>{{rel.talentFirstAndLast}}</a></p></div>
+        {% endif %}
+        <div class="read-time"><p>{{ entry.readTime }} minute read</p></div>
+
+        <h4><a href="{{ entry.url }}">{{ entry.title }}</a></h4>
+          {{ entry.excerpt }}
+          <p class="pt20"><a href="{{ entry.url }}" class="add-arrow-reg">read more</a></p>
+    </div>
+  </div><!-- /row -->
+</div><!-- /container -->
+{% endfor %}
+
+
+
+{% endblock %}{#-- /main --#}
+
+{% block foot %}
+  {% include "_partials/footer_get_results" %}
+  {{ parent() }}
+  {% include '_partials/edit-this' %}
+{% endblock %} {#-- /foot --#}
