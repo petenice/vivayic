@@ -27,18 +27,28 @@ $(document).ready(function () {
 });
 
 
-  $(function () { // wait for document ready
-    // init controller
-  	var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: 0}});
+(function ($) {
 
-    // var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+	// Init ScrollMagic
+    var controller = new ScrollMagic.Controller();
 
-  	// build scenes
-  	new ScrollMagic.Scene({triggerElement: "#sec1"})
-            .setPin("#hero-feature")
-            // .setTween(".parallax", {y: "20%", ease: Linear.easeNone})
+	    // SCENE 5 - parallax effect on the intro slide
+	    // move bcg container when intro gets out of the the view
 
-  					// .setClassToggle("#hero-feature", "scroll-low") // add class toggle
-  					.addIndicators() // add indicators (requires plugin)
-  					.addTo(controller);
-  });
+	    var introTl = new TimelineMax();
+
+	    introTl
+	    	.to($('#hero-feature-new .hero-copy'), 1, {autoAlpha: 0.2, top: '+=500', ease:Power1.easeOut})
+	    	.to($('#hero-feature-new .bcg'), 1, {autoAlpha: 0.2, y: '20%', ease:Power1.easeOut}, '-=1')
+	    	.to($('#hero-feature-new'), 1, {ease:Power1.easeNone}, '-=1');
+
+		var introScene = new ScrollMagic.Scene({
+	        triggerElement: '#hero-feature-new',
+	        triggerHook: 0,
+	        duration: "100%"
+	    })
+	    .setTween(introTl)
+		    .addIndicators()
+	    .addTo(controller);
+
+}(jQuery));
