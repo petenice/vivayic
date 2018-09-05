@@ -19,9 +19,9 @@ niceworld 7.18.18
 {% block main %}
 
 <div id="hero-feature" class="container-fluid no-marr build-border-blue">
-  <h1>We're laughter, curiosity and love.<br class="resp-br">
-      We're grit, vision, excellence.<br class="resp-br">
-      We're Vivayic.</h1>
+  <h1>We&rsquo;re laughter, curiosity and love.<br class="resp-br">
+      We&rsquo;re grit, vision, excellence.<br class="resp-br">
+      We&rsquo;re Vivayic.</h1>
 </div>
 
 <div class="container da-main-ova v-pad build-border-red">
@@ -34,7 +34,7 @@ niceworld 7.18.18
       </div>
     </div><!-- /col -->
     <div class="col-12 col-lg-3 px-0 px-md-2 text-center">
-      <img src="{{ siteUrl }}imgz/icon-lets-talk-lg.jpg" class="lets-talk hover-grow">
+      {% include "_partials/lets_talk" %}
     </div><!-- /col -->
   </div><!-- /row -->
 </div><!-- /da-main-ova -->
@@ -200,4 +200,5 @@ niceworld 7.18.18
 {% block foot %}
   {% include "_partials/footer_get_results" %}
   {{ parent() }}
+  {% include '_partials/edit-this' %}
 {% endblock %} {#-- /foot --#}

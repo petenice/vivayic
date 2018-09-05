@@ -13,6 +13,7 @@ niceworld 7.18.18
   // js
   </script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
   <script src="{{ siteUrl }}js/gsap.js"></script>
 {% endblock %}
@@ -37,14 +38,14 @@ niceworld 7.18.18
       <div class="section-intro"><p>Vivayic offers solutions which strike a balance between solid research and lived experience. We offer learner centered programs based on great ideas and solid fundamentals. Our goal is to drive through completion on time, on budget and most importantly with a positive impact on the learner and on the organization’s stated objectives.</p></div>
     </div><!-- /col -->
     <div class="col-12 col-lg-3 px-0 px-md-2 text-center">
-      <img src="{{ siteUrl }}imgz/icon-lets-talk-lg.jpg" class="lets-talk">
+      {% include "_partials/lets_talk" %}
     </div><!-- /col -->
   </div><!-- /row -->
 </div><!-- /da-main-ova -->
 
 
 <div class="wrap solutions-whiteboard-bg build-border-red">
-  <div class="container v-pad build-border-red">
+  <div class="container v-pad mb80 build-border-red">
     <div class="row build-border-blue">
       <div class="col-12 col-lg-9 outline-15 mr-auto bg-white build-border-green">
         <h2 class="mb30 mt20">Consulting Services</h2>
@@ -57,7 +58,7 @@ niceworld 7.18.18
               {% if relatedPositiveImpactStory|length %}
                 <div class="wrap-btn-bar">
                 {% for positiveEntry in relatedPositiveImpactStory %}
-                  <a href="{{ positiveEntry.url }}" class="btn button-icon-impact-arrow">{{ positiveEntry.title }}</a>
+                  <a href="{{ positiveEntry.url }}" class="btn button-icon-impact-arrow-360">{{ positiveEntry.title }}</a>
                 {% endfor %}
                 </div>
               {% endif %}
@@ -70,10 +71,10 @@ niceworld 7.18.18
   </div>
 </div><!-- /wrap -->
 
-<div class="container v-pad build-border-red">
+<div class="container v-pad mb80 build-border-red">
   <div class="row build-border-blue">
     <div class="col-12 col-lg-9 outline-15 mr-auto bg-white build-border-green">
-      <h2 class="mb30 mt60">Program Design</h2>
+      <h2 class="mb30">Program Design</h2>
 
       {% for block in entry.solutionsProgramDesign  %}
 
@@ -83,7 +84,7 @@ niceworld 7.18.18
             {% if relatedPositiveImpactStory|length %}
               <div class="wrap-btn-bar">
               {% for positiveEntry in relatedPositiveImpactStory %}
-                <a href="{{ positiveEntry.url }}" class="btn button-icon-impact-arrow">{{ positiveEntry.title }}</a>
+                <a href="{{ positiveEntry.url }}" class="btn button-icon-impact-arrow-360">{{ positiveEntry.title }}</a>
               {% endfor %}
               </div>
             {% endif %}
@@ -97,7 +98,7 @@ niceworld 7.18.18
 
 
 <div class="wrap solutions-hand-whiteboard-cu-bg build-border-red">
-  <div class="container v-pad build-border-red">
+  <div class="container v-pad mb80 build-border-red">
     <div class="row build-border-blue">
       <div class="col-12 col-lg-9 outline-15 mr-auto bg-white build-border-green">
         <h2 class="mb30 mt20">Experience Design</h2>
@@ -110,7 +111,7 @@ niceworld 7.18.18
               {% if relatedPositiveImpactStory|length %}
                 <div class="wrap-btn-bar">
                 {% for positiveEntry in relatedPositiveImpactStory %}
-                  <a href="{{ positiveEntry.url }}" class="btn button-icon-impact-arrow">{{ positiveEntry.title }}</a>
+                  <a href="{{ positiveEntry.url }}" class="btn button-icon-impact-arrow-360">{{ positiveEntry.title }}</a>
                 {% endfor %}
                 </div>
               {% endif %}
@@ -127,7 +128,7 @@ niceworld 7.18.18
 <div class="container v-pad build-border-red">
   <div class="row build-border-blue">
     <div class="col-12 col-lg-9 outline-15 mr-auto bg-white build-border-green">
-      <h2 class="mb30 mt60">K-12, College and Workforce</h2>
+      <h2 class="mb30">K-12, College and Workforce</h2>
 
       {% for block in entry.solutionsK12CollegeAndWorkforce  %}
 
@@ -137,7 +138,7 @@ niceworld 7.18.18
             {% if relatedPositiveImpactStory|length %}
               <div class="wrap-btn-bar">
               {% for positiveEntry in relatedPositiveImpactStory %}
-                <a href="{{ positiveEntry.url }}" class="btn button-icon-impact-arrow">{{ positiveEntry.title }}</a>
+                <a href="{{ positiveEntry.url }}" class="btn button-icon-impact-arrow-360">{{ positiveEntry.title }}</a>
               {% endfor %}
               </div>
             {% endif %}
@@ -158,4 +159,5 @@ niceworld 7.18.18
 {% block foot %}
   {% include "_partials/footer_get_results" %}
   {{ parent() }}
+  {% include '_partials/edit-this' %}
 {% endblock %} {#-- /foot --#}

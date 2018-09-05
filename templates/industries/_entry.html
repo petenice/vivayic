@@ -30,7 +30,7 @@ niceworld 8.1.18
       <div class="section-intro">{{ entry.excerpt }}</div>
     </div><!-- /col -->
     <div class="col-12 col-lg-3 px-0 px-md-2 text-center">
-      <a href="{{ siteUrl }}contact"><img src="{{ siteUrl }}imgz/icon-lets-talk-lg.jpg" class="lets-talk"></a>
+      {% include "_partials/lets_talk" %}
     </div><!-- /col -->
   </div><!-- /row -->
 </div><!-- /da-main-ova -->
@@ -132,4 +132,5 @@ niceworld 8.1.18
 {% block foot %}
   {% include "_partials/footer_get_results" %}
   {{ parent() }}
+  {% include '_partials/edit-this' %}
 {% endblock %} {#-- /foot --#}

@@ -33,7 +33,7 @@ niceworld 7.18.18
       <div class="section-intro"><p>Vivayic draws on knowledge gained from deeply rooted experience across a wide range of industries. We understand what you’re trying to accomplish because we’ve been there (and we’ve done that). This informs a unique perspective and helps us to solve problems like a good partner should - with insight, innovation and efficiency.</p></div>
     </div><!-- /col -->
     <div class="col-12 col-lg-3 px-0 px-md-2 text-center">
-      <img src="imgz/icon-lets-talk-lg.jpg" class="lets-talk">
+      {% include "_partials/lets_talk" %}
     </div><!-- /col -->
   </div><!-- /row -->
 </div><!-- /da-main-ova -->
@@ -78,7 +78,7 @@ niceworld 7.18.18
           {% if industry.level == 1 %}
             <h3 class="list-view">{{ industry.title }}</h3>
             {{ industry.excerpt }}
-            <p class="mb20"><a href="{{ industry.url }}" class="add-arrow">read more</a></p>
+            <p class="mb20"><a href="{{ industry.url }}" class="btn button-arrow-grey">read more</a></p>
           {% else %}
               <div class="wrap-btn">
                 <a href="{{industry.url}}" class="btn button-fixed-arrow-grey">{{ industry.title }}</a>
@@ -127,4 +127,5 @@ niceworld 7.18.18
 {% block foot %}
   {% include "_partials/footer_get_results" %}
   {{ parent() }}
+  {% include '_partials/edit-this' %}
 {% endblock %} {#-- /foot --#}

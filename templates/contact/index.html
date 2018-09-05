@@ -1,0 +1,44 @@
+{#
+CONTACT INDEX
+/templates/giving-back/index.html
+niceworld 8.24.18
+#}
+
+{% extends "_layouts/site" %}
+
+{% set pageName = 'Contact' %}
+
+{% block head %}
+  {% set title = "Contact" %}
+  {{ parent() }}
+  <script>
+  // js
+  </script>
+{% endblock %}
+
+{% block main %}
+
+<div id="hero-page" class="container-fluid no-marr build-border-blue"></div>
+
+<div class="container da-main-ova v-pad build-border-red">
+  <div class="row no-padd build-border-yellow ">
+    <div class="col-12 col-lg-9">
+      <span class="breadcrumbs"><img src="/imgz/logo-vivayic-bug-red.svg"><p>coming soon:</p></span>
+      <h2>{{pageName}}</h2>
+      <div class="section-intro"><p>Coming Soon</p></div>
+    </div><!-- /col -->
+    <div class="col-12 col-lg-3 px-0 px-md-2 text-center">
+      {% include "_partials/lets_talk" %}
+    </div><!-- /col -->
+  </div><!-- /row -->
+</div><!-- /da-main-ova -->
+
+
+
+{% endblock %}{#-- /main --#}
+
+{% block foot %}
+  {% include "_partials/footer_get_results" %}
+  {{ parent() }}
+  {% include '_partials/edit-this' %}
+{% endblock %} {#-- /foot --#}

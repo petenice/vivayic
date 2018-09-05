@@ -634,6 +634,11 @@ body.insights-body .v-pad-glob-insights {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .pl10-sm {
+    padding-left: 10px;
+  }
+}
 .pl15 {
   padding-left: 15px;
 }
@@ -694,6 +699,11 @@ body.insights-body .v-pad-glob-insights {
 }
 .pl40 {
   padding-left: 40px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .pl40-md {
+    padding-left: 40px;
+  }
 }
 .ptb80 {
   padding-top: 80px;
@@ -916,7 +926,6 @@ select.select_1 {
   border: 1px solid #ccc;
   border-radius: 4px;
   margin: 10px 0;
-  padding: 15px 0 15px 15px;
   height: 40px;
   width: 100%;
   font-weight: 300;
@@ -932,7 +941,13 @@ select.select_1 option {
   width: 24px;
   height: 24px;
   position: relative;
-  top: 6px;
+  top: 4px;
+}
+_:-moz-tree-row(hover),
+.w3-check {
+  position: relative;
+  top: 12px;
+  left: -4px;
 }
 .search_txt[type="text"] {
   border: 1px solid #ccc;
@@ -1063,6 +1078,62 @@ select.select_1 option {
   }
 }
 .button-icon-impact-arrow:first-child {
+  border-top: none;
+}
+.button-icon-impact-arrow-360 {
+  border-top: 1px solid #CECECE;
+  white-space: normal !important;
+  text-align: left!important;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  width: 360px;
+  padding-left: 56px!important;
+  padding-right: 26px!important;
+  color: #5B6770;
+  font-size: 14px;
+  background: #fff url('../imgz/icon-book-arrow-360.jpg') no-repeat center -22px;
+}
+@media small {
+  .button-icon-impact-arrow-360 {
+    height: 70px;
+    width: 360px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .button-icon-impact-arrow-360 {
+    height: 70px;
+    width: 340px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .button-icon-impact-arrow-360 {
+    height: auto;
+    width: 240px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .button-icon-impact-arrow-360 {
+    padding-left: 2px!important;
+    padding-right: 2px!important;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .button-icon-impact-arrow-360 {
+    background: none;
+  }
+}
+.button-icon-impact-arrow-360:hover {
+  background: #fff url('../imgz/icon-book-arrow-360.jpg') no-repeat center -146px;
+  color: #FFF;
+}
+@media only screen and (max-width: 320px) {
+  .button-icon-impact-arrow-360:hover {
+    background: none;
+  }
+}
+.button-icon-impact-arrow-360:first-child {
   border-top: none;
 }
 .wrap-btn-bar {
@@ -1871,6 +1942,7 @@ a.nav-link:hover {
 .insights-talent-excerpts .read-time p {
   font-size: 12px;
   padding-left: 20px;
+  margin-bottom: 0;
 }
 #home-insights-excerpts .author-name,
 .insights-index-excerpts .author-name,
@@ -1879,13 +1951,28 @@ a.nav-link:hover {
   display: inline-block;
   margin-right: 5px;
 }
+#home-insights-excerpts .author-name p,
+.insights-index-excerpts .author-name p,
+.insights-talent-excerpts .author-name p {
+  font-size: 12px;
+  margin-bottom: 0;
+}
 #home-insights-excerpts h4,
 .insights-index-excerpts h4,
 .insights-talent-excerpts h4 {
   font-weight: 300;
   font-size: 16px;
   line-height: 20px;
-  margin-top: 10px;
+}
+#home-insights-excerpts h4 a,
+.insights-index-excerpts h4 a,
+.insights-talent-excerpts h4 a {
+  color: #5B6770;
+}
+#home-insights-excerpts h4 a:hover,
+.insights-index-excerpts h4 a:hover,
+.insights-talent-excerpts h4 a:hover {
+  color: #D6282D;
 }
 #home-insights-excerpts img,
 .insights-index-excerpts img,
@@ -1968,7 +2055,6 @@ a.nav-link:hover {
 #super-footer-form-quote .sf-quote .foot-feature-text h3 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  font-style: italic;
   font-size: 24px;
   color: #FFF;
 }
@@ -2015,9 +2101,11 @@ a.nav-link:hover {
   text-decoration: none;
 }
 #super-footer-form-quote .sf-quote img {
-  display: block;
-  margin: 0 auto;
-  margin-top: 20px;
+  display: inline;
+  max-width: 30px;
+  margin-top: 0;
+  position: relative;
+  top: 0px;
 }
 #footer-bottom {
   padding-top: 30px;
@@ -2634,10 +2722,20 @@ a.nav-link:hover {
   .positiveImpact-body #hero-feature,
   .giving-back-body #hero-feature,
   .givingBack-body #hero-feature,
+  .free-resources-body #hero-feature,
+  .contact-body #hero-feature,
+  .join-body #hero-feature,
+  .privacy-body #hero-feature,
+  .legal-body #hero-feature,
   .positive-impact-body #hero-page,
   .positiveImpact-body #hero-page,
   .giving-back-body #hero-page,
-  .givingBack-body #hero-page {
+  .givingBack-body #hero-page,
+  .free-resources-body #hero-page,
+  .contact-body #hero-page,
+  .join-body #hero-page,
+  .privacy-body #hero-page,
+  .legal-body #hero-page {
     background: #E3F2F1 url('../imgz/positive-impact-hero-lg.jpg') no-repeat center center;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -2654,10 +2752,20 @@ a.nav-link:hover {
   .positiveImpact-body #hero-feature,
   .giving-back-body #hero-feature,
   .givingBack-body #hero-feature,
+  .free-resources-body #hero-feature,
+  .contact-body #hero-feature,
+  .join-body #hero-feature,
+  .privacy-body #hero-feature,
+  .legal-body #hero-feature,
   .positive-impact-body #hero-page,
   .positiveImpact-body #hero-page,
   .giving-back-body #hero-page,
-  .givingBack-body #hero-page {
+  .givingBack-body #hero-page,
+  .free-resources-body #hero-page,
+  .contact-body #hero-page,
+  .join-body #hero-page,
+  .privacy-body #hero-page,
+  .legal-body #hero-page {
     background: #E3F2F1 url('../imgz/positive-impact-hero-lg.jpg') no-repeat center center;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -2673,30 +2781,55 @@ a.nav-link:hover {
 .positiveImpact-body #hero-feature h1,
 .giving-back-body #hero-feature h1,
 .givingBack-body #hero-feature h1,
+.free-resources-body #hero-feature h1,
+.contact-body #hero-feature h1,
+.join-body #hero-feature h1,
+.privacy-body #hero-feature h1,
+.legal-body #hero-feature h1,
 .positive-impact-body #hero-page h1,
 .positiveImpact-body #hero-page h1,
 .giving-back-body #hero-page h1,
-.givingBack-body #hero-page h1 {
+.givingBack-body #hero-page h1,
+.free-resources-body #hero-page h1,
+.contact-body #hero-page h1,
+.join-body #hero-page h1,
+.privacy-body #hero-page h1,
+.legal-body #hero-page h1 {
   color: #FFF;
   text-shadow: 1px 1px 0px #000;
 }
 .positive-impact-body .da-main-ova,
 .positiveImpact-body .da-main-ova,
 .giving-back-body .da-main-ova,
-.givingBack-body .da-main-ova {
+.givingBack-body .da-main-ova,
+.free-resources-body .da-main-ova,
+.contact-body .da-main-ova,
+.join-body .da-main-ova,
+.privacy-body .da-main-ova,
+.legal-body .da-main-ova {
   padding-bottom: 20px;
 }
 .positive-impact-body h4,
 .positiveImpact-body h4,
 .giving-back-body h4,
-.givingBack-body h4 {
+.givingBack-body h4,
+.free-resources-body h4,
+.contact-body h4,
+.join-body h4,
+.privacy-body h4,
+.legal-body h4 {
   font-weight: 700;
   margin-bottom: 20px;
 }
 .positive-impact-body .excerpt P,
 .positiveImpact-body .excerpt P,
 .giving-back-body .excerpt P,
-.givingBack-body .excerpt P {
+.givingBack-body .excerpt P,
+.free-resources-body .excerpt P,
+.contact-body .excerpt P,
+.join-body .excerpt P,
+.privacy-body .excerpt P,
+.legal-body .excerpt P {
   font-size: 16px;
 }
 .giving-back-body .author-name,
@@ -2715,6 +2848,30 @@ a.nav-link:hover {
   body.insights-body,
   body.two-insights-page {
     background: #FFF url('../imgz/insights-bg-tile.jpg') repeat-x;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  body.insights-body,
+  body.two-insights-page {
+    background-position-y: -110px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  body.insights-body,
+  body.two-insights-page {
+    background-position-y: -210px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  body.insights-body,
+  body.two-insights-page {
+    background-position-y: -340px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  body.insights-body,
+  body.two-insights-page {
+    background-position-y: -470px;
   }
 }
 body.two-insights-page {

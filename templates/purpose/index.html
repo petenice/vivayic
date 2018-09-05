@@ -30,7 +30,7 @@ niceworld 7.18.18
       <p>Vivayic offers solutions which strike a balance between solid research and lived experience. We offer learner centered programs based on great ideas and solid fundamentals. Our goal is to drive through completion on time, on budget and most importantly with a positive impact on the learner and on the organization’s stated objectives.</p>
     </div><!-- /col -->
     <div class="col-12 col-lg-3 px-0 px-md-2 text-center">
-      <img src="imgz/icon-lets-talk-lg.jpg" class="lets-talk">
+      {% include "_partials/lets_talk" %}
     </div><!-- /col -->
   </div><!-- /row -->
 </div><!-- /da-main-ova -->
@@ -62,4 +62,5 @@ niceworld 7.18.18
 {% block foot %}
   {% include "_partials/footer_get_results" %}
   {{ parent() }}
+  {% include '_partials/edit-this' %}
 {% endblock %} {#-- /foot --#}
