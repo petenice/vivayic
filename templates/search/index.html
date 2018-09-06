@@ -1,0 +1,119 @@
+{#
+SEARCH INDEX
+/templates/search/index.html
+niceworld 8.24.18
+#}
+
+{% extends "_layouts/site" %}
+
+{% set pageName = 'Search' %}
+
+{% set query = craft.request.getParam('q') %}
+{% set page = craft.request.getParam('page') ?: '1' %}
+{% set title = "Search" %}
+
+{% if query %}
+	{% set response = craft.googlecustomsearch.performSearch(query, page) %}
+	{% set title = query ~ " - Search" %}
+	{% set totalPages = ceil(response.totalResults / response.perPage) %}
+{% endif %}
+
+
+{% block head %}
+  {% set title = "Search" %}
+  {{ parent() }}
+  <script>
+  // js
+  </script>
+{% endblock %}
+
+{% block main %}
+
+<div id="hero-page" class="container-fluid no-marr build-border-blue"></div>
+
+<div class="container da-main-ova v-pad build-border-red">
+  <div class="row no-padd build-border-yellow ">
+    <div class="col-12 col-lg-9">
+      <span class="breadcrumbs"><img src="/imgz/logo-vivayic-bug-red.svg"><p>coming soon:</p></span>
+      <h2>{{pageName}}</h2>
+      <div class="section-intro"><p></p></div>
+    </div><!-- /col -->
+    <div class="col-12 col-lg-3 px-0 px-md-2 text-center">
+      {% include "_partials/lets_talk" %}
+    </div><!-- /col -->
+  </div><!-- /row -->
+</div><!-- /da-main-ova -->
+
+<div class="container mtb20 v-pad build-border-red">
+  <div class="row build-border-blue">
+    <div class="col-12 col-md-9">
+
+  <h1>Search</h1>
+  <form class="search">
+    <div class="text">
+      <input type="search" name="q" placeholder="Search" value="{{ query }}">
+    </div>
+    <div class="submit">
+      <input type="submit" value="Search">
+    </div>
+  </form>
+
+  {% if query %}
+    {% if response.results | length %}
+      <div class="intro">
+        <p>
+          Showing {{ response.start }}–{{ response.end }} of {{ response.totalResults }} results for <strong>{{ query }}</strong>
+        </p>
+      </div>
+      <ul class="listing">
+        {% for result in response.results %}
+          <li>
+            <h3>
+              <a href="{{ result.link }}">
+                {{ result.title | raw }}
+              </a>
+            </h3>
+            {% if result.thumbnail | length %}
+              <img src="{{ result.thumbnail }}" width="80" style="float: left; margin: 0 1em 1em 0" />
+            {% endif %}
+            <a class="url" href="{{ result.link }}">{{ result.link }}</a>
+            <p class="summary">
+              {{ result.htmlSnippet | raw }}
+            </p>
+          </li>
+        {% endfor %}
+      </ul>
+
+      {% if totalPages > 1 %}
+        <div class="meta paginator">
+          {% if page > 1 %}
+            <a href="{{ url('search', {q:query, page:(page-1)}) }}" class="prev"></i>Previous</a>
+          {% endif %}
+
+          {% if page < totalPages %}
+            <a href="{{ url('search', {q:query, page:(page+1)}) }}" class="next">Next</a>
+          {% endif %}
+        </div>
+      {% endif %}
+
+    {% else %}
+      <div class="info">
+        <p>
+          Your search for “{{ query }}” didn’t return any results.
+        </p>
+      </div>
+    {% endif %}
+  {% endif %}
+
+    </div><!-- /col -->
+  </div><!-- /row -->
+</div><!-- /container -->
+
+
+{% endblock %}{#-- /main --#}
+
+{% block foot %}
+  {% include "_partials/footer_get_results" %}
+  {{ parent() }}
+  {% include '_partials/edit-this' %}
+{% endblock %} {#-- /foot --#}
