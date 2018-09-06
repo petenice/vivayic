@@ -7,7 +7,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta charset="utf-8">
 		<title>
-			{% if title is defined %}{{ title }} - {% else %}{{ seoTitle }} - {% endif %}{{ siteName }}
+			{% if title is defined %}{{ title }} | {% else %}{{ seoTitle }} | {% endif %}{{ siteName }}
 		</title>
 		<meta name="description" content="{% if description is defined %}{{ description }}{% else %}{{ seoDescription }}{% endif %}"/>
     <meta property="og:title" content="{% if title is defined %}{{ title }}{% else %}{{ seoTitle }}{% endif %}"/>
@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{ siteUrl }}bootstrap-4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ siteUrl }}css/style.css"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,800" rel="stylesheet">
+		{% include '_partials/favico' %}
 	{% endblock %}
 </head>
 

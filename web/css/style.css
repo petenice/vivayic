@@ -782,6 +782,9 @@ body.insights-body .v-pad-glob-insights {
 .height-200 {
   min-height: 200px!important;
 }
+.height-240 {
+  min-height: 240px!important;
+}
 .height-300 {
   min-height: 300px!important;
 }

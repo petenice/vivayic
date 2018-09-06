@@ -76,12 +76,14 @@ niceworld 8.1.18
                 <div class="row h-100">
                   <div class="col-12 col-md-4 no-padd bg-light-blue">
                     {% set positiveThum = positiveEntry.positiveImpactThumb.first() %}
-                    <a href="{{ positiveThum.url }}"><img src="{{ positiveThum.url('positiveImpactThumb') }}" class="img-fluid" alt="{{ positiveThum.title }}"></a>
+                    <div class="d-flex h-100 align-items-center">
+                      <a href="{{ positiveEntry.url }}"><img src="{{ positiveThum.url('positiveImpactThumb') }}" class="img-fluid" alt="{{ positiveThum.title }}"></a>
+                    </div>
                   </div>
-                  <div class="col-12 col-md-8 px-4 py-4 bg-light-green">
+                  <div class="col-12 col-md-8 px-4 py-2 bg-light-green">
                         <h4 class="specialist"><a href="{{ positiveEntry.url }}">{{ positiveEntry.title }}</a></h4>
                         {{ positiveEntry.excerpt }}
-                        <p class="pt20"><a href="{{ positiveEntry.url }}" class="add-arrow-reg">read more</a></p>
+                        <p class="pt0"><a href="{{ positiveEntry.url }}" class="add-arrow-reg">read more</a></p>
                   </div>
                 </div><!-- /row -->
               </div><!-- /container -->
@@ -107,15 +109,39 @@ niceworld 8.1.18
                 {% set thumbImage = rel.talentHeadshot.first() %}
                   <a href="{{ rel.url }}"><img src="{{ thumbImage.url('insightsThumb') }}" class="img-fluid m-auto"></a>
                 </div>
-                <div class="col-12 col-md-8 px-4 py-4 align-self-center bg-light-green">
+                <div class="col-12 col-md-8 px-4 py-4 height-240 align-self-center bg-light-green">
                   <h4 class="specialist"><a href="{{ rel.url }}">{{ rel.title }}</a></h4>
                   {{rel.talentBody | chop(limit=100, unit='w', allowedTags="<p>", append='...') }}
-                  <p class="pt20"><a href="{{ rel.url }}" class="add-arrow-reg">read more</a></p>
+                  <p class="pt0"><a href="{{ rel.url }}" class="add-arrow-reg">read more</a></p>
                 </div>
               </div><!-- /row -->
             </div><!-- /container -->
           {% endfor %}
         {% endif %}
+
+
+        {% if entry.level == '1' %}
+
+            {% set industries = craft.entries.section('industries').descendantOf( entry.id ).descendantDist(1) %}
+            {% set parentLink = entry %}
+
+            <div class="container v-pad mtb40 build-border-red">
+              <div class="row">
+                <div class="col-12 col-md-9">
+                  {% nav industry in industries %}
+                    <div class="wrap-btn">
+                      <a href="{{industry.url}}" class="btn button-fixed-arrow-grey">{{ industry.title }}</a>
+                    </div>
+                  {% endnav %}
+                </div>
+              </div>
+            </div>
+
+        {% endif %}
+
+
+
+
 
         <div class="container v-pad mtb40 build-border-red">
           <div class="row">
