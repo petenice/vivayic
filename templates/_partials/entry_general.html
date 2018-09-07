@@ -67,7 +67,7 @@
   {% if block.type == 'copyAndFGImage' %}
       {% set blockFGImage = block.addImage.first() %}
       {% if blockFGImage | length %}
-      <div class="container {% if not loop.first %}loop-marr{% endif %} build-border-red">
+      <div class="container {% if not loop.first %}loop-marr{% endif %} clearfix build-border-red">
         <div class="col-12 col-md-9 gen-copy build-border-blue">
        {% switch block.imageType %}
          {% case "fullWidth" %}

@@ -2627,9 +2627,78 @@ a.nav-link:hover {
 .talentIndex-body h3 {
   margin-bottom: 10px;
 }
-@media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
-  .process-body #hero-feature,
+.values-body #hero-feature {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 93px;
+}
+@media only screen and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) {
   .values-body #hero-feature {
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .values-body #hero-feature {
+    height: 617px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .values-body #hero-feature {
+    height: 772px;
+  }
+}
+@media only screen and (min-width:1200px) and (max-width: 4000px) {
+  .values-body #hero-feature {
+    height: 888px;
+  }
+}
+@media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  .values-body #hero-feature {
+    background-color: #5A89B4;
+  }
+}
+.values-body #hero-feature h1 {
+  color: #FFF;
+  text-shadow: 1px 1px 0px #000;
+}
+@media only screen and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) {
+  .values-body #hero-feature .values-img {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .values-body #hero-feature .values-img {
+    width: 720px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .values-body #hero-feature .values-img {
+    width: 960px;
+  }
+}
+@media only screen and (min-width:1200px) and (max-width: 4000px) {
+  .values-body #hero-feature .values-img {
+    width: 1140px;
+  }
+}
+.values-body .da-main-ova {
+  padding-bottom: 0;
+}
+@media only screen and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) {
+  .values-body .da-main-ova {
+    top: 0;
+  }
+}
+.values-body .val-ill-w {
+  max-width: 268px;
+}
+@media only screen and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .values-body .val-ill-w {
+    width: 100%;
+  }
+}
+@media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .process-body #hero-feature {
     background: #E3F2F1 url('../imgz/placeholder-hero-lg.jpg') no-repeat center center;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -2642,8 +2711,7 @@ a.nav-link:hover {
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
-  .process-body #hero-feature,
-  .values-body #hero-feature {
+  .process-body #hero-feature {
     background: #E3F2F1 url('../imgz/placeholder-hero-lg.jpg') no-repeat center center;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -2654,11 +2722,6 @@ a.nav-link:hover {
     -o-background-size: cover;
     background-size: cover;
   }
-}
-.process-body #hero-feature h1,
-.values-body #hero-feature h1 {
-  color: #FFF;
-  text-shadow: 1px 1px 0px #000;
 }
 @media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
   .about-body #hero-feature {
@@ -2730,6 +2793,7 @@ a.nav-link:hover {
   .join-body #hero-feature,
   .privacy-body #hero-feature,
   .legal-body #hero-feature,
+  .search-body #hero-feature,
   .positive-impact-body #hero-page,
   .positiveImpact-body #hero-page,
   .giving-back-body #hero-page,
@@ -2738,7 +2802,8 @@ a.nav-link:hover {
   .contact-body #hero-page,
   .join-body #hero-page,
   .privacy-body #hero-page,
-  .legal-body #hero-page {
+  .legal-body #hero-page,
+  .search-body #hero-page {
     background: #E3F2F1 url('../imgz/positive-impact-hero-lg.jpg') no-repeat center center;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -2760,6 +2825,7 @@ a.nav-link:hover {
   .join-body #hero-feature,
   .privacy-body #hero-feature,
   .legal-body #hero-feature,
+  .search-body #hero-feature,
   .positive-impact-body #hero-page,
   .positiveImpact-body #hero-page,
   .giving-back-body #hero-page,
@@ -2768,7 +2834,8 @@ a.nav-link:hover {
   .contact-body #hero-page,
   .join-body #hero-page,
   .privacy-body #hero-page,
-  .legal-body #hero-page {
+  .legal-body #hero-page,
+  .search-body #hero-page {
     background: #E3F2F1 url('../imgz/positive-impact-hero-lg.jpg') no-repeat center center;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -2789,6 +2856,7 @@ a.nav-link:hover {
 .join-body #hero-feature h1,
 .privacy-body #hero-feature h1,
 .legal-body #hero-feature h1,
+.search-body #hero-feature h1,
 .positive-impact-body #hero-page h1,
 .positiveImpact-body #hero-page h1,
 .giving-back-body #hero-page h1,
@@ -2797,7 +2865,8 @@ a.nav-link:hover {
 .contact-body #hero-page h1,
 .join-body #hero-page h1,
 .privacy-body #hero-page h1,
-.legal-body #hero-page h1 {
+.legal-body #hero-page h1,
+.search-body #hero-page h1 {
   color: #FFF;
   text-shadow: 1px 1px 0px #000;
 }
@@ -2809,7 +2878,8 @@ a.nav-link:hover {
 .contact-body .da-main-ova,
 .join-body .da-main-ova,
 .privacy-body .da-main-ova,
-.legal-body .da-main-ova {
+.legal-body .da-main-ova,
+.search-body .da-main-ova {
   padding-bottom: 20px;
 }
 .positive-impact-body h4,
@@ -2820,7 +2890,8 @@ a.nav-link:hover {
 .contact-body h4,
 .join-body h4,
 .privacy-body h4,
-.legal-body h4 {
+.legal-body h4,
+.search-body h4 {
   font-weight: 700;
   margin-bottom: 20px;
 }
@@ -2832,7 +2903,8 @@ a.nav-link:hover {
 .contact-body .excerpt P,
 .join-body .excerpt P,
 .privacy-body .excerpt P,
-.legal-body .excerpt P {
+.legal-body .excerpt P,
+.search-body .excerpt P {
   font-size: 16px;
 }
 .giving-back-body .author-name,

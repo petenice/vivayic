@@ -34,12 +34,11 @@ niceworld 8.24.18
 <div class="container da-main-ova v-pad build-border-red">
   <div class="row no-padd build-border-yellow ">
     <div class="col-12 col-lg-9">
-      <span class="breadcrumbs"><img src="/imgz/logo-vivayic-bug-red.svg"><p>coming soon:</p></span>
+      <span class="breadcrumbs"><img src="/imgz/logo-vivayic-bug-red.svg"><p>what you're looking for:</p></span>
       <h2>{{pageName}}</h2>
       <div class="section-intro"><p></p></div>
     </div><!-- /col -->
     <div class="col-12 col-lg-3 px-0 px-md-2 text-center">
-      {% include "_partials/lets_talk" %}
     </div><!-- /col -->
   </div><!-- /row -->
 </div><!-- /da-main-ova -->
@@ -48,14 +47,9 @@ niceworld 8.24.18
   <div class="row build-border-blue">
     <div class="col-12 col-md-9">
 
-  <h1>Search</h1>
   <form class="search">
-    <div class="text">
-      <input type="search" name="q" placeholder="Search" value="{{ query }}">
-    </div>
-    <div class="submit">
+      <input type="search" name="q" placeholder="Search" value="{{ query }}" class="search_txt">
       <input type="submit" value="Search">
-    </div>
   </form>
 
   {% if query %}
