@@ -34,7 +34,7 @@ niceworld 8.24.18
 <div class="container da-main-ova v-pad build-border-red">
   <div class="row no-padd build-border-yellow ">
     <div class="col-12 col-lg-9">
-      <span class="breadcrumbs"><img src="/imgz/logo-vivayic-bug-red.svg"><p>what you're looking for:</p></span>
+      <span class="breadcrumbs"><img src="/imgz/logo-vivayic-bug-red.svg"><p>Find what you're looking for:</p></span>
       <h2>{{pageName}}</h2>
       <div class="section-intro"><p></p></div>
     </div><!-- /col -->
@@ -45,10 +45,10 @@ niceworld 8.24.18
 
 <div class="container mtb20 v-pad build-border-red">
   <div class="row build-border-blue">
-    <div class="col-12 col-md-9">
+    <div class="col-12">
 
   <form class="search">
-      <input type="search" name="q" placeholder="Search" value="{{ query }}" class="search_txt">
+      <input type="search" name="q" placeholder="Search" value="{{ query }}" class="main-search">
       <input type="submit" value="Search">
   </form>
 
@@ -61,7 +61,7 @@ niceworld 8.24.18
       </div>
       <ul class="listing">
         {% for result in response.results %}
-          <li>
+          <li class="clearfix">
             <h3>
               <a href="{{ result.link }}">
                 {{ result.title | raw }}

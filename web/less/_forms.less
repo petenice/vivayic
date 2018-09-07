@@ -79,6 +79,11 @@ select.select_1 {
 .w3-check,.w3-radio {width:24px; height:24px; position:relative; top: 4px;}
 _:-moz-tree-row(hover), .w3-check {position:relative; top: 12px; left: -4px;}
 
+.search-body {
+	.search {
+		.mb20;
+	}
+}
 
 .search_txt[type="text"] {
 	border: 1px solid #ccc;
@@ -87,6 +92,17 @@ _:-moz-tree-row(hover), .w3-check {position:relative; top: 12px; left: -4px;}
 	margin: 10px 0;
 	padding: 3px 0 3px 16px;
 	width: 300px;
+	@media @small, @extra-small {width: 180px;}
+	.f-weight-light;
+}
+
+.main-search[type="text"] {
+	border: 1px solid #ccc;
+	.bg-white;
+	border-radius: 4px;
+	margin: 10px 0;
+	padding: 3px 0 3px 16px;
+	width: 400px;
 	@media @small, @extra-small {width: 180px;}
 	.f-weight-light;
 }
