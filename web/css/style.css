@@ -58,6 +58,9 @@
 .bg-light-grey {
   background-color: #e2e2e2;
 }
+.bg-pale-grey {
+  background-color: #f8f9fa;
+}
 .bg-charcoal {
   background-color: #5B6770;
 }
@@ -85,6 +88,15 @@
 .bg-nav {
   background-color: rgba(255, 255, 255, 0.8);
   border-bottom: solid 1px grey;
+}
+.bg-aqua-blue {
+  background-color: #f6faff;
+}
+.bg-light-purple {
+  background-color: #e5e7ff;
+}
+.bg-cornflower {
+  background-color: #fff6e1;
 }
 .links-white-hover a:hover {
   color: #FFF;
@@ -732,6 +744,13 @@ body.insights-body .v-pad-glob-insights {
 }
 .pl60 {
   padding-left: 60px;
+}
+.pb60 {
+  padding-bottom: 60px;
+}
+.ptb60 {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .pb80 {
   padding-bottom: 80px;
@@ -2673,16 +2692,20 @@ a.nav-link:hover {
 }
 .process-body #hero-feature {
   position: relative;
-  top: 92px;
 }
-@media only screen and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (max-width: 575px) {
   .process-body #hero-feature {
-    height: 617px;
+    height: 400px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .process-body #hero-feature {
+    height: 465px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .process-body #hero-feature {
-    height: 617px;
+    height: 580px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -2692,39 +2715,26 @@ a.nav-link:hover {
 }
 @media only screen and (min-width:1200px) and (max-width: 4000px) {
   .process-body #hero-feature {
-    height: 680px;
+    height: 760px;
   }
 }
 @media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
   .process-body #hero-feature {
-    background-color: #5A89B4;
+    background-color: #FFF;
   }
 }
-@media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
-  .process-body #hero-feature.process-ill {
-    background: #f8f9fa url('../imgz/180906-learning-solutions-model-full-1600w.png') no-repeat center center;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
+.process-body .process-stuff p {
+  text-align: center;
+  font-weight: 700;
 }
-@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
-  .process-body #hero-feature.process-ill {
-    background: #f8f9fa url('../imgz/180906-learning-solutions-model-full-1600w.png') no-repeat center center;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
+.process-body .process-top {
+  background-color: #f8f9fa;
+}
+.process-body .da-main-ova {
+  background-color: #f8f9fa;
+  top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 .values-body #hero-feature {
   position: relative;
@@ -2821,32 +2831,6 @@ a.nav-link:hover {
 @media only screen and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px) {
   .values-body .val-ill-w {
     width: 100%;
-  }
-}
-@media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
-  .process-body #hero-feature {
-    background: #E3F2F1 url('../imgz/placeholder-hero-lg.jpg') no-repeat center center;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
-  .process-body #hero-feature {
-    background: #E3F2F1 url('../imgz/placeholder-hero-lg.jpg') no-repeat center center;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
   }
 }
 @media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
