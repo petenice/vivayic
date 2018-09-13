@@ -12,8 +12,10 @@ niceworld 7.18.18
         <a class="nav-close d-inline d-md-none float-right" href="#"><img src="{{ siteUrl }}imgz/icon-close-x.svg"></a>
       </div>
       <div class="col-12 col-md-10 mt-4 mt-sm-4 mt-md-0 text-center text-md-right pr-2">
-        <input type="text" placeholder="search" value="" name="search" class="search_txt">
-        <input type="submit" class="search_btn" value="go">
+        <form id="search_form" class="form" method="get" action="{{ siteUrl }}search">
+          <input type="text" placeholder="search" value="" name="q" class="search_txt">
+          <input type="submit" class="search_btn" value="go">
+        </form>
         <a class="nav-close d-none d-md-inline" href="#"><img src="{{ siteUrl }}imgz/icon-close-x.svg"></a>
       </div>
     </div>

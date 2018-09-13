@@ -630,6 +630,9 @@ body.insights-body .v-pad-glob-insights {
 .pl0 {
   padding-left: 0;
 }
+.pl10 {
+  padding-left: 10px;
+}
 .ptb10 {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -726,6 +729,9 @@ body.insights-body .v-pad-glob-insights {
 .ptb50 {
   padding-top: 50px;
   padding-bottom: 50px;
+}
+.pl60 {
+  padding-left: 60px;
 }
 .pb80 {
   padding-bottom: 80px;
@@ -967,6 +973,20 @@ _:-moz-tree-row(hover),
 @media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
   .search_txt[type="text"] {
     width: 180px;
+  }
+}
+.search_txt_sm[type="text"] {
+  border: 1px solid #ccc;
+  background-color: #FFF;
+  border-radius: 4px;
+  margin: 10px 0;
+  padding: 3px 0 3px 16px;
+  width: 200px;
+  font-weight: 300;
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  .search_txt_sm[type="text"] {
+    width: 140px;
   }
 }
 .main-search[type="text"] {
@@ -1450,6 +1470,13 @@ a.nav-link:hover {
 .date p {
   font-size: 12px;
   margin-right: 10px;
+}
+.category {
+  display: inline-block;
+}
+.category p {
+  font-size: 12px;
+  padding-left: 10px;
 }
 .read-time {
   display: inline-block;
@@ -2644,14 +2671,68 @@ a.nav-link:hover {
 .talentIndex-body h3 {
   margin-bottom: 10px;
 }
+.process-body #hero-feature {
+  position: relative;
+  top: 92px;
+}
+@media only screen and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) {
+  .process-body #hero-feature {
+    height: 617px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .process-body #hero-feature {
+    height: 617px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .process-body #hero-feature {
+    height: 772px;
+  }
+}
+@media only screen and (min-width:1200px) and (max-width: 4000px) {
+  .process-body #hero-feature {
+    height: 680px;
+  }
+}
+@media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  .process-body #hero-feature {
+    background-color: #5A89B4;
+  }
+}
+@media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .process-body #hero-feature.process-ill {
+    background: #f8f9fa url('../imgz/180906-learning-solutions-model-full-1600w.png') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  .process-body #hero-feature.process-ill {
+    background: #f8f9fa url('../imgz/180906-learning-solutions-model-full-1600w.png') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
 .values-body #hero-feature {
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 93px;
+  position: relative;
+  top: 92px;
 }
 @media only screen and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) {
   .values-body #hero-feature {
-    height: 100%;
+    height: 617px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -2672,6 +2753,32 @@ a.nav-link:hover {
 @media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
   .values-body #hero-feature {
     background-color: #5A89B4;
+  }
+}
+@media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .values-body #hero-feature.values-ill {
+    background: #E3F2F1 url('../imgz/180906-values-full-1600w.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  .values-body #hero-feature.values-ill {
+    background: #E3F2F1 url('../imgz/180906-values-full-1600w.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
 }
 .values-body #hero-feature h1 {
@@ -2699,6 +2806,8 @@ a.nav-link:hover {
   }
 }
 .values-body .da-main-ova {
+  top: -30px;
+  margin-bottom: 0;
   padding-bottom: 0;
 }
 @media only screen and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) {
@@ -3021,11 +3130,20 @@ body.two-insights-paginate-page {
   background-position: 0px -850px;
   margin-top: 200px;
 }
+body.two-insights-category-page {
+  background-position: 0px -670px;
+  margin-top: 200px;
+}
 #insights-index-head {
   margin-top: 190px;
   height: 200px;
   border: solid #ccc 1px;
   background-color: #FFF;
+}
+#insights-index-head.index-cat-head {
+  border: none;
+  height: auto;
+  padding-top: 20px;
 }
 #insights-page-head {
   margin-top: 170px;

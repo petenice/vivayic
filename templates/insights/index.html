@@ -24,12 +24,15 @@ niceworld 7.18.18
   {% if craft.request.pageNum == 1 %}
   <div id="insights-index-head" class="container build-border-blue">
     <div class="row h-100 build-border-yellow ">
-      <div class="col-12 col-lg-9 pl40-md pl10-sm align-self-center">
+      <div class="col-12 col-sm-12 col-lg-7 offset-lg-1 pl40-md pl10-sm align-self-center">
         <span class="breadcrumbs"><img src="/imgz/logo-vivayic-bug-red.svg"><p>news and knowledge:</p></span>
         <h2>Insights</h2>
       </div><!-- /col -->
-      <div class="col-12 col-lg-3 px-0 px-md-2 align-self-center">
-        <p>search here</p>
+      <div class="col-12 col-sm-12 col-lg-4 pl40-md align-self-center">
+        <form method="get" action="{{ siteUrl }}search">
+          <input type="text" placeholder="search" value="" name="q" class="search_txt_sm">
+          <input type="submit" class="search_btn" value="go">
+        </form>
       </div><!-- /col -->
     </div><!-- /row -->
   </div>

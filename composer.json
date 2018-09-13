@@ -36,7 +36,8 @@
     "nystudio107/craft-minify": "1.2.9",
     "dolphiq/redirect": "v1.0.18",
     "luwes/craft3-codemirror": "v1.0.0",
-    "imarc/craft-googlecustomsearch": "^2.0"
+    "imarc/craft-googlecustomsearch": "^2.0",
+    "ether/logs": "v3.0.0"
   },
   "autoload": {
     "psr-4": {

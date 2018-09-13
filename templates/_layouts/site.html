@@ -6,7 +6,10 @@
 	{% set bodyClass = entry is defined ? entry.section.handle : craft.request.firstSegment %}
 {% endif %}
 
-{% if (craft.request.getSegment('1') == 'insights') and (craft.request.getPageNum() != "1") %}
+
+{% if (craft.request.getSegment('1') == 'insights') and (craft.request.getSegment('2') == 'category') %}
+	{% set pageClass = 'two-insights-category' %}
+{% elseif (craft.request.getSegment('1') == 'insights') and (craft.request.getPageNum() != "1") %}
 	{% set pageClass = 'two-insights-paginate' %}
 {% elseif (craft.request.getSegment('1') == 'insights') and (craft.request.getSegment('2') != '') %}
 	{% set pageClass = 'two-insights' %}

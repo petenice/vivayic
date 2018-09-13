@@ -1,0 +1,99 @@
+{#
+INSIGHTS CATEGORY
+/templates/insights/category.html
+niceworld 9.12.18
+#}
+
+{% extends "_layouts/site" %}
+
+{% set pageName = 'Category' %}
+
+{% if craft.request.getSegment(3) == '' %}
+  {% redirect "insights" %}
+{% endif %}
+
+{% block head %}
+  {% set copy = "Insights on " %}
+  {% set title =  copy ~ category.title %}
+  {{ parent() }}
+  <script>
+  // js
+  </script>
+{% endblock %}
+
+{% block main %}
+
+<div id="insights-index-head" class="container index-cat-head build-border-blue">
+  <div class="row h-100 build-border-yellow ">
+    <div class="col-12 pl60 align-self-center">
+      <span class="breadcrumbs"><a href="{{ siteUrl}}insights"><img src="/imgz/logo-vivayic-bug-red.svg"><p>news and knowledge:</p></a></span>
+      <h2>Insights on {{ category.title }}</h2>
+      <div class="section-intro">
+        <p>{{ category.excerpt }}</p>
+      </div>
+    </div><!-- /col -->
+  </div><!-- /row -->
+</div>
+
+
+
+
+
+{% paginate craft.entries.section('insights').relatedTo(category).limit('3') as insightEntries %}
+
+{% for insightEntry in insightEntries %}
+
+    {% if loop.index0 is divisible by(3) %}
+        <div class="insights-index-excerpts container v-pad build-border-dashed">
+        <div class="row build-border-red">
+    {% endif %}
+
+        <div class="insights-excerpt-tile col-12 col-md-4">
+          {% set thumbImage = insightEntry.insightsHero.first() %}
+          <a href="{{ insightEntry.url }}"><img src="{{ thumbImage.url('insightsThumb') }}" class="img-fluid"></a>
+          {% set rel = insightEntry.insightAuthor.one() %}
+            {% if rel %}
+              <div class="author-name"><a href="{{ rel.url }}"><p>{{rel.talentFirstAndLast}}</a></p></div>
+            {% endif %}
+            <div class="read-time"><p>{{ insightEntry.readTime }} minute read</p></div>
+          <h4><a href="{{ insightEntry.url }}">{{ insightEntry.title }}</a></h4>
+        </div>
+
+
+    {% if loop.index is divisible by(3) or loop.last %}
+      </div><!-- /row -->
+    </div><!-- /insights-index-excerpts -->
+    {% endif %}
+
+{% endfor %}
+
+<div class="pagination">
+
+  {% if paginate.prevUrl %}
+    <li><a href="{{ paginate.prevURL }}" class="pag-prev-link">prev</a></li>
+  {% endif %}
+
+  {% for page, url in paginate.getPrevUrls(5) %}
+    <li><a href="{{url}}">{{page}}</a></li>
+  {% endfor %}
+
+  <li class="current">{{ paginate.currentPage }}</li>
+
+  {% for page, url in paginate.getNextUrls(5) %}
+      <li><a href="{{ url }}">{{ page }}</a></li>
+  {% endfor %}
+
+  {% if paginate.nextUrl %}
+    <li><a href="{{ paginate.nextURL }}" class="pag-next-link">next</a></li>
+  {% endif %}
+
+</div><!-- /end pagination -->
+
+
+
+{% endblock %}{#-- /main --#}
+
+{% block foot %}
+  {% include "_partials/footer_get_results" %}
+  {{ parent() }}
+{% endblock %} {#-- /foot --#}

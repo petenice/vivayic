@@ -1,8 +1,8 @@
 <div class="container you-might-also-like v-pad-45 build-border-pink">
   <div class="row no-marr">
     <div class="col-12 col-lg-6 build-border-blue">
-      <h4>You might also like</h4>
-      {% for insight in craft.entries.section('insights').limit(3) %}
+      <h4>More Insights About {% for category in entry.insightCategories %}{{ category.title }}{% endfor %}</h4>
+      {% for insight in craft.entries.section('insights').relatedTo(entry.insightCategories).limit(3).offset(1) %}
         <div class="you-might">
           <p>{{insight.title}}</p>
           <p><a href="{{insight.url}}"><img src="{{ siteUrl }}imgz/read-more-arrow-extra-small.svg"></a></p>
