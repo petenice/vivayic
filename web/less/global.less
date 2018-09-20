@@ -531,8 +531,7 @@ a.nav-link:hover {.red;}
 .process-body {
   #hero-feature {
     // border: solid red 1px;
-    @media @extra-small {height: 400px;}
-    @media @small {height: 465px;}
+    @media @extra-small, @small {overflow: hidden; height: 0; padding-top: 54.25%; margin-top:100px; margin-bottom: 20px;}
     @media @medium {height: 580px;}
     @media @large {height: 772px;}
     @media @extra-large {height: 760px;}
@@ -540,9 +539,7 @@ a.nav-link:hover {.red;}
     position: relative;
     // top: 98px;
     &.process-ill {
-
-      // @media @extra-large, @large, @medium { background: #ffffff url('../imgz/180906-learning-solutions-model-full-1600w.png') no-repeat center center; .cover-bg;}
-      // @media @small, @extra-small {background:  #ffffff url('../imgz/180906-learning-solutions-model-full-1600w.png') no-repeat center center; .cover-bg;}
+      @media @small, @extra-small {background:  #ffffff url('../imgz/180913-learning-solutions-model.svg') no-repeat center center; .contain-bg;}
     }
   }
   .process-stuff {
@@ -620,12 +617,30 @@ a.nav-link:hover {.red;}
 }
 
 .purpose-body {
-  #hero-feature {
-      @media @extra-large, @large, @medium { background: #E3F2F1 url('../imgz/placeholder-hero-lg.jpg') no-repeat center center; .cover-bg;}
-      @media @small, @extra-small {background:  #E3F2F1 url('../imgz/placeholder-hero-lg.jpg') no-repeat center center; .cover-bg;}
+  #hero-feature-scrolly {
+    .bcg {
+      @media @extra-large   { background: #E3F2F1 url('../imgz/180531-global-boog-grid-2400w.jpg') no-repeat center center; .cover-bg;}
+      @media @large { background: #E3F2F1 url('../imgz/180531-global-boog-grid-1800w.jpg') no-repeat center center; .cover-bg;}
+      @media @medium { background: #E3F2F1 url('../imgz/180531-global-boog-grid-1200w.jpg') no-repeat center center; .cover-bg;}
+      @media @small { background: #E3F2F1 url('../imgz/180531-global-boog-grid-800w.jpg') no-repeat center center; .cover-bg;}
+      @media @extra-small { background: #E3F2F1 url('../imgz/180531-global-boog-grid-800w.jpg') no-repeat center center; .cover-bg;}
+    }
     h1 {
-      .white;
-      .black-text-shadow;
+      .black;
+      text-align:left;
+      float: none;
+      .mb20;
+    }
+    .hero-copy-purpose {
+      width: 500px;
+      .bg-white;
+      z-index: 2;
+      opacity: 1;
+      display: block;
+      position: relative;
+      top: 430px;
+      .prl20;
+      .ptb20;
     }
   }
 }

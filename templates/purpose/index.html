@@ -11,45 +11,37 @@ niceworld 7.18.18
 {% block head %}
   {% set title = "Our Purpose" %}
   {{ parent() }}
-  <script>
-  // js
-  </script>
+  {% include '_partials/scrollface' %}
 {% endblock %}
 
 {% block main %}
 
-<div id="hero-feature" class="container-fluid no-marr build-border-blue">
-  <h1>{{pageName}}</h1>
+
+<div id="hero-feature-scrolly" class="container-fluid no-marr no-padd build-border-blue">
+  <div class="bcg"></div>
+  <div class="container v-pad build-border-red">
+    <div class="row build-border-blue">
+      <div class="col-12">
+        <div class="hero-copy hero-copy-purpose">
+          <h1>Purpose</h1>
+          <p>Our guiding purpose is to build others capacity to do good in the world by helping them use learning as a strategy to enable larger goals. Our ambition is to partner with organizations that share in our vision of affecting positive change.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class="container da-main-ova v-pad build-border-red">
-  <div class="row no-padd build-border-yellow ">
-    <div class="col-12 col-lg-9">
-      <span class="breadcrumbs"><img src="/imgz/logo-vivayic-bug-red.svg"><p>what we do:</p></span>
-      <h2>{{pageName}}</h2>
-      <p>Vivayic offers solutions which strike a balance between solid research and lived experience. We offer learner centered programs based on great ideas and solid fundamentals. Our goal is to drive through completion on time, on budget and most importantly with a positive impact on the learner and on the organization’s stated objectives.</p>
-    </div><!-- /col -->
-    <div class="col-12 col-lg-3 px-0 px-md-2 text-center">
-      {% include "_partials/lets_talk" %}
-    </div><!-- /col -->
-  </div><!-- /row -->
-</div><!-- /da-main-ova -->
+<div class="scroll-magi build-border-dashed"><!-- scroll-magi -->
 
-
-<div class="container v-pad build-border-red">
+<div class="container v-pad-45 build-border-red">
   <div class="row build-border-blue">
-    <div class="col-12">
-    <P>Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-    <P>Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-    <P>Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-    <P>Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-    <p>Go!</p>
-    <p>Go!</p>
-    <p>Go!</p>
-    <p>Go!</p>
-    <p>Go!</p>
-    <p>Go!</p>
-    <p>Go!</p>
+    <div class="col-6">
+
+      <h2>Areas of Positive Impact</h2>
+
+      <div class="section-intro">
+      <p><em>Please join us and share the vision. How can we help your organization do good in the world?</em></p>
+      </div>
     </div>
   </div>
 </div>

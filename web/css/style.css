@@ -1032,6 +1032,9 @@ _:-moz-tree-row(hover),
   width: 47px;
   padding: 0;
 }
+#search_form {
+  display: inline-block;
+}
 .btn {
   border-radius: 0;
   padding: 10px 80px 10px 20px;
@@ -2785,14 +2788,13 @@ a.nav-link:hover {
 .process-body #hero-feature {
   position: relative;
 }
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) {
   .process-body #hero-feature {
-    height: 400px;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .process-body #hero-feature {
-    height: 465px;
+    overflow: hidden;
+    height: 0;
+    padding-top: 54.25%;
+    margin-top: 100px;
+    margin-bottom: 20px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -2813,6 +2815,19 @@ a.nav-link:hover {
 @media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
   .process-body #hero-feature {
     background-color: #FFF;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  .process-body #hero-feature.process-ill {
+    background: #ffffff url('../imgz/180913-learning-solutions-model.svg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
   }
 }
 .process-body .process-stuff p {
@@ -2991,9 +3006,9 @@ a.nav-link:hover {
   color: #FFF;
   text-shadow: 1px 1px 0px #000;
 }
-@media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
-  .purpose-body #hero-feature {
-    background: #E3F2F1 url('../imgz/placeholder-hero-lg.jpg') no-repeat center center;
+@media only screen and (min-width:1200px) and (max-width: 4000px) {
+  .purpose-body #hero-feature-scrolly .bcg {
+    background: #E3F2F1 url('../imgz/180531-global-boog-grid-2400w.jpg') no-repeat center center;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
@@ -3004,9 +3019,9 @@ a.nav-link:hover {
     background-size: cover;
   }
 }
-@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
-  .purpose-body #hero-feature {
-    background: #E3F2F1 url('../imgz/placeholder-hero-lg.jpg') no-repeat center center;
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .purpose-body #hero-feature-scrolly .bcg {
+    background: #E3F2F1 url('../imgz/180531-global-boog-grid-1800w.jpg') no-repeat center center;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
@@ -3017,9 +3032,63 @@ a.nav-link:hover {
     background-size: cover;
   }
 }
-.purpose-body #hero-feature h1 {
-  color: #FFF;
-  text-shadow: 1px 1px 0px #000;
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .purpose-body #hero-feature-scrolly .bcg {
+    background: #E3F2F1 url('../imgz/180531-global-boog-grid-1200w.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .purpose-body #hero-feature-scrolly .bcg {
+    background: #E3F2F1 url('../imgz/180531-global-boog-grid-800w.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .purpose-body #hero-feature-scrolly .bcg {
+    background: #E3F2F1 url('../imgz/180531-global-boog-grid-800w.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+.purpose-body #hero-feature-scrolly h1 {
+  color: #000;
+  text-align: left;
+  float: none;
+  margin-bottom: 20px;
+}
+.purpose-body #hero-feature-scrolly .hero-copy-purpose {
+  width: 500px;
+  background-color: #FFF;
+  z-index: 2;
+  opacity: 1;
+  display: block;
+  position: relative;
+  top: 430px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 @media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
   .positive-impact-body #hero-feature,
