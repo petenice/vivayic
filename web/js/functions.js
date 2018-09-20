@@ -37,12 +37,12 @@ $(document).ready(function () {
 	    var introTl = new TimelineMax();
 
 	    introTl
-	    	.to($('#hero-feature-new .hero-copy'), 1, {autoAlpha: 0.2, top: '+=500', ease:Power1.easeOut})
-	    	.to($('#hero-feature-new .bcg'), 1, {autoAlpha: 0.2, y: '20%', ease:Power1.easeOut}, '-=1')
-	    	.to($('#hero-feature-new'), 1, {ease:Power1.easeNone}, '-=1');
+	    	.to($('#hero-feature-scrolly .hero-copy'), 1, {autoAlpha: 0.2, top: '+=500', ease:Power1.easeOut})
+	    	.to($('#hero-feature-scrolly .bcg'), 1, {autoAlpha: 0.2, y: '20%', ease:Power1.easeOut}, '-=1')
+	    	.to($('#hero-feature-scrolly'), 1, {ease:Power1.easeNone}, '-=1');
 
 		var introScene = new ScrollMagic.Scene({
-	        triggerElement: '#hero-feature-new',
+	        triggerElement: '#hero-feature-scrolly',
 	        triggerHook: 0,
 	        duration: "100%"
 	    })

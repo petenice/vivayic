@@ -660,6 +660,10 @@ body.insights-body .v-pad-glob-insights {
 .pr15 {
   padding-right: 15px;
 }
+.prl10 {
+  padding-right: 10px;
+  padding-left: 10px;
+}
 .prl15 {
   padding-right: 15px;
   padding-left: 15px;
@@ -2278,9 +2282,28 @@ a.nav-link:hover {
   font-size: 16px;
   margin-bottom: 0;
 }
-#hero-feature-new {
-  height: 800px;
+#hero-feature-scrolly {
   background-color: #5A89B4;
+}
+@media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px) {
+  #hero-feature-scrolly {
+    height: 800px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  #hero-feature-scrolly {
+    height: 715px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  #hero-feature-scrolly {
+    height: 470px;
+  }
+}
+#hero-feature-scrolly .bcg {
+  background-size: cover;
 }
 .hero-copy {
   z-index: 2;
@@ -2289,6 +2312,12 @@ a.nav-link:hover {
   position: relative;
   top: 130px;
   padding-right: 60px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  .hero-copy {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width:1200px) and (max-width: 4000px) {
   .hero-copy h1 {
@@ -2335,13 +2364,23 @@ a.nav-link:hover {
   background-size: cover;
   position: absolute;
   width: 100%;
-  height: 800px;
   z-index: 1;
   opacity: 1;
 }
-#hero-feature-new .bcg {
-  background: url(../imgz/solutions-hero-lg.jpg) no-repeat center center;
-  background-size: cover;
+@media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px) {
+  .bcg {
+    height: 800px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .bcg {
+    height: 715px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  .bcg {
+    height: 470px;
+  }
 }
 @media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px) {
   #hero-feature {
@@ -2361,7 +2400,7 @@ a.nav-link:hover {
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
   #hero-feature {
-    height: 670px;
+    height: 470px;
     padding-top: 120px;
   }
 }
@@ -2403,7 +2442,10 @@ a.nav-link:hover {
     padding-top: 120px;
   }
 }
-.solutions-body #hero-feature h1 {
+.solutions-body #hero-feature-scrolly .bcg {
+  background: url(../imgz/solutions-hero-lg.jpg) no-repeat center center;
+}
+.solutions-body #hero-feature-scrolly h1 {
   color: #FFF;
   text-shadow: 1px 1px 0px #000;
 }
@@ -2476,8 +2518,37 @@ a.nav-link:hover {
     background-size: cover;
   }
 }
+.industries-body #hero-feature-scrolly h1 {
+  color: #FFF;
+  text-shadow: 1px 1px 0px #000;
+}
 @media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
-  .industries-body #hero-feature,
+  .industries-body #hero-feature-scrolly .bcg {
+    background: #E3F2F1 url('../imgz/industries-hero-lg.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  .industries-body #hero-feature-scrolly .bcg {
+    background: #E3F2F1 url('../imgz/industries-hero-lg.jpg') no-repeat -100px 91px;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
   .industries-body #hero-page {
     background: #E3F2F1 url('../imgz/industries-hero-lg.jpg') no-repeat center center;
     -webkit-background-size: 100%;
@@ -2491,9 +2562,8 @@ a.nav-link:hover {
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
-  .industries-body #hero-feature,
   .industries-body #hero-page {
-    background: #E3F2F1 url('../imgz/industries-hero-lg.jpg') no-repeat -100px center;
+    background: #E3F2F1 url('../imgz/industries-hero-lg.jpg') no-repeat -100px 91px;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
@@ -2503,11 +2573,6 @@ a.nav-link:hover {
     -o-background-size: cover;
     background-size: cover;
   }
-}
-.industries-body #hero-feature h1,
-.industries-body #hero-page h1 {
-  color: #FFF;
-  text-shadow: 1px 1px 0px #000;
 }
 @media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
   .industries-body #hero-page {
@@ -2639,8 +2704,39 @@ a.nav-link:hover {
   }
 }
 @media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
-  .talent-body #hero-feature,
-  .talentIndex-body #hero-feature,
+  .talent-body #hero-feature-scrolly .bcg,
+  .talentIndex-body #hero-feature-scrolly .bcg {
+    background: #E3F2F1 url('../imgz/talent-hero-lg.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  .talent-body #hero-feature-scrolly .bcg,
+  .talentIndex-body #hero-feature-scrolly .bcg {
+    background: #E3F2F1 url('../imgz/talent-hero-lg.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+.talent-body #hero-feature-scrolly h1,
+.talentIndex-body #hero-feature-scrolly h1 {
+  color: #FFF;
+  text-shadow: 1px 1px 0px #000;
+}
+@media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
   .talent-body #hero-page,
   .talentIndex-body #hero-page {
     background: #E3F2F1 url('../imgz/talent-hero-lg.jpg') no-repeat center center;
@@ -2655,8 +2751,6 @@ a.nav-link:hover {
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
-  .talent-body #hero-feature,
-  .talentIndex-body #hero-feature,
   .talent-body #hero-page,
   .talentIndex-body #hero-page {
     background: #E3F2F1 url('../imgz/talent-hero-lg.jpg') no-repeat center center;
@@ -2670,8 +2764,6 @@ a.nav-link:hover {
     background-size: cover;
   }
 }
-.talent-body #hero-feature h1,
-.talentIndex-body #hero-feature h1,
 .talent-body #hero-page h1,
 .talentIndex-body #hero-page h1 {
   color: #FFF;
@@ -2742,22 +2834,26 @@ a.nav-link:hover {
 }
 @media only screen and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) {
   .values-body #hero-feature {
-    height: 617px;
+    overflow: hidden;
+    height: 0;
+    padding-top: 54.25%;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .values-body #hero-feature {
-    height: 617px;
+    height: 560px;
   }
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width: 992px) and (max-width: 1399px) {
   .values-body #hero-feature {
-    height: 772px;
+    height: 712px;
   }
 }
-@media only screen and (min-width:1200px) and (max-width: 4000px) {
+@media only screen and (min-width:1400px) and (max-width: 4000px) {
   .values-body #hero-feature {
-    height: 888px;
+    height: 980px;
+    max-width: 2000px;
+    margin: 0 auto;
   }
 }
 @media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
@@ -2765,9 +2861,35 @@ a.nav-link:hover {
     background-color: #5A89B4;
   }
 }
-@media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width:1400px) and (max-width: 4000px) {
   .values-body #hero-feature.values-ill {
-    background: #E3F2F1 url('../imgz/180906-values-full-1600w.jpg') no-repeat center center;
+    background: #E3F2F1 url('../imgz/180906-values-full-wide-2000w.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1399px) {
+  .values-body #hero-feature.values-ill {
+    background: #E3F2F1 url('../imgz/180906-values-full-wide-1600w.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .values-body #hero-feature.values-ill {
+    background: #E3F2F1 url('../imgz/180906-values-full-wide-1200w.jpg') no-repeat center center;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
@@ -2780,15 +2902,15 @@ a.nav-link:hover {
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
   .values-body #hero-feature.values-ill {
-    background: #E3F2F1 url('../imgz/180906-values-full-1600w.jpg') no-repeat center center;
+    background: #E3F2F1 url('../imgz/180906-values-full-wide-1200w.jpg') no-repeat center center;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
     background-size: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
   }
 }
 .values-body #hero-feature h1 {
@@ -2825,6 +2947,12 @@ a.nav-link:hover {
     top: 0;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  .values-body .da-main-ova {
+    top: 92px;
+    margin-bottom: 110px;
+  }
+}
 .values-body .val-ill-w {
   max-width: 268px;
 }
@@ -2834,7 +2962,7 @@ a.nav-link:hover {
   }
 }
 @media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
-  .about-body #hero-feature {
+  .about-body #hero-feature-scrolly .bcg {
     background: #E3F2F1 url('../imgz/about-hero-lg.jpg') no-repeat center center;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -2847,7 +2975,7 @@ a.nav-link:hover {
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
-  .about-body #hero-feature {
+  .about-body #hero-feature-scrolly .bcg {
     background: #E3F2F1 url('../imgz/about-hero-lg.jpg') no-repeat center center;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -2859,7 +2987,7 @@ a.nav-link:hover {
     background-size: cover;
   }
 }
-.about-body #hero-feature h1 {
+.about-body #hero-feature-scrolly h1 {
   color: #FFF;
   text-shadow: 1px 1px 0px #000;
 }
@@ -2903,7 +3031,98 @@ a.nav-link:hover {
   .join-body #hero-feature,
   .privacy-body #hero-feature,
   .legal-body #hero-feature,
-  .search-body #hero-feature,
+  .search-body #hero-feature {
+    background: #E3F2F1 url('../imgz/positive-impact-hero-lg.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  .positive-impact-body #hero-feature,
+  .positiveImpact-body #hero-feature,
+  .giving-back-body #hero-feature,
+  .givingBack-body #hero-feature,
+  .free-resources-body #hero-feature,
+  .contact-body #hero-feature,
+  .join-body #hero-feature,
+  .privacy-body #hero-feature,
+  .legal-body #hero-feature,
+  .search-body #hero-feature {
+    background: #E3F2F1 url('../imgz/positive-impact-hero-lg.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .positive-impact-body #hero-feature-scrolly .bcg,
+  .positiveImpact-body #hero-feature-scrolly .bcg,
+  .giving-back-body #hero-feature-scrolly .bcg,
+  .givingBack-body #hero-feature-scrolly .bcg,
+  .free-resources-body #hero-feature-scrolly .bcg,
+  .contact-body #hero-feature-scrolly .bcg,
+  .join-body #hero-feature-scrolly .bcg,
+  .privacy-body #hero-feature-scrolly .bcg,
+  .legal-body #hero-feature-scrolly .bcg,
+  .search-body #hero-feature-scrolly .bcg {
+    background: #E3F2F1 url('../imgz/positive-impact-hero-lg.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
+  .positive-impact-body #hero-feature-scrolly .bcg,
+  .positiveImpact-body #hero-feature-scrolly .bcg,
+  .giving-back-body #hero-feature-scrolly .bcg,
+  .givingBack-body #hero-feature-scrolly .bcg,
+  .free-resources-body #hero-feature-scrolly .bcg,
+  .contact-body #hero-feature-scrolly .bcg,
+  .join-body #hero-feature-scrolly .bcg,
+  .privacy-body #hero-feature-scrolly .bcg,
+  .legal-body #hero-feature-scrolly .bcg,
+  .search-body #hero-feature-scrolly .bcg {
+    background: #E3F2F1 url('../imgz/positive-impact-hero-lg.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+.positive-impact-body #hero-feature-scrolly h1,
+.positiveImpact-body #hero-feature-scrolly h1,
+.giving-back-body #hero-feature-scrolly h1,
+.givingBack-body #hero-feature-scrolly h1,
+.free-resources-body #hero-feature-scrolly h1,
+.contact-body #hero-feature-scrolly h1,
+.join-body #hero-feature-scrolly h1,
+.privacy-body #hero-feature-scrolly h1,
+.legal-body #hero-feature-scrolly h1,
+.search-body #hero-feature-scrolly h1 {
+  color: #FFF;
+  text-shadow: 1px 1px 0px #000;
+}
+@media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
   .positive-impact-body #hero-page,
   .positiveImpact-body #hero-page,
   .giving-back-body #hero-page,
@@ -2926,16 +3145,6 @@ a.nav-link:hover {
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 575px) {
-  .positive-impact-body #hero-feature,
-  .positiveImpact-body #hero-feature,
-  .giving-back-body #hero-feature,
-  .givingBack-body #hero-feature,
-  .free-resources-body #hero-feature,
-  .contact-body #hero-feature,
-  .join-body #hero-feature,
-  .privacy-body #hero-feature,
-  .legal-body #hero-feature,
-  .search-body #hero-feature,
   .positive-impact-body #hero-page,
   .positiveImpact-body #hero-page,
   .giving-back-body #hero-page,
@@ -2957,16 +3166,6 @@ a.nav-link:hover {
     background-size: cover;
   }
 }
-.positive-impact-body #hero-feature h1,
-.positiveImpact-body #hero-feature h1,
-.giving-back-body #hero-feature h1,
-.givingBack-body #hero-feature h1,
-.free-resources-body #hero-feature h1,
-.contact-body #hero-feature h1,
-.join-body #hero-feature h1,
-.privacy-body #hero-feature h1,
-.legal-body #hero-feature h1,
-.search-body #hero-feature h1,
 .positive-impact-body #hero-page h1,
 .positiveImpact-body #hero-page h1,
 .giving-back-body #hero-page h1,

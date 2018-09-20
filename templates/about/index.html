@@ -11,17 +11,19 @@ niceworld 8.24.18
 {% block head %}
   {% set title = "About" %}
   {{ parent() }}
-  <script>
-  // js
-  </script>
+  {% include '_partials/scrollface' %}
 {% endblock %}
 
 {% block main %}
 
-<div id="hero-feature" class="container-fluid no-marr build-border-blue">
-  <h1>Wisdom from Experience</h1>
+<div id="hero-feature-scrolly" class="container-fluid no-marr no-padd build-border-blue">
+  <div class="bcg"></div>
+    <div class="hero-copy">
+      <h1>Wisdom from Experience</h1>
+    </div>
 </div>
 
+<div class="scroll-magi build-border-dashed"><!-- scroll-magi -->
 <div class="container da-main-ova v-pad build-border-red">
   <div class="row no-padd build-border-yellow ">
     <div class="col-12 col-lg-9">

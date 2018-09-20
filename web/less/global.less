@@ -376,9 +376,17 @@ a.nav-link:hover {.red;}
   p {.f-size-small-16; .mb0;}
 }
 
-#hero-feature-new {
-    height:800px; .bg-blue;
+#hero-feature-scrolly {
+    // height:800px;
+    .bg-blue;
+    @media @extra-large, @large {height:800px;}
+    @media @medium {height:715px; .prl40;}
+    @media @small, @extra-small  {height:470px;}
+    }
+  #hero-feature-scrolly .bcg {
+    background-size: cover;
   }
+
 .hero-copy {
   z-index: 2;
   opacity: 1;
@@ -386,6 +394,7 @@ a.nav-link:hover {.red;}
   position: relative;
   top: 130px;
   padding-right: 60px;
+  @media @medium, @small, @extra-small  {.prl10;}
   h1 {
     @media @medium, @large, @extra-large {.f-size-large; .l-height-large; float: right; text-align: right;}
     @media @small, @extra-small {.f-size-medium; .l-height-medium; float: none; text-align: center;}
@@ -404,20 +413,21 @@ a.nav-link:hover {.red;}
   background-size: cover;
   position: absolute;
   width: 100%;
-  height: 800px;
+  // height: 800px;
   z-index: 1;
   opacity: 1;
-  }
-  #hero-feature-new .bcg {
-    background: url(../imgz/solutions-hero-lg.jpg) no-repeat center center;
-    background-size: cover; }
+  @media @extra-large, @large {height:800px;}
+  @media @medium {height:715px;}
+  @media @small, @extra-small  {height:470px;}
+}
+
 
 
 
 #hero-feature {
   @media @extra-large, @large {height:800px; .pt120; .prl40;}
   @media @medium {height:715px; .pt120; .prl40;}
-  @media @small, @extra-small  {height:670px; .pt120;}
+  @media @small, @extra-small  {height:470px; .pt120;}
   h1 {
     @media @medium, @large, @extra-large {.f-size-large; .l-height-large; float: right; text-align: right;}
     @media @small, @extra-small {.f-size-medium; .l-height-medium; float: none; text-align: center;}
@@ -431,9 +441,8 @@ a.nav-link:hover {.red;}
 }
 
 .solutions-body {
-  #hero-feature {
-      // @media @extra-large, @large, @medium { background: #E3F2F1 url('../imgz/solutions-hero-lg.jpg') no-repeat center center; .cover-bg;}
-      // @media @small, @extra-small {background:  #E3F2F1 url('../imgz/solutions-hero-lg.jpg') no-repeat center center; .cover-bg;}
+  #hero-feature-scrolly {
+    .bcg {background: url(../imgz/solutions-hero-lg.jpg) no-repeat center center;}
     h1 {
       .white;
       .black-text-shadow;
@@ -454,15 +463,19 @@ a.nav-link:hover {.red;}
   }
 
 .industries-body {
-  #hero-feature, #hero-page {
+  #hero-feature-scrolly {
+      h1 {
+        .white;
+        .black-text-shadow;
+      }
+     .bcg {
       @media @extra-large, @large, @medium { background: #E3F2F1 url('../imgz/industries-hero-lg.jpg') no-repeat center center; .cover-bg;}
-      @media @small, @extra-small {background:  #E3F2F1 url('../imgz/industries-hero-lg.jpg') no-repeat -100px center; .cover-bg;}
-    h1 {
-      .white;
-      .black-text-shadow;
+      @media @small, @extra-small {background:  #E3F2F1 url('../imgz/industries-hero-lg.jpg') no-repeat -100px 91px; .cover-bg;}
+      }
     }
-  }
   #hero-page {
+    @media @extra-large, @large, @medium { background: #E3F2F1 url('../imgz/industries-hero-lg.jpg') no-repeat center center; .cover-bg;}
+    @media @small, @extra-small {background:  #E3F2F1 url('../imgz/industries-hero-lg.jpg') no-repeat -100px 91px; .cover-bg;}
     @media @extra-large, @large, @medium { background-position-y: -20px;}
     @media @small, @extra-small {background-position-x: 0px; background-position-y: 0px;}
   }
@@ -492,7 +505,17 @@ a.nav-link:hover {.red;}
 }
 
 .talent-body, .talentIndex-body {
-  #hero-feature, #hero-page {
+  #hero-feature-scrolly {
+      .bcg {
+      @media @extra-large, @large, @medium { background: #E3F2F1 url('../imgz/talent-hero-lg.jpg') no-repeat center center; .cover-bg;}
+      @media @small, @extra-small {background:  #E3F2F1 url('../imgz/talent-hero-lg.jpg') no-repeat center center; .cover-bg;}
+      }
+    h1 {
+      .white;
+      .black-text-shadow;
+    }
+  }
+  #hero-page {
       @media @extra-large, @large, @medium { background: #E3F2F1 url('../imgz/talent-hero-lg.jpg') no-repeat center center; .cover-bg;}
       @media @small, @extra-small {background:  #E3F2F1 url('../imgz/talent-hero-lg.jpg') no-repeat center center; .cover-bg;}
     h1 {
@@ -546,16 +569,18 @@ a.nav-link:hover {.red;}
       // @media @large {height: 772px;}
       // @media @extra-large {height: 888px;}
       // @media @extra-large, @large, @medium, @small, @extra-small { .bg-blue; }
-      @media @extra-small, @small {height: 617px;}
-      @media @medium {height: 617px;}
-      @media @large {height: 772px;}
-      @media @extra-large {height: 888px;}
+      @media @extra-small, @small {overflow: hidden; height: 0; padding-top: 54.25%;}
+      @media @medium {height: 560px;}
+      @media @large-alt {height: 712px;}
+      @media @extra-large-alt {height: 980px; max-width: 2000px; margin: 0 auto;}
       @media @extra-large, @large, @medium, @small, @extra-small { .bg-blue; }
       position: relative;
       top: 92px;
       &.values-ill {
-        @media @extra-large, @large, @medium { background: #E3F2F1 url('../imgz/180906-values-full-1600w.jpg') no-repeat center center; .cover-bg;}
-        @media @small, @extra-small {background:  #E3F2F1 url('../imgz/180906-values-full-1600w.jpg') no-repeat center center; .cover-bg;}
+        @media @extra-large-alt { background: #E3F2F1 url('../imgz/180906-values-full-wide-2000w.jpg') no-repeat center center; .cover-bg;}
+        @media @large-alt { background: #E3F2F1 url('../imgz/180906-values-full-wide-1600w.jpg') no-repeat center center; .cover-bg;}
+        @media @medium { background: #E3F2F1 url('../imgz/180906-values-full-wide-1200w.jpg') no-repeat center center; .cover-bg;}
+        @media @small, @extra-small {background:  #E3F2F1 url('../imgz/180906-values-full-wide-1200w.jpg') no-repeat center center; .contain-bg;}
       }
     h1 {
       .white;
@@ -572,6 +597,7 @@ a.nav-link:hover {.red;}
     top: -30px;
     margin-bottom: 0;
     @media @extra-small, @small {top:0;}
+    @media @medium, @small, @extra-small {top: 92px; margin-bottom: 110px;}
     padding-bottom: 0;
   }
   .val-ill-w {
@@ -581,15 +607,16 @@ a.nav-link:hover {.red;}
 }
 
 .about-body {
-  #hero-feature {
+  #hero-feature-scrolly {
+    .bcg {
       @media @extra-large, @large, @medium { background: #E3F2F1 url('../imgz/about-hero-lg.jpg') no-repeat center center; .cover-bg;}
       @media @small, @extra-small {background:  #E3F2F1 url('../imgz/about-hero-lg.jpg') no-repeat center center; .cover-bg;}
+      }
     h1 {
       .white;
       .black-text-shadow;
     }
   }
-
 }
 
 .purpose-body {
@@ -606,7 +633,21 @@ a.nav-link:hover {.red;}
 .positive-impact-body, .positiveImpact-body, .giving-back-body, .givingBack-body,
 .free-resources-body, .contact-body, .join-body, .privacy-body, .legal-body, .search-body
 {
-  #hero-feature, #hero-page {
+  #hero-feature {
+      @media @extra-large, @large, @medium { background: #E3F2F1 url('../imgz/positive-impact-hero-lg.jpg') no-repeat center center; .cover-bg;}
+      @media @small, @extra-small {background:  #E3F2F1 url('../imgz/positive-impact-hero-lg.jpg') no-repeat center center; .cover-bg;}
+      }
+  #hero-feature-scrolly {
+      .bcg {
+      @media @extra-large, @large, @medium { background: #E3F2F1 url('../imgz/positive-impact-hero-lg.jpg') no-repeat center center; .cover-bg;}
+      @media @small, @extra-small {background:  #E3F2F1 url('../imgz/positive-impact-hero-lg.jpg') no-repeat center center; .cover-bg;}
+      }
+    h1 {
+      .white;
+      .black-text-shadow;
+    }
+  }
+  #hero-page {
       @media @extra-large, @large, @medium { background: #E3F2F1 url('../imgz/positive-impact-hero-lg.jpg') no-repeat center center; .cover-bg;}
       @media @small, @extra-small {background:  #E3F2F1 url('../imgz/positive-impact-hero-lg.jpg') no-repeat center center; .cover-bg;}
     h1 {
