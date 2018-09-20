@@ -47,7 +47,7 @@ $(document).ready(function () {
 	        duration: "100%"
 	    })
 	    .setTween(introTl)
-		  .addIndicators()
+		  // .addIndicators()
 	    .addTo(controller);
 
 }(jQuery));

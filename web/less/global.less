@@ -260,8 +260,6 @@ a.nav-link:hover {.red;}
   .col-12 {padding: 0 5px;}
 }
 
-
-
 #super-footer-get-results {
   .bg-light-green;
   h3 {
@@ -377,15 +375,17 @@ a.nav-link:hover {.red;}
 }
 
 #hero-feature-scrolly {
-    // height:800px;
+    height:800px;
     .bg-blue;
-    @media @extra-large, @large {height:800px;}
+    @media @extra-large {height:800px;}
+    @media @large {height:800px;}
     @media @medium {height:715px; .prl40;}
-    @media @small, @extra-small  {height:470px;}
+    @media @small  {height:470px;}
+    @media @extra-small {height:470px;}
     }
-  #hero-feature-scrolly .bcg {
-    background-size: cover;
-  }
+#hero-feature-scrolly .bcg {
+  background-size: cover;
+}
 
 .hero-copy {
   z-index: 2;
@@ -420,8 +420,6 @@ a.nav-link:hover {.red;}
   @media @medium {height:715px;}
   @media @small, @extra-small  {height:470px;}
 }
-
-
 
 
 #hero-feature {
@@ -618,12 +616,16 @@ a.nav-link:hover {.red;}
 
 .purpose-body {
   #hero-feature-scrolly {
+      @media @extra-small, @small {height: 470px;}
+      @media @medium {height: 560px;}
+      @media @large {height: 712px;}
+      @media @extra-large {height: 800px; margin: 0 auto;}
     .bcg {
-      @media @extra-large   { background: #E3F2F1 url('../imgz/180531-global-boog-grid-2400w.jpg') no-repeat center center; .cover-bg;}
-      @media @large { background: #E3F2F1 url('../imgz/180531-global-boog-grid-1800w.jpg') no-repeat center center; .cover-bg;}
-      @media @medium { background: #E3F2F1 url('../imgz/180531-global-boog-grid-1200w.jpg') no-repeat center center; .cover-bg;}
-      @media @small { background: #E3F2F1 url('../imgz/180531-global-boog-grid-800w.jpg') no-repeat center center; .cover-bg;}
-      @media @extra-small { background: #E3F2F1 url('../imgz/180531-global-boog-grid-800w.jpg') no-repeat center center; .cover-bg;}
+      @media @extra-large   { background: url('../imgz/180531-global-boog-grid-2400w.jpg') no-repeat center center; .cover-bg;}
+      @media @large { background: url('../imgz/180531-global-boog-grid-1800w.jpg') no-repeat center center; .cover-bg;}
+      @media @medium { background: url('../imgz/180531-global-boog-grid-1200w.jpg') no-repeat center center; .cover-bg;}
+      @media @small { background: url('../imgz/180531-global-boog-grid-800w.jpg') no-repeat center center; .cover-bg;}
+      @media @extra-small { background: url('../imgz/180531-global-boog-grid-800w.jpg') no-repeat center center; .cover-bg;}
     }
     h1 {
       .black;
@@ -638,11 +640,17 @@ a.nav-link:hover {.red;}
       opacity: 1;
       display: block;
       position: relative;
-      top: 430px;
       .prl20;
       .ptb20;
+      @media @extra-small, @small {top: 200px;}
+      @media @medium {top: 200px;}
+      @media @large {top: 330px;}
+      @media @extra-large {top: 430px;}
     }
   }
+  h2 {.f-size-medium;}
+  h3 {.f-weight-sembold; .f-size-small;}
+
 }
 
 .positive-impact-body, .positiveImpact-body, .giving-back-body, .givingBack-body,
