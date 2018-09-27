@@ -36,11 +36,11 @@
       <!-- <div class="foot-feature-text align-self-center text-center build-border-red"> -->
       <div class="foot-feature-text align-self-center build-border-red">
 
-    {% for quoteEntry in craft.entries.section('quotes').limit(1) %}
+    {% set quoteEntry = craft.entries.section('quotes').order('RAND()').first() %}
       <h3 class="mb10">&ldquo; {{ quoteEntry.quote }} &rdquo;</h3>
-
+      {% if quoteEntry.firstAndLastName|length %}
       <p class="quote-attrib"><span class="quote-dash">&mdash;</span>{{ quoteEntry.firstAndLastName }}<br>{{ quoteEntry.jobTitle }}<br>{{ quoteEntry.businessOrAffiliation }}</p>
-    {% endfor %}
+      {% endif %}
 
         <div class="mtb60"></div>
 
