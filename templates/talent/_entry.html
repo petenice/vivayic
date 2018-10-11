@@ -20,7 +20,7 @@ niceworld 7.26.18
 <div class="container da-main-ova v-pad build-border-red">
   <div class="row no-padd build-border-yellow ">
     <div class="col-12 col-lg-9">
-      <span class="breadcrumbs"><img src="/imgz/logo-vivayic-bug-red.svg"><p>Vivayic Talent:</p></span>
+      <span class="breadcrumbs"><img src="/imgz/logo-vivayic-bug-red.svg"><a href="{{ siteUrl }}talent"><p>Vivayic Talent:</p></a></span>
       <h2>{{ entry.talentFirstAndLast }}</h2>
       <p class="talent-title">{{ entry.talentTitle }}</p>
     </div><!-- /col -->
@@ -30,8 +30,8 @@ niceworld 7.26.18
       {% for block in entry.talentSocialLinks|slice(0, 4) %}
           {% if block.facebookUrl %}<a href="{{ block.facebookUrl}}" target="_new"><img src="{{ siteUrl }}imgz/icon-social-fb-blue-circle.svg" class="mr10"></a>{% endif %}
           {% if block.twitterUrl %}<a href="{{ block.twitterUrl}}" target="_new"><img src="{{ siteUrl }}imgz/icon-social-tw-blue-circle.svg" class="mr10"></a>{% endif %}
-          {% if block.linkedinUrl %}<a href="{{ block.linkedinUrl}}" target="_new"><img src="{{ siteUrl }}imgz/icon-social-insta-blue-circle.svg" class="mr10"></a>{% endif %}
-          {% if block.instagramUrl %}<a href="{{ block.instagramUrl}}" target="_new"><img src="{{ siteUrl }}imgz/icon-social-li-blue-circle.svg" class="mr10"></a>{% endif %}
+          {% if block.linkedinUrl %}<a href="{{ block.linkedinUrl}}" target="_new"><img src="{{ siteUrl }}imgz/icon-social-li-blue-circle.svg" class="mr10"></a>{% endif %}
+          {% if block.instagramUrl %}<a href="{{ block.instagramUrl}}" target="_new"><img src="{{ siteUrl }}imgz/icon-social-insta-blue-circle.svg" class="mr10"></a>{% endif %}
       {% endfor %}
       {% if entry.talentEmail %}<a href="mailto:{{ entry.talentEmail }}"><img src="{{ siteUrl }}imgz/icon-email-blue-circle.svg"></a>{% endif %}
 
@@ -48,11 +48,11 @@ niceworld 7.26.18
       <img src="{{ headshot.url('talentHeadshot260') }}" class="img-fluid">
     </div>
     <div class="col-12 col-md-8 talent-big-quote no-padd align-self-center build-border-yellow">
-      {{entry.talentBigQuote}}
+      <p>&ldquo;{{entry.talentBigQuote}}&rdquo;</p>
     </div>
     {% else %}
     <div class="col-12 talent-big-quote align-self-center build-border-yellow">
-      {{entry.talentBigQuote}}
+      <p>&ldquo;{{entry.talentBigQuote}}&rdquo;</p>
     </div>
     {% endif %}
   </div>

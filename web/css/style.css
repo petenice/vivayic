@@ -2634,6 +2634,66 @@ a.nav-link:hover {
     background-size: cover;
   }
 }
+@media only screen and (min-width:1200px) and (max-width: 4000px), only screen and (min-width: 992px) and (max-width: 1200px), only screen and (min-width: 768px) and (max-width: 992px) {
+  .industries-body #hero-feature.manufacturing,
+  .industries-body #hero-feature.associations-and-checkoff-organizations,
+  .industries-body #hero-feature.cooperative-extensions,
+  .industries-body #hero-feature.small-and-mid-sized-businesses,
+  .industries-body #hero-feature.health-and-wellness,
+  .industries-body #hero-feature.technology-and-information,
+  .industries-body #hero-feature.agriculture-food-and-natural-resources,
+  .industries-body #hero-feature.education-and-workforce,
+  .industries-body #hero-feature.international-development,
+  .industries-body #hero-feature.social-impact-and-community-development,
+  .industries-body #hero-feature.international-development,
+  .industries-body #hero-feature.youth-development,
+  .industries-body #hero-feature.technology-and-innovation,
+  .industries-body #hero-feature.state-career-technical-education,
+  .industries-body #hero-feature.statewide-initiatives,
+  .industries-body #hero-feature.social-impact,
+  .industries-body #hero-feature.community-development,
+  .industries-body #hero-feature.faith-communities {
+    background: #E3F2F1 url('../imgz/industries-hero-lg.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 768px), only screen and (max-width: 576px) {
+  .industries-body #hero-feature.manufacturing,
+  .industries-body #hero-feature.associations-and-checkoff-organizations,
+  .industries-body #hero-feature.cooperative-extensions,
+  .industries-body #hero-feature.small-and-mid-sized-businesses,
+  .industries-body #hero-feature.health-and-wellness,
+  .industries-body #hero-feature.technology-and-information,
+  .industries-body #hero-feature.agriculture-food-and-natural-resources,
+  .industries-body #hero-feature.education-and-workforce,
+  .industries-body #hero-feature.international-development,
+  .industries-body #hero-feature.social-impact-and-community-development,
+  .industries-body #hero-feature.international-development,
+  .industries-body #hero-feature.youth-development,
+  .industries-body #hero-feature.technology-and-innovation,
+  .industries-body #hero-feature.state-career-technical-education,
+  .industries-body #hero-feature.statewide-initiatives,
+  .industries-body #hero-feature.social-impact,
+  .industries-body #hero-feature.community-development,
+  .industries-body #hero-feature.faith-communities {
+    background: #E3F2F1 url('../imgz/industries-hero-lg.jpg') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
 .industries-body .da-main-ova {
   padding-bottom: 30px;
 }
