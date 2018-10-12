@@ -843,12 +843,13 @@ body.two-insights-category-page {
 .insights-big-image {
   img {width:100%;}
   @media @extra-small, @small { img {.mb10;} }
-  p {
+  p, strong {
     .f-size-extra-small;
     .white;
-    .mb10; .ml10;
+    .mb30;
   }
-  @media @extra-small, @small { p {text-align: center;} }
+  strong {.f-weight-sembold;}
+  @media @extra-small, @small { p {text-align: center; .mb10;} }
   a {.white; text-decoration: underline;}
   &.dark-text { p, a {.charcoal; } }
   padding-left: 30px;

@@ -3624,15 +3624,19 @@ body.two-insights-category-page {
     margin-bottom: 10px;
   }
 }
-.insights-big-image p {
+.insights-big-image p,
+.insights-big-image strong {
   font-size: 12px;
   color: #FFF;
-  margin-bottom: 10px;
-  margin-left: 10px;
+  margin-bottom: 30px;
+}
+.insights-big-image strong {
+  font-weight: 700;
 }
 @media only screen and (max-width: 576px), only screen and (min-width: 576px) and (max-width: 768px) {
   .insights-big-image p {
     text-align: center;
+    margin-bottom: 10px;
   }
 }
 .insights-big-image a {

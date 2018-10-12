@@ -42,30 +42,37 @@ niceworld 10.11.18
 
 <div class="container v-pad build-border-red">
   <div class="row">
-    <div class="col-12">
+    <div class="col-12 col-lg-9">
+    <h4>Interfaces</h4>
+    <p>Aenean lacinia bibendum nulla sed consectetur.
+    Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper.</p>
+    </div>
 
-      <h4>Learning Modules</h4>
+    <div class="col-12 mt20">
+        <div id="gallery-1">
+        	<div id="panel-1">
+        		<img id="largeImage-1" src="{{ siteUrl }}imgz/ux_portfolio_gallery_01_01_large.jpg" class="ux-main img-resp" />
+        		<div class="ux-descrip"><div class="ux-descrip-copy-1">1st image description</div></div>
+        	</div>
 
-      <div id="gallery-1">
-      	<div id="panel-1">
-      		<img id="largeImage-1" src="{{ siteUrl }}imgz/ux_portfolio_gallery_01_01_large.jpg" class="ux-main img-resp" />
-      		<div class="ux-descrip"><div class="ux-descrip-copy-1">1st image description</div></div>
-      	</div>
+        	<div id="thumbs-1" class="thumb-row">
+                <img src="{{ siteUrl }}imgz/ux_portfolio_gallery_01_01_thumb.jpg" alt="1st image description" class="ux-thumb active" />
+                <img src="{{ siteUrl }}imgz/ux_portfolio_gallery_01_02_thumb.jpg" alt="2nd image description" class="ux-thumb" />
+                <img src="{{ siteUrl }}imgz/ux_portfolio_gallery_01_03_thumb.jpg" alt="3rd image description" class="ux-thumb" />
+                <img src="{{ siteUrl }}imgz/ux_portfolio_gallery_01_04_thumb.jpg" alt="4th image description" class="ux-thumb" />
+                <img src="{{ siteUrl }}imgz/ux_portfolio_gallery_01_05_thumb.jpg" alt="4th image description" class="ux-thumb" />
+                <img src="{{ siteUrl }}imgz/ux_portfolio_gallery_01_06_thumb.jpg" alt="4th image description" class="ux-thumb" />
+        	</div>
+        </div><!-- gallery-1 -->
+    </div><!-- /col-12 -->
 
-      	<div id="thumbs-1" class="thumb-row">
-              <img src="{{ siteUrl }}imgz/ux_portfolio_gallery_01_01_thumb.jpg" alt="1st image description" class="ux-thumb active" />
-              <img src="{{ siteUrl }}imgz/ux_portfolio_gallery_01_02_thumb.jpg" alt="2nd image description" class="ux-thumb" />
-              <img src="{{ siteUrl }}imgz/ux_portfolio_gallery_01_03_thumb.jpg" alt="3rd image description" class="ux-thumb" />
-              <img src="{{ siteUrl }}imgz/ux_portfolio_gallery_01_04_thumb.jpg" alt="4th image description" class="ux-thumb" />
-              <img src="{{ siteUrl }}imgz/ux_portfolio_gallery_01_05_thumb.jpg" alt="4th image description" class="ux-thumb" />
-              <img src="{{ siteUrl }}imgz/ux_portfolio_gallery_01_06_thumb.jpg" alt="4th image description" class="ux-thumb" />
-      	</div>
-      </div>
+    <div class="col-12 col-lg-9 mt40">
+    <h4>Experiences</h4>
+    <p>Aenean lacinia bibendum nulla sed consectetur.
+    Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper.</p>
+    </div>
 
-
-      <h4>UX Modules</h4>
-
-
+    <div class="col-12 mt20">
       <div id="gallery-2">
       	<div id="panel-2">
       		<img id="largeImage-2" src="{{ siteUrl }}imgz/ux_portfolio_gallery_02_01_large.jpg" class="img-resp" />
@@ -84,9 +91,30 @@ niceworld 10.11.18
       </div>
 
 
+      <div class="col-12 col-lg-9 mt40">
+      <h4>Games</h4>
+      <p>Aenean lacinia bibendum nulla sed consectetur.
+      Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper.</p>
+      </div>
 
-      </div><!-- /col -->
-    </div><!-- /row -->
+      <div class="col-12 mt20 mb80">
+          <div id="gallery-3">
+          	<div id="panel-3">
+          		<img id="largeImage-3" src="{{ siteUrl }}imgz/ux_portfolio_gallery_01_01_large.jpg" class="ux-main img-resp" />
+          		<div class="ux-descrip"><div class="ux-descrip-copy-1">1st image description</div></div>
+          	</div>
+
+          	<div id="thumbs-3" class="thumb-row">
+                  <img src="{{ siteUrl }}imgz/ux_portfolio_gallery_01_01_thumb.jpg" alt="1st image description" class="ux-thumb active" />
+                  <img src="{{ siteUrl }}imgz/ux_portfolio_gallery_01_02_thumb.jpg" alt="2nd image description" class="ux-thumb" />
+                  <img src="{{ siteUrl }}imgz/ux_portfolio_gallery_01_03_thumb.jpg" alt="3rd image description" class="ux-thumb" />
+          	</div>
+          </div><!-- gallery-1 -->
+      </div><!-- /col-12 -->
+
+
+  </div><!-- /col-12 -->
+  </div><!-- /row -->
   </div><!-- /container -->
 
 
@@ -103,6 +131,15 @@ niceworld 10.11.18
     $('#thumbs-2').delegate('img','click', function(){
     	$('#largeImage-2').attr('src',$(this).attr('src').replace('thumb','large'));
     	$('.ux-descrip-copy-2').html($(this).attr('alt'));
+      $(this).toggleClass( "active" );
+      $(this).siblings().each(function(){
+          $(this).removeClass("active") ;
+        });
+    });
+
+    $('#thumbs-3').delegate('img','click', function(){
+    	$('#largeImage-3').attr('src',$(this).attr('src').replace('thumb','large'));
+    	$('.ux-descrip-copy-3').html($(this).attr('alt'));
       $(this).toggleClass( "active" );
       $(this).siblings().each(function(){
           $(this).removeClass("active") ;
