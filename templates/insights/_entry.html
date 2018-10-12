@@ -22,6 +22,7 @@ niceworld 7.18.18
   <div class="row insights-hero build-border-dashed">
     <div class="col-12 no-padd no-marr">
       {% set hero = entry.insightsHero.first() %}
+      {% if hero|length %}
       <img
       sizes="100vw"
       srcset="{{ hero.url('insightsHeroBig') }} 1205w,
@@ -29,6 +30,10 @@ niceworld 7.18.18
               {{ hero.url('insightsHeroSmall') }} 770w"
       src="{{ hero.url('insightsHeroBig') }}" class="img-fluid" alt="{{ hero.title }}"
       >
+      {% else %}
+        <img src="{{ siteUrl }}imgz/{{ random (['insights-blog-head-green.jpg','insights-blog-head-blue.jpg'])}}" class="img-fluid">
+      {% endif %}
+
     </div>
   </div>
   <div class="row insights-container px-0 px-md-2 py-2 py-md-4 build-border-pink">
