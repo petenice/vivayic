@@ -477,6 +477,9 @@ body.insights-body .v-pad-glob-insights {
 .mr5 {
   margin-right: 5px;
 }
+.mb5 {
+  margin-bottom: 5px;
+}
 .ml5 {
   margin-left: 5px;
 }
@@ -3227,7 +3230,8 @@ a.nav-link:hover {
   .join-body #hero-feature,
   .privacy-body #hero-feature,
   .legal-body #hero-feature,
-  .search-body #hero-feature {
+  .search-body #hero-feature,
+  .xd-portfolio-body #hero-feature {
     background: #E3F2F1 url('../imgz/positive-impact-hero-lg.jpg') no-repeat center center;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -3249,7 +3253,8 @@ a.nav-link:hover {
   .join-body #hero-feature,
   .privacy-body #hero-feature,
   .legal-body #hero-feature,
-  .search-body #hero-feature {
+  .search-body #hero-feature,
+  .xd-portfolio-body #hero-feature {
     background: #E3F2F1 url('../imgz/positive-impact-hero-lg.jpg') no-repeat center center;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -3271,7 +3276,8 @@ a.nav-link:hover {
   .join-body #hero-feature-scrolly .bcg,
   .privacy-body #hero-feature-scrolly .bcg,
   .legal-body #hero-feature-scrolly .bcg,
-  .search-body #hero-feature-scrolly .bcg {
+  .search-body #hero-feature-scrolly .bcg,
+  .xd-portfolio-body #hero-feature-scrolly .bcg {
     background: #E3F2F1 url('../imgz/positive-impact-hero-lg.jpg') no-repeat center center;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -3293,7 +3299,8 @@ a.nav-link:hover {
   .join-body #hero-feature-scrolly .bcg,
   .privacy-body #hero-feature-scrolly .bcg,
   .legal-body #hero-feature-scrolly .bcg,
-  .search-body #hero-feature-scrolly .bcg {
+  .search-body #hero-feature-scrolly .bcg,
+  .xd-portfolio-body #hero-feature-scrolly .bcg {
     background: #E3F2F1 url('../imgz/positive-impact-hero-lg.jpg') no-repeat center center;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -3314,7 +3321,8 @@ a.nav-link:hover {
 .join-body #hero-feature-scrolly h1,
 .privacy-body #hero-feature-scrolly h1,
 .legal-body #hero-feature-scrolly h1,
-.search-body #hero-feature-scrolly h1 {
+.search-body #hero-feature-scrolly h1,
+.xd-portfolio-body #hero-feature-scrolly h1 {
   color: #FFF;
   text-shadow: 1px 1px 0px #000;
 }
@@ -3328,7 +3336,8 @@ a.nav-link:hover {
   .join-body #hero-page,
   .privacy-body #hero-page,
   .legal-body #hero-page,
-  .search-body #hero-page {
+  .search-body #hero-page,
+  .xd-portfolio-body #hero-page {
     background: #E3F2F1 url('../imgz/positive-impact-hero-lg.jpg') no-repeat center center;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -3350,7 +3359,8 @@ a.nav-link:hover {
   .join-body #hero-page,
   .privacy-body #hero-page,
   .legal-body #hero-page,
-  .search-body #hero-page {
+  .search-body #hero-page,
+  .xd-portfolio-body #hero-page {
     background: #E3F2F1 url('../imgz/positive-impact-hero-lg.jpg') no-repeat center center;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -3371,7 +3381,8 @@ a.nav-link:hover {
 .join-body #hero-page h1,
 .privacy-body #hero-page h1,
 .legal-body #hero-page h1,
-.search-body #hero-page h1 {
+.search-body #hero-page h1,
+.xd-portfolio-body #hero-page h1 {
   color: #FFF;
   text-shadow: 1px 1px 0px #000;
 }
@@ -3384,7 +3395,8 @@ a.nav-link:hover {
 .join-body .da-main-ova,
 .privacy-body .da-main-ova,
 .legal-body .da-main-ova,
-.search-body .da-main-ova {
+.search-body .da-main-ova,
+.xd-portfolio-body .da-main-ova {
   padding-bottom: 20px;
 }
 .positive-impact-body h4,
@@ -3396,7 +3408,8 @@ a.nav-link:hover {
 .join-body h4,
 .privacy-body h4,
 .legal-body h4,
-.search-body h4 {
+.search-body h4,
+.xd-portfolio-body h4 {
   font-weight: 700;
   margin-bottom: 20px;
 }
@@ -3409,7 +3422,8 @@ a.nav-link:hover {
 .join-body .excerpt P,
 .privacy-body .excerpt P,
 .legal-body .excerpt P,
-.search-body .excerpt P {
+.search-body .excerpt P,
+.xd-portfolio-body .excerpt P {
   font-size: 16px;
 }
 .giving-back-body .author-name,
@@ -3800,5 +3814,29 @@ body.two-insights-category-page {
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
+}
+.xd-portfolio-body .thumb-row {
+  padding-left: 10px;
+}
+.xd-portfolio-body .xd-carousel li {
+  list-style: none;
+}
+.xd-portfolio-body .ux-descrip {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 12px;
+}
+.xd-portfolio-body .ux-main {
+  border: solid 5px #DEE7F0;
+}
+.xd-portfolio-body .ux-thumb {
+  max-width: 169px;
+  border: solid 5px #DEE7F0;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+.xd-portfolio-body .ux-thumb.active {
+  border: solid 5px #D6282D;
 }
 /*# sourceMappingURL=http://local-new.vivayic.com/css/style.css.map */

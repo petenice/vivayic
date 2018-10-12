@@ -1,0 +1,122 @@
+{#
+XD PORTFOLIO INDEX
+/templates/xd-portfolio/index.html
+niceworld 10.11.18
+#}
+
+{% extends "_layouts/site" %}
+
+{% set pageName = 'Experience Design Portfolio' %}
+
+{% block head %}
+  {% set title = "Experience Design Portfolio" %}
+  {{ parent() }}
+  <script>
+  // js
+  </script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+{% endblock %}
+
+{% block main %}
+
+<div id="hero-page" class="container-fluid no-marr build-border-blue"></div>
+
+<div class="scroll-magi build-border-dashed"><!-- scroll-magi -->
+<div class="container da-main-ova v-pad build-border-red">
+  <div class="row no-padd build-border-yellow ">
+    <div class="col-12 col-lg-9">
+      <span class="breadcrumbs"><img src="/imgz/logo-vivayic-bug-red.svg"><p>coming soon:</p></span>
+      <h2>{{pageName}}</h2>
+      <div class="section-intro"><p> UX design is studying user behaviour and understanding user motivations with the goal of
+        designing better digital experiences. It's more than an interface, it's a process. Please enjoy the following samples from
+        our UX products </p></div>
+    </div><!-- /col -->
+    <div class="col-12 col-lg-3 px-0 px-md-2 text-center">
+      {% include "_partials/lets_talk" %}
+    </div><!-- /col -->
+  </div><!-- /row -->
+</div><!-- /da-main-ova -->
+
+
+<div class="container v-pad build-border-red">
+  <div class="row">
+    <div class="col-12">
+
+      <h4>Learning Modules</h4>
+
+      <div id="gallery-1">
+      	<div id="panel-1">
+      		<img id="largeImage-1" src="{{ siteUrl }}imgz/ux_portfolio_gallery_01_01_large.jpg" class="ux-main img-resp" />
+      		<div class="ux-descrip"><div class="ux-descrip-copy-1">1st image description</div></div>
+      	</div>
+
+      	<div id="thumbs-1" class="thumb-row">
+              <img src="{{ siteUrl }}imgz/ux_portfolio_gallery_01_01_thumb.jpg" alt="1st image description" class="ux-thumb active" />
+              <img src="{{ siteUrl }}imgz/ux_portfolio_gallery_01_02_thumb.jpg" alt="2nd image description" class="ux-thumb" />
+              <img src="{{ siteUrl }}imgz/ux_portfolio_gallery_01_03_thumb.jpg" alt="3rd image description" class="ux-thumb" />
+              <img src="{{ siteUrl }}imgz/ux_portfolio_gallery_01_04_thumb.jpg" alt="4th image description" class="ux-thumb" />
+              <img src="{{ siteUrl }}imgz/ux_portfolio_gallery_01_05_thumb.jpg" alt="4th image description" class="ux-thumb" />
+              <img src="{{ siteUrl }}imgz/ux_portfolio_gallery_01_06_thumb.jpg" alt="4th image description" class="ux-thumb" />
+      	</div>
+      </div>
+
+
+      <h4>UX Modules</h4>
+
+
+      <div id="gallery-2">
+      	<div id="panel-2">
+      		<img id="largeImage-2" src="{{ siteUrl }}imgz/ux_portfolio_gallery_02_01_large.jpg" class="img-resp" />
+          <div class="ux-descrip"><div class="ux-descrip-copy-2">1st image description</div></div>
+      	</div>
+
+      	<div id="thumbs-2" class="thumb-row">
+              <img src="{{ siteUrl }}imgz/ux_portfolio_gallery_02_01_thumb.jpg" alt="1st image description" class="ux-thumb active" />
+              <img src="{{ siteUrl }}imgz/ux_portfolio_gallery_02_02_thumb.jpg" alt="2nd image description" class="ux-thumb" />
+              <img src="{{ siteUrl }}imgz/ux_portfolio_gallery_02_03_thumb.jpg" alt="3rd image description" class="ux-thumb" />
+              <img src="{{ siteUrl }}imgz/ux_portfolio_gallery_02_04_thumb.jpg" alt="4th image description" class="ux-thumb" />
+              <img src="{{ siteUrl }}imgz/ux_portfolio_gallery_02_05_thumb.jpg" alt="5th image description" class="ux-thumb" />
+              <img src="{{ siteUrl }}imgz/ux_portfolio_gallery_02_06_thumb.jpg" alt="6th image description" class="ux-thumb" />
+              <img src="{{ siteUrl }}imgz/ux_portfolio_gallery_02_07_thumb.jpg" alt="7th image description" class="ux-thumb" />
+      	</div>
+      </div>
+
+
+
+      </div><!-- /col -->
+    </div><!-- /row -->
+  </div><!-- /container -->
+
+
+<script>
+    $('#thumbs-1').delegate('img','click', function(){
+    	$('#largeImage-1').attr('src',$(this).attr('src').replace('thumb','large'));
+    	$('.ux-descrip-copy-1').html($(this).attr('alt'));
+      $(this).toggleClass( "active" );
+      $(this).siblings().each(function(){
+          $(this).removeClass("active") ;
+        });
+    });
+
+    $('#thumbs-2').delegate('img','click', function(){
+    	$('#largeImage-2').attr('src',$(this).attr('src').replace('thumb','large'));
+    	$('.ux-descrip-copy-2').html($(this).attr('alt'));
+      $(this).toggleClass( "active" );
+      $(this).siblings().each(function(){
+          $(this).removeClass("active") ;
+        });
+    });
+
+</script>
+
+
+
+{% endblock %}{#-- /main --#}
+
+{% block foot %}
+  {% include "_partials/footer_get_results" %}
+  {{ parent() }}
+  {% include '_partials/edit-this' %}
+{% endblock %} {#-- /foot --#}
