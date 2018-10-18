@@ -410,8 +410,8 @@ img.img-resp {
 }
 @media only screen and (max-width: 576px), only screen and (min-width: 576px) and (max-width: 768px) {
   .v-pad-45 {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 .v-pad-60 {
@@ -3193,9 +3193,15 @@ a.nav-link:hover {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+@media only screen and (max-width: 576px) {
+  .purpose-body #hero-feature-scrolly .hero-copy-purpose p {
+    font-size: 12px;
+  }
+}
 @media only screen and (max-width: 576px), only screen and (min-width: 576px) and (max-width: 768px) {
   .purpose-body #hero-feature-scrolly .hero-copy-purpose {
     top: 200px;
+    width: 100%;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
