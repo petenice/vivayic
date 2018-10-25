@@ -10,7 +10,9 @@ niceworld 7.18.18
 
 {% block head %}
   {% set title = "Industries" %}
-  {% set description = "Vivayic industries description" %}
+  {% set description = "Vivayic draws on knowledge gained from deeply rooted experience across a wide range of industries." %}
+  {% set canon_url = siteUrl ~"industries" %}
+  {% set og_img = siteUrl ~"imgz/social-share-default.jpg" %}
   {{ parent() }}
   {% include '_partials/scrollface' %}
 {% endblock %}

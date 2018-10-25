@@ -9,11 +9,11 @@ niceworld 7.18.18
 {% set pageName = 'Insights' %}
 
 {% block head %}
-  {% set title = "Insights Home" %}
+  {% set title = "Insights" %}
+  {% set description = "Learnings from the world of learning. Valuable knowledge from our team." %}
+  {% set canon_url = siteUrl ~"insights" %}
+  {% set og_img = siteUrl ~"imgz/social-share-default.jpg" %}
   {{ parent() }}
-  <script>
-  // js
-  </script>
 {% endblock %}
 
 {% block main %}

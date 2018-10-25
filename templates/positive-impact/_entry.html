@@ -6,9 +6,13 @@ niceworld 8.2.18
 
 {% extends "_layouts/site" %}
 
+{% set shareImg = entry.socialShareImage.first() %}
+
 {% block head %}
   {% if entry.seoTitle|length %}{% set title = entry.seoTitle %}{% else %}{% set title = entry.title %}{% endif %}
-  {% if entry.seoDescription|length %}{% set description = entry.seoDescription %}{% else %}{% set description = entry.title %}{% endif %}
+  {% if entry.seoDescription|length %}{% set description = entry.seoDescription %}{% else %}{% set description = entry.insightExcerpt %}{% endif %}
+  {% set canon_url = craft.request.getSegment(1) ~"/" ~entry.slug %}
+  {% set og_img = shareImg.url('socialresize') %}
   {{ parent() }}
 {% endblock %}
 
@@ -16,16 +20,14 @@ niceworld 8.2.18
 <div id="hero-page" class="container-fluid no-marr build-border-blue"></div>
 
 <div class="scroll-magi build-border-dashed"><!-- scroll-magi -->
-<div class="container da-main-ova v-pad pb0 build-border-red">
+<div class="container da-main-ova v-pad pb0 mb0 build-border-red" style="padding-bottom:0;">
   <div class="row no-padd build-border-yellow ">
-    <div class="col-12 col-lg-9">
+    <div class="col-12 col-lg-12">
       <span class="breadcrumbs"><a href="{{ siteUrl }}"><img src="/imgz/logo-vivayic-bug-red.svg"></a>
         <p><a href="{{ siteUrl }}{{ craft.request.getSegment(1) }}">positive impact stories & studies:</a></p>
       </span>
-      <h2>{{ entry.title }}</h2>
-    </div><!-- /col -->
-    <div class="col-12 col-lg-3 px-0 px-md-2 text-center">
-      {% include "_partials/lets_talk" %}
+      {% include "_partials/lets_talk_right" %}
+      <h2 class="max-title-width">{{ entry.title }}</h2>
     </div><!-- /col -->
   </div><!-- /row -->
 </div><!-- /da-main-ova -->

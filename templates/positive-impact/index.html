@@ -10,9 +10,13 @@ niceworld 7.18.18
 
 {% block head %}
   {% set title = "Positive Impact Stories" %}
+  {% set description = "Our goal is to drive through completion on time, on budget and most importantly with a positive impact on the learner and on the organization’s stated objectives." %}
+  {% set canon_url = siteUrl ~"positive-impact" %}
+  {% set og_img = siteUrl ~"imgz/social-share-default.jpg" %}
   {{ parent() }}
   {% include '_partials/scrollface' %}
 {% endblock %}
+
 
 {% block main %}
 

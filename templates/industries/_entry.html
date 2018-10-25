@@ -10,7 +10,6 @@ niceworld 8.1.18
   {% if entry.seoTitle|length %}{% set title = entry.seoTitle %}{% else %}{% set title = entry.title %}{% endif %}
   {% if entry.seoDescription|length %}{% set description = entry.seoDescription %}{% else %}{% set description = entry.insightExcerpt %}{% endif %}
   {{ parent() }}
-  {% include '_partials/scrollface' %}
 {% endblock %}
 
 {% block main %}
@@ -47,7 +46,7 @@ niceworld 8.1.18
                   <h3 class="challenge">{{ block.challenge }}</h3>
                 </div>
                 <div class="col-12 col-md-6 ptb40 px-5 bg-light-green build-border-blue">
-                  <p class="chalres">How we drive results</p>
+                  <p class="chalres">How we Drive Results</p>
                   <ul class="drive-results">
                   {% for row in block.results %}
                     <li class="drive-results">{{ row.resultsRow }}</li>

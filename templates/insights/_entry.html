@@ -6,11 +6,13 @@ niceworld 7.18.18
 
 {% extends "_layouts/site" %}
 
-
+{% set hero = entry.insightsHero.first() %}
 
 {% block head %}
   {% if entry.seoTitle|length %}{% set title = entry.seoTitle %}{% else %}{% set title = entry.title %}{% endif %}
   {% if entry.seoDescription|length %}{% set description = entry.seoDescription %}{% else %}{% set description = entry.insightExcerpt %}{% endif %}
+  {% set canon_url = craft.request.getSegment(1) ~"/" ~entry.slug %}
+  {% set og_img = hero.url('socialresize') %}
   {{ parent() }}
 {% endblock %}
 
@@ -21,7 +23,6 @@ niceworld 7.18.18
 <div id="home-insights" class="container build-border-red">
   <div class="row insights-hero build-border-dashed">
     <div class="col-12 no-padd no-marr">
-      {% set hero = entry.insightsHero.first() %}
       {% if hero|length %}
       <img
       sizes="100vw"

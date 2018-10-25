@@ -10,9 +10,13 @@ niceworld 7.18.18
 
 {% block head %}
   {% set title = "Talent" %}
+  {% set description = "Our people are our strength. Our team members are experienced, innovative, intelligent, committed and hard-working individuals who share in your purpose and sense of mission." %}
+  {% set canon_url = siteUrl ~"talent" %}
+  {% set og_img = siteUrl ~"imgz/social-share-default.jpg" %}
   {{ parent() }}
   {% include '_partials/scrollface' %}
 {% endblock %}
+
 
 {% block main %}
 

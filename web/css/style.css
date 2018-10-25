@@ -2253,6 +2253,18 @@ a.nav-link:hover {
 .lets-talk.sm-talk-mar {
   margin-top: 10px;
 }
+.lets-talk.pull-talk-right {
+  float: right;
+  margin-top: 10px;
+}
+@media only screen and (min-width: 768px) and (max-width: 992px), only screen and (min-width: 576px) and (max-width: 768px), only screen and (max-width: 576px) {
+  .lets-talk.pull-talk-right {
+    display: none;
+  }
+}
+.max-title-width {
+  max-width: 700px;
+}
 .da-main-ova {
   background-color: #FFF;
   padding-top: 30px;

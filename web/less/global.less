@@ -357,7 +357,12 @@ a.nav-link:hover {.red;}
   .mt90;
   @media @medium, @small, @extra-small {.mt40;}
   &.sm-talk-mar {.mt10;}
+  &.pull-talk-right {float: right; .mt10;}
+  @media @medium, @small, @extra-small { &.pull-talk-right {display: none;} }
 }
+
+.max-title-width {max-width: 700px;}
+
 
 .da-main-ova {
   .bg-white;

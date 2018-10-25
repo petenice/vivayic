@@ -10,6 +10,9 @@ niceworld 8.24.18
 
 {% block head %}
   {% set title = "About" %}
+  {% set description = "Our name speaks to the guiding principles we use when designing effective learning and knowledge transfer experiences." %}
+  {% set canon_url = siteUrl ~"about" %}
+  {% set og_img = siteUrl ~"imgz/social-share-default.jpg" %}
   {{ parent() }}
   {% include '_partials/scrollface' %}
 {% endblock %}

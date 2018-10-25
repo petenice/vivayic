@@ -9,7 +9,10 @@ niceworld 7.18.18
 {% set pageName = 'Purpose' %}
 
 {% block head %}
-  {% set title = "Our Purpose" %}
+  {% set title = "Purpose" %}
+  {% set description = "Our guiding purpose is to build others capacity to do good in the world by helping them use learning as a strategy to enable larger goals. Our ambition is to partner with organizations that share in our vision of affecting positive change." %}
+  {% set canon_url = siteUrl ~"purpose" %}
+  {% set og_img = siteUrl ~"imgz/social-share-default.jpg" %}
   {{ parent() }}
   {% include '_partials/scrollface' %}
 {% endblock %}

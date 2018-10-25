@@ -7,7 +7,10 @@ niceworld 7.18.18
 {% extends "_layouts/site" %}
 
 {% block head %}
-  {% set title = "Solutions that Balance Research and Experience" %}
+  {% set title = "Solutions" %}
+  {% set description = "Vivayic offers solutions which strike a balance between solid research and lived experience. We offer learner centered programs based on great ideas and solid fundamentals." %}
+  {% set canon_url = siteUrl ~"solutions" %}
+  {% set og_img = siteUrl ~"imgz/social-share-default.jpg" %}
   {{ parent() }}
   {% include '_partials/scrollface' %}
 {% endblock %}

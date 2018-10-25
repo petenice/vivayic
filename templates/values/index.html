@@ -10,11 +10,12 @@ niceworld 8.24.18
 
 {% block head %}
   {% set title = "Values" %}
+  {% set description = "After several years of running our company, and our lives, by a certain set of values, we decided to say them out loud so that we could even more firmly follow them." %}
+  {% set canon_url = siteUrl ~"values" %}
+  {% set og_img = siteUrl ~"imgz/social-share-values.jpg" %}
   {{ parent() }}
-  <script>
-  // js
-  </script>
 {% endblock %}
+
 
 {% block main %}
 
@@ -41,7 +42,7 @@ niceworld 8.24.18
 
 
   <div class="row h-100 mb40">
-    <div class="col-sm-12 col-md-8 my-auto">
+    <div class="col-sm-12 col-md-8 offset-md-2 my-auto">
 
         <p>Our values are not just our values. They are how we live... and work.</p>
 
@@ -52,23 +53,15 @@ niceworld 8.24.18
     </div>
   </div><!-- /row -->
 
-  <div class="row h-100 mb40">
-    <div class="col-sm-12 col-md-8 my-auto">
-
-    <h2><em>Intersection of:</em></h2>
-
-    </div>
-  </div><!-- /row -->
-
   <div class="row h-100">
-    <div class="col-sm-12 col-md-4 my-auto">
+    <div class="col-sm-12 col-md-4 offset-md-1 my-auto">
       <div class="card-block">
         <img src="/imgz/excellence-practicality-600px.png" class="img-resp">
       </div>
     </div>
-    <div class="col-sm-12 col-md-8 my-auto">
+    <div class="col-sm-12 col-md-6 my-auto">
       <div class="card-block text-center text-md-left">
-        <h2>Excellence and Practicality</h2>
+        <h2>Intersection of Excellence and Practicality</h2>
         <p>
           Great ideas that are feasible, leverage existing systems and practices, elegant solutions not just “whiz bang”, honor where people are and where they can go.
         </p>
@@ -77,12 +70,12 @@ niceworld 8.24.18
   </div><!-- /row -->
 
   <div class="row h-100 mtb40">
-    <div class="col-sm-12 col-md-4 my-auto text-center">
+    <div class="col-sm-12 col-md-4 offset-md-1 my-auto text-center">
       <div class="card-block mx-auto">
         <img src="/imgz/authenticity-600px.png" class="img-resp val-ill-w">
       </div>
     </div>
-    <div class="col-sm-12 col-md-8 my-auto">
+    <div class="col-sm-12 col-md-6 my-auto">
       <div class="card-block text-center text-md-left">
         <h2>Authenticity</h2>
         <p>Shows up real to teammates and clients, no bullshit, admits mistakes, vulnerable.</p>
@@ -92,12 +85,12 @@ niceworld 8.24.18
 
 
   <div class="row h-100 mtb40">
-    <div class="col-sm-12 col-md-4 my-auto text-center">
+    <div class="col-sm-12 col-md-4 offset-md-1 my-auto text-center">
       <div class="card-block">
         <img src="/imgz/durability-600px.png" class="img-resp val-ill-w">
       </div>
     </div>
-    <div class="col-sm-12 col-md-8 my-auto">
+    <div class="col-sm-12 col-md-6 my-auto">
       <div class="card-block text-center text-md-left">
         <h2>Durability</h2>
         <p>Flexible, long-lasting, reliable, responsible.</p>
@@ -107,12 +100,12 @@ niceworld 8.24.18
 
 
   <div class="row h-100 mtb40">
-    <div class="col-sm-12 col-md-4 my-auto text-center">
+    <div class="col-sm-12 col-md-4 offset-md-1 my-auto text-center">
       <div class="card-block">
         <img src="/imgz/initiative-600px.png" class="img-resp val-ill-w">
       </div>
     </div>
-    <div class="col-sm-12 col-md-8 my-auto">
+    <div class="col-sm-12 col-md-6 my-auto">
       <div class="card-block text-center text-md-left">
         <h2>Initiative</h2>
         <p>Proactive, solves problems, takes leadership roles, seeks innovation.</p>
@@ -121,12 +114,12 @@ niceworld 8.24.18
   </div><!-- /row -->
 
   <div class="row h-100 mtb40">
-    <div class="col-sm-12 col-md-4 my-auto text-center">
+    <div class="col-sm-12 col-md-4 offset-md-1 my-auto text-center">
       <div class="card-block">
         <img src="/imgz/empathy-600px.png" class="img-resp">
       </div>
     </div>
-    <div class="col-sm-12 col-md-8 my-auto">
+    <div class="col-sm-12 col-md-6 my-auto">
       <div class="card-block text-center text-md-left">
         <h2>Empathy</h2>
         <p>Listen, see others’ perspectives, bring breadth of experience, consider about the learner’s experience.</p>
@@ -135,12 +128,12 @@ niceworld 8.24.18
   </div><!-- /row -->
 
   <div class="row h-100 mtb40">
-    <div class="col-sm-12 col-md-4 my-auto text-center">
+    <div class="col-sm-12 col-md-4 offset-md-1 my-auto text-center">
       <div class="card-block">
         <img src="/imgz/curiousity-600px.png" class="img-resp val-ill-w">
       </div>
     </div>
-    <div class="col-sm-12 col-md-8 my-auto">
+    <div class="col-sm-12 col-md-6 my-auto">
       <div class="card-block text-center text-md-left">
         <h2>Curiosity</h2>
         <p>Natural sense of wonder, always questioning how to improve, or is there a better way.</p>
@@ -149,12 +142,12 @@ niceworld 8.24.18
   </div><!-- /row -->
 
   <div class="row h-100 mtb40">
-    <div class="col-sm-12 col-md-4 my-auto text-center">
+    <div class="col-sm-12 col-md-4 offset-md-1 my-auto text-center">
       <div class="card-block">
         <img src="/imgz/cultivation-600px.png" class="img-resp val-ill-w">
       </div>
     </div>
-    <div class="col-sm-12 col-md-8 my-auto">
+    <div class="col-sm-12 col-md-6 my-auto">
       <div class="card-block text-center text-md-left">
         <h2>Cultivation</h2>
         <p>Invest in communities, support good causes, recognize and support personal lives and families of teammates and clients, treat people and self well.</p>
@@ -163,7 +156,7 @@ niceworld 8.24.18
   </div><!-- /row -->
 
   <div class="row h-100 mtb80">
-    <div class="col-sm-12 col-md-8 my-auto">
+    <div class="col-sm-12 col-md-8 offset-md-2 my-auto">
 
       <p class="mb40">
       Giving the values names helped us to be clear about what they are so that <a href="{{ siteUrl }}talent">team members</a>, clients and partners all know what to expect. These are things we’ve done since we were just starting out as a team of three. When we founded Vivayic, we did so because <strong>we wanted to build a workplace where we actually wanted to work</strong>. These behaviors, our values, were cornerstones of the type of team we wanted to join. So, they grew more out of "doing" than just "saying."

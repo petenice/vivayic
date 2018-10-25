@@ -1,22 +1,20 @@
 {#
-FREE RESOURCES INDEX
-/templates/giving-back/index.html
+CONTACT THANKS
+/templates/contact/thanks.html
 niceworld 8.24.18
 #}
 
 {% extends "_layouts/site" %}
 
-{% set pageName = 'Free Resources' %}
+{% set pageName = 'Thanks' %}
 
 {% block head %}
-  {% set title = "Free Resources" %}
-  {% set description = "" %}
-  {% set canon_url = siteUrl ~"free-resources" %}
+  {% set title = "Thanks" %}
+  {% set description = "Contact Vivayic." %}
+  {% set canon_url = siteUrl ~"thanks" %}
   {% set og_img = siteUrl ~"imgz/social-share-default.jpg" %}
   {{ parent() }}
 {% endblock %}
-
-
 
 {% block main %}
 
@@ -26,16 +24,21 @@ niceworld 8.24.18
 <div class="container da-main-ova v-pad build-border-red">
   <div class="row no-padd build-border-yellow ">
     <div class="col-12 col-lg-9">
-      <span class="breadcrumbs"><img src="/imgz/logo-vivayic-bug-red.svg"><p>coming soon:</p></span>
+      <span class="breadcrumbs"><img src="/imgz/logo-vivayic-bug-red.svg"><p>fantastic:</p></span>
       <h2>{{pageName}}</h2>
-      <div class="section-intro"><p>Coming Soon</p></div>
-    </div><!-- /col -->
-    <div class="col-12 col-lg-3 px-0 px-md-2 text-center">
-      {% include "_partials/lets_talk" %}
+      <div class="section-intro"><p></p></div>
     </div><!-- /col -->
   </div><!-- /row -->
 </div><!-- /da-main-ova -->
 
+<div class="container v-pad build-border-red">
+    <div class="row mb40">
+      <div class="col-sm-12 col-md-8 my-auto">
+        <p>We’re thrilled to hear from you. Our inbox can’t wait to get your messages, so talk to us any time you like.</p>
+      </div>
+    </div><!-- /row -->
+
+</div> <!-- /container -->
 
 
 {% endblock %}{#-- /main --#}

@@ -10,10 +10,10 @@ niceworld 8.24.18
 
 {% block head %}
   {% set title = "Contact" %}
+  {% set description = "Contact Vivayic" %}
+  {% set canon_url = siteUrl ~"contact" %}
+  {% set og_img = siteUrl ~"imgz/social-share-default.jpg" %}
   {{ parent() }}
-  <script>
-  // js
-  </script>
 {% endblock %}
 
 {% block main %}
@@ -24,16 +24,67 @@ niceworld 8.24.18
 <div class="container da-main-ova v-pad build-border-red">
   <div class="row no-padd build-border-yellow ">
     <div class="col-12 col-lg-9">
-      <span class="breadcrumbs"><img src="/imgz/logo-vivayic-bug-red.svg"><p>coming soon:</p></span>
+      <span class="breadcrumbs"><img src="/imgz/logo-vivayic-bug-red.svg"><p>lets talk:</p></span>
       <h2>{{pageName}}</h2>
-      <div class="section-intro"><p>Coming Soon</p></div>
-    </div><!-- /col -->
-    <div class="col-12 col-lg-3 px-0 px-md-2 text-center">
-      {% include "_partials/lets_talk" %}
+      <div class="section-intro"><p>Great coversations start here. Fill out the form to drop us a line.</p></div>
     </div><!-- /col -->
   </div><!-- /row -->
 </div><!-- /da-main-ova -->
 
+<div class="container v-pad build-border-red">
+
+
+<div class="row h-100 mb40">
+  <div class="col-sm-12 col-md-8 my-auto">
+
+    {% if craft.app.session.hasFlash('notice') %}
+        <p class="message notice">{{ craft.app.session.getFlash('notice') }}</p>
+    {% elseif craft.app.session.hasFlash('error') %}
+        <p class="message error">{{ craft.app.session.getFlash('error') }}</p>
+    {% endif %}
+
+
+    {% macro errorList(errors) %}
+        {% if errors %}
+            <ul class="errors">
+                {% for error in errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endmacro %}
+
+    {% from _self import errorList %}
+
+    <form method="post" action="" accept-charset="UTF-8">
+        {{ csrfInput() }}
+        <input type="hidden" name="action" value="contact-form/send">
+        {{ redirectInput('contact/thanks') }}
+
+        <h3><label for="from-name">Your Name</label></h3>
+        <input id="from-name" type="text" name="fromName" value="{{ message.fromName ?? '' }}">
+        {{ message is defined and message ? errorList(message.getErrors('fromName')) }}
+
+        <h3><label for="from-email">Your Email</label></h3>
+        <input id="from-email" type="email" name="fromEmail" value="{{ message.fromEmail ?? '' }}">
+        {{ message is defined and message ? errorList(message.getErrors('fromEmail')) }}
+
+        <h3><label for="subject">Subject</label></h3>
+        <input id="subject" type="text" name="subject" value="{{ message.subject ?? '' }}">
+        {{ message is defined and message ? errorList(message.getErrors('subject')) }}
+
+        <h3><label for="message">How can we help you?</label></h3>
+        <textarea rows="10" cols="40" id="message" name="message">{{ message.message ?? '' }}</textarea>
+        {{ message is defined and message ? errorList(message.getErrors('message')) }}
+
+        <input type="submit" value="Send">
+    </form>
+
+  </div>
+</div><!-- /row -->
+
+
+</div> <!-- /container -->
 
 
 {% endblock %}{#-- /main --#}
