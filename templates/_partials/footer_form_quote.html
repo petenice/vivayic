@@ -5,6 +5,64 @@
       <div class="footer_contact_form build-border-red">
             <h3>Let&rsquo;s Talk</h3>
             <p>Great coversations start here.</p>
+
+
+            {% macro errorList(errors) %}
+                {% if errors %}
+                    <ul class="errors">
+                        {% for error in errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endmacro %}
+
+            {% from _self import errorList %}
+
+            <form method="post" action="" id="contactFrm" name="contactFrm" accept-charset="UTF-8">
+                {{ csrfInput() }}
+                <input type="hidden" name="action" value="contact-form/send">
+                {{ redirectInput('contact/thanks') }}
+
+                <input id="from-name" class="txt" type="text" name="fromName" placeholder="Name" value="{{ message.fromName ?? '' }}">
+                {{ message is defined and message ? errorList(message.getErrors('fromName')) }}
+
+                <input id="from-email" class="txt" type="text" name="fromEmail" placeholder="Email" value="{{ message.fromEmail ?? '' }}">
+                {{ message is defined and message ? errorList(message.getErrors('fromEmail')) }}
+
+                <input id="phone" class="txt" type="text" name="message[Phone]" placeholder="Phone" value="{{ message.body.phone ?? '' }}">
+                {{ message is defined and message ? errorList(message.getErrors('message[phone]')) }}
+
+                <textarea class="txt_3" type="text" id="message" placeholder="How can we help you?" name="message[body]">{{ message.message.body ?? '' }}</textarea>
+                {{ message is defined and message ? errorList(message.getErrors('message[body]')) }}
+
+                <select class="select_1" id="subject" name="message[Workline][]">
+                    <option selected value="na">
+                        What line of work are you in?
+                    </option>
+
+                    <option name="message[Workline][]" value="Agriculture, Food, and Natural Resources"> Agriculture, Food, and Natural Resources </option>
+                    <option name="message[Workline][]" value="Health and Wellness "> Health and Wellness </option>
+                    <option name="message[Workline][]" value="Technology and Innovation"> Technology and Innovation </option>
+                    <option name="message[Workline][]" value="Education and Workforce"> Education and Workforce </option>
+                    <option name="message[Workline][]" value="International Development"> International Development </option>
+                    <option name="message[Workline][]" value="Social Impact and Community Development"> Social Impact and Community Development </option>
+                 </select>
+
+                 <input class="w3-check" type="checkbox" name="message[MailingList][]" value="yes"><label>Join our mailing list :-)</label>
+
+
+                <br>
+                <input type="submit" value="Send">
+            </form>
+
+            <div id="thanks" class="ptb40">
+              <div class="col-12 col-lg-9">
+                <strong>Thank You!</strong>
+                <p>We’re thrilled to hear from you. Our inbox can’t wait to get your messages, so talk to us any time you like.</p>
+              </div><!-- /col -->
+            </div><!-- /row -->
+            {#  -------------  OLD FOR USED FOR DESIGN ONLY
             <form action="#" method="post" id="contactFrm" name="contactFrm">
                 <input type="text" required="" placeholder="Name" value="" name="name" class="txt">
                 <input type="text" required="" placeholder="Email" value="" name="email" class="txt">
@@ -17,7 +75,7 @@
                          What line of work are you in?
                      </option>
 
-                     <option value=""> Agriculture, Food and Natural Resources </option>
+                     <option value=""> Agriculture, Food, and Natural Resources </option>
                      <option value=""> Health and Wellness </option>
                      <option value=""> Technology and Innovation </option>
                      <option value=""> Education and Workforce </option>
@@ -27,8 +85,9 @@
                   </select>
                   <input class="w3-check" type="checkbox"><label>Join our mailing list :-)</label>
                   <br>
-                  <input type="submit" value="submit" name="submit" class="btn button-arrow-blue txt_5">
+                  <input type="submit" value="Submit" name="submit" class="btn button-arrow-blue txt_5">
             </form>
+            #}
       </div>
 
     </div>
@@ -37,7 +96,7 @@
       <div class="foot-feature-text align-self-center build-border-red">
 
     {% set quoteEntry = craft.entries.section('quotes').order('RAND()').first() %}
-      <h3 class="mb10">&ldquo; {{ quoteEntry.quote }} &rdquo;</h3>
+      <h3 class="mb10">&ldquo;{{ quoteEntry.quote }}&rdquo;</h3>
       {% if quoteEntry.firstAndLastName|length %}
       <p class="quote-attrib"><span class="quote-dash">&mdash;</span>{{ quoteEntry.firstAndLastName }}<br>{{ quoteEntry.jobTitle }}<br>{{ quoteEntry.businessOrAffiliation }}</p>
       {% endif %}

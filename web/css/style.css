@@ -1038,6 +1038,11 @@ _:-moz-tree-row(hover),
 #search_form {
   display: inline-block;
 }
+#thanks {
+  display: none;
+  width: 100%;
+  background-color: #E3F2F1;
+}
 .btn {
   border-radius: 0;
   padding: 10px 80px 10px 20px;
@@ -3860,5 +3865,14 @@ body.two-insights-category-page {
 }
 .xd-portfolio-body .ux-thumb.active {
   border: solid 5px #D6282D;
+}
+.contact_ph {
+  color: #D6282D;
+}
+.contact_addr {
+  color: #5A89B4;
+}
+.contact_soc {
+  color: #19988B;
 }
 /*# sourceMappingURL=http://local-new.vivayic.com/css/style.css.map */

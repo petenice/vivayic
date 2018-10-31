@@ -26,7 +26,7 @@ niceworld 8.24.18
     <div class="col-12 col-lg-9">
       <span class="breadcrumbs"><img src="/imgz/logo-vivayic-bug-red.svg"><p>lets talk:</p></span>
       <h2>{{pageName}}</h2>
-      <div class="section-intro"><p>Great coversations start here. Fill out the form to drop us a line.</p></div>
+      <div class="section-intro"><p>Great coversations start here. Fill out the form at the bottom of the page, or just drop us a line.</p></div>
     </div><!-- /col -->
   </div><!-- /row -->
 </div><!-- /da-main-ova -->
@@ -36,6 +36,18 @@ niceworld 8.24.18
 
 <div class="row h-100 mb40">
   <div class="col-sm-12 col-md-8 my-auto">
+
+
+    <h1 class="contact_ph">(800) 280-7272</h1>
+    <hr>
+    <h1 class="contact_addr">Vivayic</h1>
+    <h1 class="contact_addr">600 Blue Sage Blvd</h1>
+    <h1 class="contact_addr">Lincoln, NE 68521</h1>
+    <hr>
+    <a href="https://www.linkedin.com/company/vivayic/"><h1 class="contact_soc">LinkedIn</h1></a>
+    <a href="https://twitter.com/Vivayic"><h1 class="contact_soc">Twitter</h1></a>
+
+    {#
 
     {% if craft.app.session.hasFlash('notice') %}
         <p class="message notice">{{ craft.app.session.getFlash('notice') }}</p>
@@ -56,32 +68,55 @@ niceworld 8.24.18
 
     {% from _self import errorList %}
 
-    <form method="post" action="" accept-charset="UTF-8">
+    <form method="post" action="" id="contactFrm" name="contactFrm" accept-charset="UTF-8">
         {{ csrfInput() }}
         <input type="hidden" name="action" value="contact-form/send">
         {{ redirectInput('contact/thanks') }}
 
-        <h3><label for="from-name">Your Name</label></h3>
-        <input id="from-name" type="text" name="fromName" value="{{ message.fromName ?? '' }}">
+        <input id="from-name" class="txt" type="text" name="fromName" placeholder="Name" value="{{ message.fromName ?? '' }}">
         {{ message is defined and message ? errorList(message.getErrors('fromName')) }}
 
-        <h3><label for="from-email">Your Email</label></h3>
-        <input id="from-email" type="email" name="fromEmail" value="{{ message.fromEmail ?? '' }}">
+        <input id="from-email" class="txt" type="text" name="fromEmail" placeholder="Email" value="{{ message.fromEmail ?? '' }}">
         {{ message is defined and message ? errorList(message.getErrors('fromEmail')) }}
 
-        <h3><label for="subject">Subject</label></h3>
-        <input id="subject" type="text" name="subject" value="{{ message.subject ?? '' }}">
-        {{ message is defined and message ? errorList(message.getErrors('subject')) }}
+        <input id="phone" class="txt" type="text" name="message[Phone]" placeholder="Phone" value="{{ message.body.phone ?? '' }}">
+        {{ message is defined and message ? errorList(message.getErrors('message[phone]')) }}
 
-        <h3><label for="message">How can we help you?</label></h3>
-        <textarea rows="10" cols="40" id="message" name="message">{{ message.message ?? '' }}</textarea>
-        {{ message is defined and message ? errorList(message.getErrors('message')) }}
+        <textarea class="txt_3" type="text" id="message" placeholder="How can we help you?" name="message[body]">{{ message.message.body ?? '' }}</textarea>
+        {{ message is defined and message ? errorList(message.getErrors('message[body]')) }}
 
+        <select class="select_1" id="subject" name="message[Workline][]">
+            <option selected value="na">
+                What line of work are you in?
+            </option>
+
+            <option name="message[Workline][]" value="Agriculture, Food, and Natural Resources"> Agriculture, Food, and Natural Resources </option>
+            <option name="message[Workline][]" value="Health and Wellness "> Health and Wellness </option>
+            <option name="message[Workline][]" value="Technology and Innovation"> Technology and Innovation </option>
+            <option name="message[Workline][]" value="Education and Workforce"> Education and Workforce </option>
+            <option name="message[Workline][]" value="International Development"> International Development </option>
+            <option name="message[Workline][]" value="Social Impact and Community Development"> Social Impact and Community Development </option>
+
+         </select>
+
+        <br>
         <input type="submit" value="Send">
     </form>
 
+    <div id="thanks" class="ptb40">
+      <div class="col-12 col-lg-9">
+        <h2>Thank You!</h2>
+        <div class="section-intro"><p>We’re thrilled to hear from you. Our inbox can’t wait to get your messages, so talk to us any time you like.</p></div>
+      </div><!-- /col -->
+    </div><!-- /row -->
+    #}
+
+
   </div>
 </div><!-- /row -->
+
+
+
 
 
 </div> <!-- /container -->
@@ -90,7 +125,6 @@ niceworld 8.24.18
 {% endblock %}{#-- /main --#}
 
 {% block foot %}
-  {% include "_partials/footer_get_results" %}
   {{ parent() }}
   {% include '_partials/edit-this' %}
 {% endblock %} {#-- /foot --#}
