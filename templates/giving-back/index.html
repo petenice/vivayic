@@ -38,7 +38,12 @@ niceworld 8.24.18
 
 {% include "_partials/entry_general" %}
 
-{% for entry in craft.entries.section('insights').limit(3) %}
+
+{# for entry in craft.entries.section('insights').limit(3) #}
+
+
+
+{% set entry = craft.entries.id(527).first() %}
 
 <div class="container mb40 v-pad-45 build-border-red">
   <div class="row h-100">
@@ -62,7 +67,7 @@ niceworld 8.24.18
     </div>
   </div><!-- /row -->
 </div><!-- /container -->
-{% endfor %}
+{# endfor #}
 
 
 
