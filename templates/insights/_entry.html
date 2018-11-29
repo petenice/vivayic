@@ -40,7 +40,7 @@ niceworld 7.18.18
   <div class="row insights-container px-0 px-md-2 py-2 py-md-4 build-border-pink">
     <div class="col-12 col-md-9 px-0 px-md-2">
 
-      <span class="breadcrumbs"><img src="/imgz/logo-vivayic-bug-red.svg"><p><a href="{{ siteUrl }}insights">news and knowledge: {% for category in entry.insightCategories %} <a href="{{ category.url }}">insights on {{ category.title | lower }}</a>{% endfor %}</p></span>
+      <span class="breadcrumbs"><img src="/imgz/logo-vivayic-bug-red.svg"><p><a href="{{ siteUrl }}insights">news and knowledge: {% if entry.insightCategories | length %} {% for category in entry.insightCategories %} <a href="{{ category.url }}">insights on {{ category.title | lower }}</a>{% endfor %}</p></span> {% endif %}
       <h2>{{ entry.title }}</h2>
       <div class="date"><p>{{ entry.postDate | date("M d, Y") }}</p></div>
       {% if entry.readTime | length %}<div class="read-time"><p>{{ entry.readTime }} minute read</p></div>{% endif %}
