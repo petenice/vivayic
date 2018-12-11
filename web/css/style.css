@@ -178,6 +178,9 @@ h4 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+em {
+  font-family: 'Open Sans', sans-serif;
+}
 p,
 ul li,
 label {
@@ -3573,6 +3576,11 @@ body.two-insights-category-page {
 .section-intro p {
   font-size: 24px;
   line-height: 33px;
+}
+.insights-intro em,
+.section-intro em {
+  font-weight: 300;
+  font-style: italic;
 }
 .insights-big-quote.bg-amber p,
 .big-quote.bg-amber p,

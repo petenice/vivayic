@@ -42,8 +42,8 @@ niceworld 8.2.18
       {% set downloadStudy = entry.positiveImpactPdf.first() %}
       {% if downloadStudy | length %}
         <a href="{{ downloadStudy.url }}" class="download-study"><img src="{{ siteUrl }}imgz/icon-download-circle-arrow.svg"><h2>Download</h2></a>
-        <p>Register to receive a print ready PDF<br class="resp-br">
-        copy of this positive impact story.</p>
+        <p>Get a print ready PDF copy<br class="resp-br">
+        of this positive impact story.</p>
         <p><a href="{{ downloadStudy.url }}" class="btn button-arrow-grey mt20">Free!</a></p>
       {% endif %}
 
