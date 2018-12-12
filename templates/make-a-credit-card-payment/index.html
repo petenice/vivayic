@@ -1,0 +1,56 @@
+{#
+CREDIT CARD PAYMENT INDEX
+/templates/make-a-credit-card-payment/index.html
+niceworld 8.24.18
+#}
+
+{% extends "_layouts/site" %}
+
+{% set pageName = 'Make a Credit Card Payment' %}
+
+{% block head %}
+  {% set title = "Make a Credit Card Payment" %}
+  {{ parent() }}
+  <script>
+  // js
+  </script>
+  <meta name="robots" content="noindex" />
+
+{% endblock %}
+
+{% block main %}
+
+<div id="hero-page" class="container-fluid no-marr build-border-blue"></div>
+
+<div class="scroll-magi build-border-dashed"><!-- scroll-magi -->
+<div class="container da-main-ova v-pad build-border-red">
+  <div class="row no-padd build-border-yellow ">
+    <div class="col-12 col-lg-9">
+      <span class="breadcrumbs"><img src="/imgz/logo-vivayic-bug-red.svg"><p>payment:</p></span>
+      <h2>{{pageName}}</h2>
+      <div class="section-intro"><p></p></div>
+    </div><!-- /col -->
+  </div><!-- /row -->
+</div><!-- /da-main-ova -->
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 v-pad mb40">
+
+      <div
+      id="wufoo-wbkmhsb1emizc0">
+      Fill out our <a
+      href="https://tmp.wufoo.com/forms/wbkmhsb1emizc0">online form</a>.</div><p><script type="text/javascript">var wbkmhsb1emizc0;(function(d,t){var s=d.createElement(t),options={'userName':'tmp','formHash':'wbkmhsb1emizc0','autoResize':true,'height':'565','async':true,'host':'wufoo.com','header':'show','ssl':true};s.src=('https:'==d.location.protocol?'https://':'http://')+'www.wufoo.com/scripts/embed/form.js';s.onload=s.onreadystatechange=function(){var rs=this.readyState;if(rs)if(rs!='complete')if(rs!='loaded')return;try{wbkmhsb1emizc0=new WufooForm();wbkmhsb1emizc0.initialize(options);wbkmhsb1emizc0.display();}catch(e){}};var scr=d.getElementsByTagName(t)[0],par=scr.parentNode;par.insertBefore(s,scr);})(document,'script');</script></p></div>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}{#-- /main --#}
+
+{% block foot %}
+  {% include "_partials/footer_get_results" %}
+  {{ parent() }}
+  {% include '_partials/edit-this' %}
+{% endblock %} {#-- /foot --#}
