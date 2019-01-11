@@ -11,7 +11,7 @@ niceworld 7.18.18
 {% block head %}
   {% if entry.seoTitle|length %}{% set title = entry.seoTitle %}{% else %}{% set title = entry.title %}{% endif %}
   {% if entry.seoDescription|length %}{% set description = entry.seoDescription %}{% else %}{% set description = entry.insightExcerpt %}{% endif %}
-  {% set canon_url = craft.request.getSegment(1) ~"/" ~entry.slug %}
+  {% set canon_url = siteUrl ~craft.request.getSegment(1) ~"/" ~entry.slug %}
   {% set og_img = hero.url('socialresize') %}
   {{ parent() }}
 {% endblock %}

@@ -49,11 +49,11 @@ niceworld 7.26.18
       <img src="{{ headshot.url('talentHeadshot260') }}" class="img-fluid">
     </div>
     <div class="col-12 col-md-8 talent-big-quote no-padd align-self-center build-border-yellow">
-      <p>&ldquo;{{entry.talentBigQuote}}&rdquo;</p>
+      {% if entry.talentBigQuote|length %}<p>&ldquo;{{entry.talentBigQuote}}&rdquo;</p>{% endif %}
     </div>
     {% else %}
     <div class="col-12 talent-big-quote align-self-center build-border-yellow">
-      <p>&ldquo;{{entry.talentBigQuote}}&rdquo;</p>
+      {% if entry.talentBigQuote|length %}<p>&ldquo;{{entry.talentBigQuote}}&rdquo;</p>{% endif %}
     </div>
     {% endif %}
   </div>
