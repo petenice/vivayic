@@ -3607,6 +3607,20 @@ body.two-insights-category-page {
 .big-quote.bg-grey p {
   color: #FFF;
 }
+.insights-big-quote.bg-amber strong,
+.big-quote.bg-amber strong,
+.insights-big-quote.bg-green strong,
+.big-quote.bg-green strong,
+.insights-big-quote.bg-blue strong,
+.big-quote.bg-blue strong,
+.insights-big-quote.bg-red strong,
+.big-quote.bg-red strong,
+.insights-big-quote.bg-purple strong,
+.big-quote.bg-purple strong,
+.insights-big-quote.bg-grey strong,
+.big-quote.bg-grey strong {
+  color: #FFF;
+}
 .insights-big-quote p,
 .big-quote p {
   font-weight: 300;

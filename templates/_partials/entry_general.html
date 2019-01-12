@@ -34,17 +34,7 @@
   {% endif %}
 
 
-  {% if block.type == 'bigQuote' %}
-  <div class="wrap
-  {% if block.QuoteBgColor | length %}{{ block.QuoteBgColor }}{% endif %}
-  {% if not loop.first %}loop-marr{% endif %} build-border-red">
-    <div class="container build-border-red">
-    <div class="col-12 col-md-9 big-quote  {% if block.QuoteBgColor | length %}{{ block.QuoteBgColor }}{% endif %} build-border-blue">
-      <div class="{{block.verticalPadding}}">{{ block.enterBigQuote }}</div>
-    </div><!--/ col -->
-  </div><!--/ container -->
-  </div><!-- /wrap -->
-  {% endif %}
+
 
 
   {% if block.type == 'blankVerticalSpace' %}
@@ -85,6 +75,26 @@
        {% endif %}
   {% endif %}
 
+
+
+  {% if block.type == 'bigQuote' %}
+  <div class="wrap
+  {% if block.QuoteBgColor | length %}{{ block.QuoteBgColor }}{% endif %}
+  {% if not loop.first %}loop-marr{% endif %} build-border-red">
+    <div class="container build-border-red">
+    <div class="col-12 col-md-9 big-quote
+    {% if block.QuoteBgColor | length %}{{ block.QuoteBgColor }}{% endif %}
+    {% if block.backgroundColor == "bg-light-blue" %}dark-text
+    {% elseif block.backgroundColor == "bg-light-green" %}dark-text
+    {% endif %}
+    build-border-blue">
+      <div class="{{block.verticalPadding}}">{{ block.enterBigQuote }}</div>
+    </div><!--/ col -->
+  </div><!--/ container -->
+  </div><!-- /wrap -->
+  {% endif %}
+
+  
  {% if block.type == 'copyAndBGImage' %}
    {% set blockImage = block.addImage.first() %}
    {% if blockImage | length %}
