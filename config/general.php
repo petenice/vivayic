@@ -31,8 +31,8 @@ return [
     'dev' => [
         // Base site URL
         //'siteUrl' => null,
-        'siteUrl' => 'http://local-new.vivayic.com',
-        'basePath' => '/Users/petenice/Sites/Vivayic-new/public/',
+        'siteUrl' => 'http://local.vivayic.com',
+        'basePath' => '/Users/petenice/Sites/Vivayic/public/',
 
         // Dev Mode (see https://craftcms.com/support/dev-mode)
         'devMode' => true,

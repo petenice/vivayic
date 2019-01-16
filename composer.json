@@ -38,7 +38,9 @@
     "luwes/craft3-codemirror": "v1.0.0",
     "imarc/craft-googlecustomsearch": "^2.0",
     "ether/logs": "v3.0.0",
-    "craftcms/contact-form": "2.2.2"
+    "craftcms/contact-form": "2.2.2",
+    "craftcms/contact-form-honeypot": "1.0.2",
+    "matt-west/craft-recaptcha": "1.2.0"
   },
   "autoload": {
     "psr-4": {

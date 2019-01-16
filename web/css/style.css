@@ -1046,6 +1046,9 @@ _:-moz-tree-row(hover),
   width: 100%;
   background-color: #E3F2F1;
 }
+input#younogonnafindzis {
+  display: none;
+}
 .btn {
   border-radius: 0;
   padding: 10px 80px 10px 20px;
