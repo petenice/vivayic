@@ -1,0 +1,33 @@
+{#--
+503 PAGE
+/templates/index.html
+niceworld 8.17.18
+--#}
+
+{% extends "_layouts/site" %}
+
+{% block head %}
+  {% set title = "System Status 503" %}
+  {{ parent() }}
+{% endblock %}
+
+{% block main %}
+
+<!-- global boog -->
+<div id="home-global-boog" class="home-features container-fluid build-border-red">
+  <div class="row h-100 build-border-red">
+    <div class="col-6 offset-6 align-self-center no-padd build-border-blue">
+      <div class="home-feature-text ml-md-4 d-none d-md-block build-border-red">
+        <h2 class="white">System is Offline</h2>
+      </div>
+    </div>
+  </div>
+</div><!-- /global boog -->
+
+
+
+{% endblock %}{#-- /main --#}
+
+{% block foot %}
+  {{ parent() }}
+{% endblock %} {#-- /foot --#}

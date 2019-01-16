@@ -40,7 +40,8 @@
     "ether/logs": "v3.0.0",
     "craftcms/contact-form": "2.2.2",
     "craftcms/contact-form-honeypot": "1.0.2",
-    "matt-west/craft-recaptcha": "1.2.0"
+    "matt-west/craft-recaptcha": "1.2.0",
+    "topshelfcraft/environment-label": "3.1.5"
   },
   "autoload": {
     "psr-4": {

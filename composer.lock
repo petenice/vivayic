@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1582594cbceeb0d658bab5c53cb01e80",
+    "content-hash": "3335a8e251aa115a92fab78dd2a97a2d",
     "packages": [
         {
             "name": "aelvan/inlin",
@@ -3694,6 +3694,59 @@
                 "utils"
             ],
             "time": "2017-10-10T16:40:59+00:00"
+        },
+        {
+            "name": "topshelfcraft/environment-label",
+            "version": "3.1.5",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TopShelfCraft/Environment-Label/zipball/3c719c6844201830c08cdd3d8c438c5050351c9c",
+                "reference": "3c719c6844201830c08cdd3d8c438c5050351c9c",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Environment Label",
+                "handle": "environment-label",
+                "schemaVersion": "1.0.0",
+                "hasCpSettings": true,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/TopShelfCraft/Environment-Label/master/CHANGELOG.md",
+                "components": {
+                    "label": "topshelfcraft\\environmentlabel\\services\\Label"
+                },
+                "class": "topshelfcraft\\environmentlabel\\EnvironmentLabel"
+            },
+            "autoload": {
+                "psr-4": {
+                    "topshelfcraft\\environmentlabel\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Top Shelf Craft (Michael Rog)",
+                    "homepage": "https://topshelfcraft.com"
+                }
+            ],
+            "description": "...so you don't forget where you are.",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "environment label"
+            ],
+            "support": {
+                "docs": "https://github.com/TopShelfCraft/Environment-Label",
+                "issues": "https://github.com/TopShelfCraft/Environment-Label/issues"
+            },
+            "time": "2018-11-02T21:25:23+00:00"
         },
         {
             "name": "topshelfcraft/wordsmith",

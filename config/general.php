@@ -42,7 +42,7 @@ return [
     'staging' => [
         // Base site URL
         //'siteUrl' => null,
-        'siteUrl' => 'http://dev.vivayic.com',
+        'siteUrl' => 'https://dev.vivayic.com',
         'basePath' => '/var/www/dev.vivayic.com/public/',
 
     ],
@@ -50,6 +50,7 @@ return [
     // Production environment settings
     'production' => [
         // Base site URL
-        'siteUrl' => null,
+        'siteUrl' => 'https://www.vivayic.com',
+        'basePath' => '/var/www/www.vivayic.com/public/',
     ],
 ];
